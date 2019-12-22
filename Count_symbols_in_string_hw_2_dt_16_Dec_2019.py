@@ -2,7 +2,7 @@
 
 #1 : Naive method
 string = str(input("Enter the string: ")).lower()
-symbol_to_count  = str(input("Enter the symbol to count: ")).lower()
+symbol_to_count = str(input("Enter the symbol to count: ")).lower()
 
 symbols_in_string = len(string)
 
