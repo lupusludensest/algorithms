@@ -19,7 +19,7 @@ length = len(array)
 min_element_first = min(array)
 
 k = min_element_first
-min_element_second = 99999999999999999999
+min_element_second = y
 for i in array:
     if min_element_second > i and i > k :
         min_element_second = i
