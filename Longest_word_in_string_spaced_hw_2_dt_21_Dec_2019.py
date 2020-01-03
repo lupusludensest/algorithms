@@ -17,4 +17,4 @@ if count > m:
     m = count
     index = i - count + 1
 
-print(f'The longest string is: "{string[index:index + m]}", length: "{len(string[index:index + m])}".')
+print(f'The longest word is: "{string[index:index + m]}", length: "{len(string[index:index + m])}".')
