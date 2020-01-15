@@ -47,12 +47,12 @@ students =     [
     ]
 
 
-for i in sorted(students, key=lambda k: k['name']):
-    print(f'By name: {i};')
-#
-# for i in sorted(students, key=lambda k: k['age']):
+# for i in sorted(students, key=lambda k: k['name']):
 #     print(f'By name: {i};')
 
+# for i in sorted(students, key=lambda k: k['age']):
+#     print(f'By name: {i};')
+#
 # 2 Отсортировать список по убыванию любым понравившимся алгоритмом
 
 # def bubble(students):
@@ -65,23 +65,22 @@ for i in sorted(students, key=lambda k: k['name']):
 #             j -= 1
 #         i -= 1
 #     return students
-#     return students
 # for i in bubble(students):
 #     print(f'By age: {i};')
 
 
-# def bubble(students):
-#     i = len(students) - 1
-#     while i > 0:
-#         j = len(students) - 1
-#         while j > 0:
-#             if students[j]['name'] < students[j - 1]['name']:
-#                 students[j], students[j - 1] = students[j - 1], students[j]
-#             j -= 1
-#         i -= 1
-#     return students
-# for i in bubble(students):
-#     print(f'By name: {i};')
+def bubble(students):
+    i = len(students) - 1
+    while i > 0:
+        j = len(students) - 1
+        while j > 0:
+            if students[j]['name'] < students[j - 1]['name']:
+                students[j], students[j - 1] = students[j - 1], students[j]
+            j -= 1
+        i -= 1
+    return students
+for i in bubble(students):
+    print(f'By name: {i};')
 
 
 
