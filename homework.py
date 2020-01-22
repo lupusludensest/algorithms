@@ -55,32 +55,32 @@ students =     [
 
 # 2 Отсортировать список по убыванию любым понравившимся алгоритмом
 
-def bubble(students):
-    i = len(students) - 1
-    while i > 0:
-        j = len(students) - 1
-        while j > 0:
-            if students[j]['age'] < students[j - 1]['age']:
-                students[j], students[j - 1] = students[j - 1], students[j]
-            j -= 1
-        i -= 1
-    return students
-for i in bubble(students):
-    print(f'By age: {i};')
-
-
 # def bubble(students):
 #     i = len(students) - 1
 #     while i > 0:
 #         j = len(students) - 1
 #         while j > 0:
-#             if students[j]['name'] < students[j - 1]['name']:
+#             if students[j]['age'] < students[j - 1]['age']:
 #                 students[j], students[j - 1] = students[j - 1], students[j]
 #             j -= 1
 #         i -= 1
 #     return students
 # for i in bubble(students):
-#     print(f'By name: {i};')
+#     print(f'By age: {i};')
+
+
+def bubble(students):
+    i = len(students) - 1
+    while i > 0:
+        j = len(students) - 1
+        while j > 0:
+            if students[j]['name'] < students[j - 1]['name']:
+                students[j], students[j - 1] = students[j - 1], students[j]
+            j -= 1
+        i -= 1
+    return students
+for i in bubble(students):
+    print(f'By name: {i};')
 
 
 
