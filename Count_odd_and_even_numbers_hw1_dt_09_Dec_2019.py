@@ -16,3 +16,4 @@ while n > 0:
         odd += 1
     n = n//10
 print("Even: %d, odd: %d" % (even, odd), '.')
+print("Even: {}, odd: {}".format(even, odd), '.')
