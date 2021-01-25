@@ -9,7 +9,7 @@ if n < 0:
 result = 1
 for i in range(1, n+1):
     result *= i
-print(f'result = {result}')
+print(f'Factorial of {n} = {result}')
 
 # вариант 2 while
 result = 1
@@ -17,7 +17,7 @@ i = 1
 while i < n+1:
     result *= i
     i += 1
-print(f'result = {result}')
+print(f'Factorial of {n} = {result}')
 
 # вариант 3 для читеров
 

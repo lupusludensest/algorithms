@@ -1,5 +1,6 @@
 # В заданном листе найти непрерывный подлист, сумма элементов в котором максимальна.
-# TODO: Вывести саму подсумму largest_sum_continguous_sublist([5, -3, 4, -9, 2, -6]) выводит в ответ [5, -3, 4]
+# TODO: Вывести саму подсумму largest_sum_continguous_sublist([5, -3, 4, -9, 2, -6])
+#  выводит в ответ [5, -3, 4]
 
 def largest_sum_contiguous_sublist(array):
     best_sum = 0
