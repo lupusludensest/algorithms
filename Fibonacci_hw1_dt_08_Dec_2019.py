@@ -1,6 +1,6 @@
 # TODO: Домашнее задание: Написать программу для вывода только указаного элемента последовательности
 
-# Recursion function for nth Fibonacci number
+# # Recursion function for nth Fibonacci number
 # def fib(n):
 #     if n <= 0:
 #         print("Enter not zero and not negative integer.")
@@ -16,34 +16,34 @@
 # result = fib(n)
 # print(f'Member # {n} is : {result} .')
 
-# Fibonacci Sequence Using For Loop
-n = int(input('Enter the number of sequence member: '))
-def Fibonacci(n):
-    a, b = 1, 1
-    list = []
-    for i in range(n):
-        list.append(a) #yield a
-        a, b = b, a + b
-    if n < 0:
-       print('Enter not zero and not negative integer.')
-       quit()
-    elif n == 0:
-        print(f'Sequence member# 0 is: {a}.')
-        quit()
-    return list
-fibs = Fibonacci(n) #fibs = list(Fibonacci(n))
-result = fibs[-1]
-print(f'Sequence member# {n} is: {result}.')
-
-# Fibonacci Sequence Using Lambda and Reduce
-# from functools import reduce
-# n = int(input('Enter the Number of terms: '))
-# def fib(n):
+# # Fibonacci Sequence Using For Loop
+# n = int(input('Enter the number of sequence member: '))
+# def Fibonacci(n):
+#     a, b = 1, 1
+#     list = []
+#     for i in range(n):
+#         list.append(a) #yield a
+#         a, b = b, a + b
 #     if n < 0:
-#         print('Enter not zero and not negative integer.')
+#        print('Enter not zero and not negative integer.')
+#        quit()
+#     elif n == 0:
+#         print(f'Sequence member# 0 is: {a}.')
 #         quit()
-#     return reduce(lambda x, _: x+[x[-1]+x[-2]], range(n-2), [0, 1])
-# fibs = list(fib(n))
+#     return list
+# fibs = Fibonacci(n) #fibs = list(Fibonacci(n))
 # result = fibs[-1]
 # print(f'Sequence member# {n} is: {result}.')
+
+# Fibonacci Sequence Using Lambda and Reduce
+from functools import reduce
+n = int(input('Enter the Number of terms: '))
+def fib(n):
+    if n < 0:
+        print('Enter not zero and not negative integer.')
+        quit()
+    return reduce(lambda x, _: x+[x[-1]+x[-2]], range(n-2), [0, 1])
+fibs = list(fib(n))
+result = fibs[-1]
+print(f'Sequence member# {n} is: {result}.')
 

@@ -1,24 +1,23 @@
 # 1.Посчитайте, сколько раз символ встречается в строке.
 # Строка и символ вводятся с клавиатуры.
 
-# #1 : Naive method
-# string = str(input("Enter the string: ")).lower()
-# symbol_to_count = str(input("Enter the symbol to count: ")).lower()
-#
-# symbols_in_string = len(string)
-#
-# count = 0
-# for i in string:
-#     if i == symbol_to_count:
-#         count = count + 1
-#
-# percent_symbol = round(count/symbols_in_string*100, 2)
-#
-# print(f'Symbols in the string: {symbols_in_string} total. '
-#       f'\nSymbol "{symbol_to_count}" repeated in the string: {count} times. '
-#       f'\nOr is : {percent_symbol}%.')
+#1 : Naive method
+string = str(input("Enter the string: ")).lower()
+symbol_to_count = str(input("Enter the symbol to count: ")).lower()
 
-##########
+symbols_in_string = len(string)
+
+count = 0
+for i in string:
+    if i == symbol_to_count:
+        count = count + 1
+
+percent_symbol = round(count/symbols_in_string*100, 2)
+
+print(f'Symbols in the string: {symbols_in_string} total. '
+      f'\nSymbol "{symbol_to_count}" repeated in the string: {count} times. '
+      f'\nOr is : {percent_symbol}%.')
+
 
 # # 2 : Using count()
 # test_str = str(input("Enter the string: ")).lower()
@@ -35,7 +34,6 @@
 #       f'\nLength of the string is: {length_of_string}. '
 #       f'\nOr : {percent_symbol}%')
 
-##########
 
 # #3 : Using collections.Counter()
 # from collections import Counter
@@ -48,7 +46,6 @@
 # print (f'Count of "{symbol}" in "{string}" is :{count[symbol]}. '
 # f'\nOr %: "{percent}"')
 
-##########
 
 # #4 : Using lambda + sum() + map()
 # test_str = str(input("Enter the string: ")).lower()
@@ -60,13 +57,12 @@
 # print(f'Symbol: "{symbol}" in "{test_str}" repeated "{count}" times.'
 #       f'\nOr "{percent}" percent.')
 
-#5 : Using re + findall()
-import re
-test_str = str(input("Enter the string: ")).lower()
-e = str(input("Entet the symbol: ")).lower()
-
-
-count = len(re.findall("e", test_str))
-
-print(f'Symbol "{e}" in "{test_str}" repeated "{count}" times. '
-      f'\nOr "{count/len(test_str)*100}" percent.')
+# #5 : Using re + findall()
+# import re
+# test_str = str(input("Enter the string: ")).lower()
+# e = str(input("Entet the symbol: ")).lower()
+#
+# count = len(re.findall(e, test_str))
+#
+# print(f'Symbol "{e}" in "{test_str}" repeated "{count}" times. '
+#       f'\nOr "{round(count/len(test_str)*100, 2)}" percent.')

@@ -2,14 +2,14 @@
 import math
 
 n = int(input('Введите число n: '))
-# вариант 1 for
-if n < 0:
-    print(f'Вы точно хотите получить результат гамма-функции? Я нет!')
-    quit()
-result = 1
-for i in range(1, n+1):
-    result *= i
-print(f'Factorial of {n} = {result}')
+# # вариант 1 for
+# if n < 0:
+#     print(f'Вы точно хотите получить результат гамма-функции? Я нет!')
+#     quit()
+# result = 1
+# for i in range(1, n+1):
+#     result *= i
+# print(f'Factorial of {n} = {result}')
 
 # вариант 2 while
 result = 1
