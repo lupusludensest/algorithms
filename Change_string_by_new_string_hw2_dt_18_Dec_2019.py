@@ -11,6 +11,7 @@ lenStrOld = len(subStrOld)
 
 while string.find(subStrOld) >= 0:
     i = string.find(subStrOld)
+    print(i, type(i))
     string = string[:i] + subStrNew + string[i+lenStrOld:]
 
 print(f'\nEdited string: {string}')
