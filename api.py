@@ -7,8 +7,8 @@ if 300 >= r.status_code >= 200:
 else:
     print(f'\nFAIL_STATUS ="{r.status_code}"')
 print(f'\nReceived responce = "{r}"')
-x1=r.text
-wrd='war'
+x1 = r.text
+wrd = 'war'
 # print(x1)
 if wrd in x1:
     print(f'\nFound: "{wrd}"')
