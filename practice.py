@@ -35,7 +35,7 @@
 
 # # Count char in the string
 # st = str(input('Enter the string: '))
-# print(f'Eou entered the string: {st}')
+# print(f'You entered the string: {st}')
 # ch = str(input('Enter the char to count the char in string: '))
 # print(f'You have {ch} to count in the string')
 # def cntchr(st, ch):
@@ -48,12 +48,12 @@
 #     return f'We have "{ch}" repeated "{cntr}" times'
 # print(cntchr(st, ch))
 
-# # Factorial n! of integer
-# def fctrl(num = int(input('Enter the integer: '))):
-#     if num == 0:
-#         return f'Factorial of "{num}" = "1"'
-#     fctrl = 1
-#     for e in range(1, num + 1):
-#         fctrl *= e
-#     return f'Factorial of "{num}" = "{fctrl}"'
-# print(fctrl())
+# Factorial n! of integer
+def fctrl(num = int(input('Enter the integer: '))):
+    if num == 0:
+        return f'Factorial of "{num}" = "1"'
+    fctrl = 1
+    for e in range(1, num + 1):
+        fctrl *= e
+    return f'Factorial of "{num}" = "{fctrl}"'
+print(fctrl())
