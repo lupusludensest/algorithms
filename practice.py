@@ -48,12 +48,34 @@
 #     return f'We have "{ch}" repeated "{cntr}" times'
 # print(cntchr(st, ch))
 
-# Factorial n! of integer
-def fctrl(num = int(input('Enter the integer: '))):
-    if num == 0:
-        return f'Factorial of "{num}" = "1"'
-    fctrl = 1
-    for e in range(1, num + 1):
-        fctrl *= e
-    return f'Factorial of "{num}" = "{fctrl}"'
-print(fctrl())
+# # Factorial n! of integer
+# def fctrl(num = int(input('Enter the integer: '))):
+#     if num == 0:
+#         return f'Factorial of "{num}" = "1"'
+#     fctrl = 1
+#     for e in range(1, num + 1):
+#         fctrl *= e
+#     return f'Factorial of "{num}" = "{fctrl}"'
+# print(fctrl())
+
+# answers = ['A', 'B', '', 'D']
+# for answer in answers:
+#     if answer == '':
+#         print('Incomlete')
+#         break
+#     print(answer)
+# print('Loop is done')
+
+# list1 = [1, 2, 3, 4, 5]
+# def fnd_n_lst(list1):
+#     ev = []
+#     od = []
+#     for i in list1:
+#         if i % 2 == 0:
+#             ev.append(i)
+#         else:
+#             od.append(i)
+#     return f'Even: {ev}, total: {len(ev)},\nOdd:{od}, total: {len(od)}'
+#
+# print(fnd_n_lst(list1))
+
