@@ -79,3 +79,22 @@
 #
 # print(fnd_n_lst(list1))
 
+
+# # Iterate as an elements
+lst1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+def itrsel():
+    i = []
+    for e in lst1:
+        i.append(e)
+    return i, type(i)
+print(itrsel())
+
+# Iterate as indexes
+lst2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+def itrsin():
+    i = []
+    for e in range(0, len(lst2)):
+        i.append(e)
+    return i, type(i)
+print(itrsin())
+
