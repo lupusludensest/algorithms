@@ -6,7 +6,7 @@
 #     for i in range(len(nums)):
 #         if (nums[i-1] + nums[i]) == 9:
 #             nlst.append(nums[i-1]), nlst.append(nums[i]),nnlst.append(i-1), nnlst.append(i)
-#     return nlst, nnlst
+#     return f'Elements: \t{nlst}\nIndexes: \t{nnlst}'
 # print(wrkwlst(nums))
 
 # # Decimal to binary

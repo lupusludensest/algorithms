@@ -95,14 +95,26 @@
 # Python code to reverse a string
 # using reversed()
 
-# Function to reverse a string
-def reverse(string):
-    string = "".join(reversed(string))
-    return string
+# # Function to reverse a string
+# def reverse(string):
+#     string = "".join(reversed(string))
+#     return string
+#
+# string = str(input('Enter the string: '))
+#
+# print("The original string  is : ", end="")
+# print(string)
+# print("The reversed string(using reversed) is : ", end="")
+# print(reverse(string))
 
-string = str(input('Enter the string: '))
+# print("This is the rat,\nThat ate the malt\nThat lay in the house that Jack built")
 
-print("The original string  is : ", end="")
-print(string)
-print("The reversed string(using reversed) is : ", end="")
-print(reverse(string))
+num = 456
+first_digit = num // 100
+# print(first_digit)
+middle_digit = (num // 10) % 10
+# print(middle_digit)
+last_digit = num % 10
+# print(last_digit)
+s = first_digit + middle_digit + last_digit
+# print(s)

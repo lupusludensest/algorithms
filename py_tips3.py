@@ -1,6 +1,8 @@
 stack = []
 stack.append(1)
+print(stack)
 stack.append(2)
+print(stack)
 
 pop_elem = stack.pop()
 
