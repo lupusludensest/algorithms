@@ -97,3 +97,13 @@
 #         i.append(e)
 #     return i, type(i)
 # print(itrsin())
+
+input = 'aaaabbbccdddd'
+# expected output is: output = '4a3b2c4b'
+def cntltrs(input):
+    output = []
+    for i in input:
+        if i.count(input) > 0:
+            output.append(str(i.count(input)) + {i})
+    return f'{output}'
+print(cntltrs(input))

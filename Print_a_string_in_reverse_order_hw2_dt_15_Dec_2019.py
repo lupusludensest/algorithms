@@ -119,14 +119,14 @@
 # s = first_digit + middle_digit + last_digit
 # # print(s)
 
-lst=[]
-a=round(float(input(f'Enter value to number "a" : ')), 2)
-lst.append(a)
-b=round(float(input(f'Enter value to number "b" : ')), 2)
-lst.append(b)
-c=round(float(input(f'Enter value to number "c" : ')), 2)
-lst.append(c)
-print(f'Lst: "{lst}"')
-
-s=round(sum(lst), 2)
-print(f'Sum of "{a}", "{b}", "{c}" as a members of list "{lst}" is "{s}".')
+# lst=[]
+# a=round(float(input(f'Enter value to number "a" : ')), 2)
+# lst.append(a)
+# b=round(float(input(f'Enter value to number "b" : ')), 2)
+# lst.append(b)
+# c=round(float(input(f'Enter value to number "c" : ')), 2)
+# lst.append(c)
+# print(f'Lst: "{lst}"')
+#
+# s=round(sum(lst), 2)
+# print(f'Sum of "{a}", "{b}", "{c}" as a members of list "{lst}" is "{s}".')
