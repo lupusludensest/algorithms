@@ -109,12 +109,24 @@
 
 # print("This is the rat,\nThat ate the malt\nThat lay in the house that Jack built")
 
-num = 456
-first_digit = num // 100
-# print(first_digit)
-middle_digit = (num // 10) % 10
-# print(middle_digit)
-last_digit = num % 10
-# print(last_digit)
-s = first_digit + middle_digit + last_digit
-# print(s)
+# num = 456
+# first_digit = num // 100
+# # print(first_digit)
+# middle_digit = (num // 10) % 10
+# # print(middle_digit)
+# last_digit = num % 10
+# # print(last_digit)
+# s = first_digit + middle_digit + last_digit
+# # print(s)
+
+lst=[]
+a=round(float(input(f'Enter value to number "a" : ')), 2)
+lst.append(a)
+b=round(float(input(f'Enter value to number "b" : ')), 2)
+lst.append(b)
+c=round(float(input(f'Enter value to number "c" : ')), 2)
+lst.append(c)
+print(f'Lst: "{lst}"')
+
+s=round(sum(lst), 2)
+print(f'Sum of "{a}", "{b}", "{c}" as a members of list "{lst}" is "{s}".')
