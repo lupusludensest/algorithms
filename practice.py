@@ -98,12 +98,60 @@
 #     return i, type(i)
 # print(itrsin())
 
+# print(f'1\n')
+#
+# chars = "abcdefghijklmnopqrstuvwxyz"
+# check_string = "aaaabbbccdddd"
+#
+# for char in chars:
+#     count = check_string.count(char)
+#     if count > 0:
+#         print(str(count) + char, end='')
+#
+# print(f'2\n')
+#
+# from collections import Counter
+#
+# i = 'aaaabbbccdddd'
+# count = Counter(i)
+# print(''.join(list(map(lambda b: str(count[b]) + b, count))))
+#
+# print(f'3\n')
+#
+# input = 'aaaabbbccdddd'
+# def cntchrs(input):
+#     a = b = c = d = 0
+#     for e in input:
+#         if e == 'a':
+#             a += 1
+#         elif e == 'b':
+#             b += 1
+#         elif e == 'c':
+#             c += 1
+#         else:
+#             d += 1
+#     return f'{a}{e}{b}{e}{c}{e}{d}{e}'
+#
+# print(cntchrs(input))
+#
+# print(f'4\n')
+#
+# i = 'aaaabbbccdddd'
+# def cntchrs(input):
+#     res = ''
+#     for e in i:
+#         if i.count(e) > 0:
+#             res.join(str(i.count(e)) + e)
+#     return res
+#
+# print(cntchrs(i))
+
 input = 'aaaabbbccdddd'
 # expected output is: output = '4a3b2c4b'
 def cntltrs(input):
     output = []
     for i in input:
-        if i.count(input) > 0:
-            output.append(str(i.count(input)) + {i})
+        if input.count(i) != 0:
+            output.append(str(input.count(i)) + i)
     return f'{output}'
 print(cntltrs(input))
