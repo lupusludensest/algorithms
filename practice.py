@@ -98,26 +98,28 @@
 #     return i, type(i)
 # print(itrsin())
 
-# print(f'1\n')
-#
-# chars = "abcdefghijklmnopqrstuvwxyz"
-# check_string = "aaaabbbccdddd"
-#
-# for char in chars:
-#     count = check_string.count(char)
-#     if count > 0:
-#         print(str(count) + char, end='')
-#
+print(f'1\n')
+
+alpha = "abcdefghijklmnopqrstuvwxyz"
+input = "aaaabbbccdddd"
+
+for char in alpha.lower():
+    count = input.count(char)
+    if count > 0:
+        print(str(count) + char, end='')
+
+
 # print(f'2\n')
-#
+
 # from collections import Counter
-#
-# i = 'aaaabbbccdddd'
-# count = Counter(i)
-# print(''.join(list(map(lambda b: str(count[b]) + b, count))))
-#
+
+# input = 'aaaabbbccdddd'
+# count = Counter(input)
+# res = ''
+# print(res.join(list(map(lambda b: str(count[b]) + b, count))))
+
 # print(f'3\n')
-#
+
 # input = 'aaaabbbccdddd'
 # def cntchrs(input):
 #     a = b = c = d = 0
@@ -133,25 +135,54 @@
 #     return f'{a}{e}{b}{e}{c}{e}{d}{e}'
 #
 # print(cntchrs(input))
-#
+
 # print(f'4\n')
 #
-# i = 'aaaabbbccdddd'
+# input = 'aaaabbbccdddd'
 # def cntchrs(input):
 #     res = ''
-#     for e in i:
-#         if i.count(e) > 0:
-#             res.join(str(i.count(e)) + e)
-#     return res
+#     for e in input:
+#         if input.count(e) > 0:
+#             res += (str(input.count(e)) + e)
+#     res += (str(input.count(e)) + e)
+#     return f'{res}'
 #
-# print(cntchrs(i))
+# print(cntchrs(input))
 
-input = 'aaaabbbccdddd'
-# expected output is: output = '4a3b2c4b'
-def cntltrs(input):
-    output = []
-    for i in input:
-        if input.count(i) != 0:
-            output.append(str(input.count(i)) + i)
-    return f'{output}'
-print(cntltrs(input))
+# input = 'aaaabbbccdddd'
+# # expected output is: output = '4a3b2c4d'
+# def cntchrs(input):
+#   char = input[0]
+#   countLetter = 1
+#   output = ''
+#   for i in range(1, len(input)):
+#     if input[i - 1] == input[i]:
+#       countLetter += 1
+#     elif input[i - 1] != input[i]:
+#       output += (str(countLetter) + char)
+#       char = input[i]
+#       countLetter = 1
+#
+#   output += str(countLetter) + char
+#   return output
+
+# print(cntchrs(input))
+
+# input = 'aaaabbbccdddd'
+# # expected output is: output = '4a3b2c4d'
+# def cntltrs(input):
+#     if input == '':
+#       return ''
+#     output = ''
+#     cur = ''
+#     for l in input:
+#         if cur == '':
+#           cur = l
+#         elif cur[0] == l:
+#           cur+=l
+#         else:
+#           output += f"{len(cur)}{cur[0]}"
+#           cur=l
+#     output += f"{len(cur)}{cur[0]}"
+#     return f'{output}'
+# print(cntltrs(input))
