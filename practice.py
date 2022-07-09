@@ -98,15 +98,15 @@
 #     return i, type(i)
 # print(itrsin())
 
-print(f'1\n')
+# print(f'1\n')
 
-alpha = "abcdefghijklmnopqrstuvwxyz"
-input = "aaaabbbccdddd"
-
-for char in alpha.lower():
-    count = input.count(char)
-    if count > 0:
-        print(str(count) + char, end='')
+# alpha = "abcdefghijklmnopqrstuvwxyz"
+# input = "aaaabbbccdddd"
+#
+# for char in alpha.lower():
+#     count = input.count(char)
+#     if count > 0:
+#         print(str(count) + char, end='')
 
 
 # print(f'2\n')
@@ -186,3 +186,39 @@ for char in alpha.lower():
 #     output += f"{len(cur)}{cur[0]}"
 #     return f'{output}'
 # print(cntltrs(input))
+
+input = 'aaaabbbccdddd'
+# expected output is: output = '4a3b2c4d'
+# def cntchars(inp):
+#     letter = inp[0]
+#     countLetter = 1
+#     res = ''
+#     for i in range(1, len(input)):
+#         if input[i] == input[i - 1]:
+#             countLetter += 1
+#         elif input[i] != input[i - 1]:
+#             res += str(countLetter) + letter
+#             letter = input[i]
+#             countLetter = 1
+#
+#     res += str(countLetter) + letter
+#     return res
+# print(cntchars(input))
+
+# input = 'aaaabbbccdddd'
+# output = {}
+#
+# for i in input:
+#     output[i] = input.count(i)
+#
+# print(output)
+
+input = 'aaaabbbccdddd'
+def cntchrs(input):
+    output = {}
+    for ind in input:
+        output[ind] = input.count(ind)
+    return output
+
+print(cntchrs(input))
+
