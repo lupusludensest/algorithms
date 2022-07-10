@@ -187,10 +187,10 @@
 #     return f'{output}'
 # print(cntltrs(input))
 
-input = 'aaaabbbccdddd'
-# expected output is: output = '4a3b2c4d'
-# def cntchars(inp):
-#     letter = inp[0]
+# input = 'aaaabbbccddddaaaa'
+# # expected output is: output = '4a3b2c4d'
+# def cntchars(input):
+#     letter = input[0]
 #     countLetter = 1
 #     res = ''
 #     for i in range(1, len(input)):
@@ -200,25 +200,46 @@ input = 'aaaabbbccdddd'
 #             res += str(countLetter) + letter
 #             letter = input[i]
 #             countLetter = 1
-#
 #     res += str(countLetter) + letter
 #     return res
 # print(cntchars(input))
 
-# input = 'aaaabbbccdddd'
+# input = 'aaaabbbccddddaaaa'
 # output = {}
 #
 # for i in input:
 #     output[i] = input.count(i)
-#
+
 # print(output)
 
-input = 'aaaabbbccdddd'
-def cntchrs(input):
-    output = {}
-    for ind in input:
-        output[ind] = input.count(ind)
-    return output
+# input = 'aaaabbbccddddaaaa'
+# def cntchrs(input):
+#     output = {}
+#     for ind in input:
+#         output[ind] = input.count(ind)
+#     return output
+#
+# print(cntchrs(input))
 
-print(cntchrs(input))
+# input = 'aaaabbbccdddd'
+# # expected output is: output = '4a3b2c4d'
+# def cntltrs(input):
+#  output = ''
+#  for n in range(0, len(input)):
+#     if (len(output)==0 or input[n] != output[-1]):
+#      if input.count(input[n]) > 0 and input[n - 1] == input[n]:
+#         output += (str(input.count(input[n - 1])) + input[n - 1])
+#  return f'{output}'
+# print(cntltrs(input))
+
+# print('Пиши свое число и я его прибавлю')
+# first = round(float(input('Enter the number: ')), 2)
+# print(f'Ответ: 1 + {first} = {1 + first}')
+
+
+# a=float('1.93')
+# b=float('1,93')
+# print(a,b)
+
+
 
