@@ -241,5 +241,30 @@
 # b=float('1,93')
 # print(a,b)
 
+# print(444//110) # 4
+# print(444//100) # 4
+# print(444%100) # 44
+
+# find min and max elements in list
+# lst = [1,2,3,4,5,6,7,8,9,10,-100,100]
+# def mnMx(lst):
+#     mn = mx = lst[0]
+#     for el in lst:
+#         if el < mn:
+#             mn = el
+#         elif el > mx:
+#             mx = el
+#     return f'Mn: {mn}: Mx:{mx}'
+# print(mnMx(lst))
+
+# # generate list from number n < m
+# n, m = 5, 10
+# def gnrtLstfrmNmbrsNm(n, m):
+#     lst = []
+#     for el in range(n, m + 1):
+#         lst.append(el)
+#     return lst
+# print(gnrtLstfrmNmbrsNm(n, m))
+
 
 
