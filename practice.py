@@ -245,7 +245,7 @@
 # print(444//100) # 4
 # print(444%100) # 44
 
-# find min and max elements in list
+# # find min and max elements in list
 # lst = [1,2,3,4,5,6,7,8,9,10,-100,100]
 # def mnMx(lst):
 #     mn = mx = lst[0]
@@ -265,6 +265,102 @@
 #         lst.append(el)
 #     return lst
 # print(gnrtLstfrmNmbrsNm(n, m))
+
+# # find word with the length more than 5 from list of words
+# lst = ["Sandra", "Dorothy", "Paul", "Aristarkh", "Betty", "John", "Jenny", "Alexander", 1234]
+# def fndWrdsMrFv(lst):
+#     mrFv = []
+#     lsFv = []
+#     for ind in range(0, len(lst)):
+#         if type(lst[ind]) != str:
+#             print(f'{lst[ind]} not a string')
+#         elif len(lst[ind]) > 5:
+#             mrFv.append(lst[ind])
+#         elif len(lst[ind]) <= 5:
+#             lsFv.append(lst[ind])
+#
+#     return f'Mrfv: {mrFv}\n' \
+#            f'Lsfv: {lsFv}'
+#
+# print(fndWrdsMrFv(lst))
+
+# # find index of first negative element in the list of numbers
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,-11, 1234, -123]
+# def fndFrstNgElmnt(lst):
+#     frstNgtvElmnt = ''
+#     for i in range(0, len(lst)):
+#         if lst[i] < 0:
+#             frstNgtvElmnt += str(i)
+#             break
+#     return f'frstNgtvElmnt: {frstNgtvElmnt}'
+#
+# print(fndFrstNgElmnt(lst))
+
+# # reverse the elements of the list
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,-11, 1234, -123]
+# def rvrsElmntsLst(lst):
+#     for e in lst:
+#         if type(e) == int:
+#             rlst = lst[::-1]
+#         return rlst
+#
+# print(rvrsElmntsLst(lst))
+
+# def replace_word(string, s, n_word):
+#     r = []
+#     l = string.split()
+#     for word in l:
+#         if word.lower() == s:
+#             r.append(n_word)
+#         else:
+#             r.append(word)
+#     return ' '.join(r)
+#
+#
+# print(replace_word('Hello heLlo PYthon pasv', 'hello', 'HI'))
+
+# def expression_matter(a, b, c):
+#     lst = []
+#     lst.append(a)
+#     lst.append(b)
+#     lst.append(c)
+#     max = lst[0]
+#     for e in lst:
+#         if e > max:
+#             max = e
+#     return max
+# print(expression_matter(3, 4, 5))
+
+# def expression_matter(a, b, c):
+#     lst = []
+#     aa = (a + b) * c
+#     bb = a + b + c
+#     cc = a * b * c
+#     dd = a * (b + c)
+#     lst.append(aa)
+#     lst.append(bb)
+#     lst.append(cc)
+#     lst.append(dd)
+#     max = lst[0]
+#     for e in lst:
+#         if e > max:
+#             max = e
+#     return max
+# print(expression_matter(3, 4, 5))
+
+# def discover_original_price(discounted_price, sale_percentage):
+#     return round(float(discounted_price / (100 - sale_percentage) * 100), 2)
+# print(discover_original_price(373.85,11.2)) # 421
+
+
+def two_decimal_places(number):
+    return int(number * 100) / 100.0
+print(two_decimal_places(10.1289767789))
+
+
+
+
+
 
 
 
