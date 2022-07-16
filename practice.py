@@ -267,20 +267,20 @@
 # print(gnrtLstfrmNmbrsNm(n, m))
 
 # # find word with the length more than 5 from list of words
-# lst = ["Sandra", "Dorothy", "Paul", "Aristarkh", "Betty", "John", "Jenny", "Alexander", 1234]
+# lst = ["Sandra", "Dorothy", "Paul", "Aristarkh", "Betty", "John", "Jenny", "Alexander", 1234, True]
 # def fndWrdsMrFv(lst):
+#     nStr = []
 #     mrFv = []
 #     lsFv = []
 #     for ind in range(0, len(lst)):
 #         if type(lst[ind]) != str:
-#             print(f'{lst[ind]} not a string')
+#             nStr.append(lst[ind])
 #         elif len(lst[ind]) > 5:
 #             mrFv.append(lst[ind])
 #         elif len(lst[ind]) <= 5:
 #             lsFv.append(lst[ind])
 #
-#     return f'Mrfv: {mrFv}\n' \
-#            f'Lsfv: {lsFv}'
+#     return f'Nstr: {nStr}\nMrfv: {mrFv}\n'f'Lsfv: {lsFv}'
 #
 # print(fndWrdsMrFv(lst))
 
@@ -352,15 +352,334 @@
 #     return round(float(discounted_price / (100 - sale_percentage) * 100), 2)
 # print(discover_original_price(373.85,11.2)) # 421
 
+# def two_decimal_places(number):
+#     return int(number * 100) / 100.0
+# print(two_decimal_places(10.1289767789))
 
-def two_decimal_places(number):
-    return int(number * 100) / 100.0
-print(two_decimal_places(10.1289767789))
+# import math
+# def square_area(A):
+#     return round((A*4/(2*math.pi))**2, 2)
+# print(square_area(14.05)) # 80
+
+# S = L**2 : (4 × π), где L — это длина окружности
+
+# import math
+# def square_area(A):
+#     return round((A * 2 / math.pi) ** 2, 2)
+# print(square_area(14.05)) # 80
+
+# def enough(cap, on, wait):
+#     if wait + on == cap:
+#         return cap - wait - on
+#     elif wait + on > cap:
+#         return (cap - on - wait) * -1
+#     else:
+#         return 0
+# print(enough(100, 60, 50)) # 10
+# print(enough(10, 5, 5)) # 0
+
+# def get_planet_name(id):
+#     if id == 1:
+#         return "Mercury"
+#     if id == 2:
+#         return "Venus"
+#     if id == 3:
+#         return "Earth"
+#     if id == 4:
+#         return "Mars"
+#     if id == 5:
+#         return "Jupiter"
+#     if id == 6:
+#         return "Saturn"
+#     if id == 7:
+#         return "Uranus"
+#     if id == 8:
+#         return "Neptune"
+#     else:
+#         return "Not valid ID"
+# print(get_planet_name(9))
+
+# def get_planet_name(id):
+#     return {
+#         1: "Mercury",
+#         2: "Venus",
+#         3: "Earth",
+#         4: "Mars",
+#         5: "Jupiter",
+#         6: "Saturn",
+#         7: "Uranus",
+#         8: "Neptune",
+#     }.get(id, None)
+# print(get_planet_name(3))
+
+# def triangular(n):
+#     if n >= 1 and type(n) == int:
+#         return n * (n + 1) // 2
+#     else:
+#         return 0
+# print(triangular(0))
+# print(triangular(1))
+# print(triangular(2))
+# print(triangular(3))
+# print(triangular(4))
+# print(triangular(5))
+# print(triangular(-9))
+# print(triangular(69179757194))
+
+# def triangular(n):
+#     if n < 1 and type(n) == int:
+#         return 0
+#     else:
+#         return n * (n + 1) // 2
+# print(triangular(0))
+# print(triangular(1))
+# print(triangular(2))
+# print(triangular(3))
+# print(triangular(4))
+# print(triangular(5))
+# print(triangular(-9))
+# print(triangular(69179757194))
+
+# def triangular(n: int) -> int:
+#     return n * (n + 1) // 2 if n > 0 else 0 # floor division is an answer
+# print(triangular(0))
+# print(triangular(1))
+# print(triangular(2))
+# print(triangular(3))
+# print(triangular(4))
+# print(triangular(5))
+# print(triangular(-9))
+# print(triangular(69179757194))
+
+# lst = [1, 2, 'dod', {"id": 4, "name": 'George'}]
+# def shr_lst(lst):
+#     nmrs = []
+#     strn =[]
+#     els = []
+#     for e in lst:
+#         if type(e) == int:
+#             nmrs.append(e)
+#         elif type(e) == str:
+#             strn.append(e)
+#         elif type(e) == dict:
+#             els.append(e)
+#         else:
+#             return f'Wrong input'
+#     return f'Numbers: {nmrs}\nStrings: {strn}\nElse: {els}'
+# print(shr_lst(lst))
+
+# l1 = [-5, 10, 3, 4, 0, 2,-5]
+
+# str1 = 'abcabcbb'
+# str2 = 'pwwkew'
+# def lng_str(str1, str2):
+#     if len(str1) > len(str2):
+#         return f'{str1}'
+#     else:
+#         return f'{str2}'
+#
+# print(lng_str(str1, str2))
+
+# def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+#     if dolphin == True and pontoon_distance / you_speed < shark_distance / shark_speed * 0.5:
+#         print(pontoon_distance / you_speed, shark_distance / shark_speed * 0.5)
+#         return f'Alive!'
+#     elif dolphin == True and pontoon_distance / you_speed < shark_distance / shark_speed:
+#         print(pontoon_distance / you_speed, shark_distance / shark_speed)
+#         return f'Alive!'
+#     elif dolphin == True and pontoon_distance / you_speed >= shark_distance / shark_speed * 0.5:
+#         print(pontoon_distance / you_speed, shark_distance / shark_speed * 0.5)
+#         return f'Shark Bait!'
+#     elif dolphin == True and pontoon_distance / you_speed >= shark_distance / shark_speed:
+#         print(pontoon_distance / you_speed, shark_distance / shark_speed)
+#         return f'Shark Bait!'
+#
+#     elif dolphin == False and pontoon_distance / you_speed < shark_distance / shark_speed:
+#         print(pontoon_distance / you_speed, shark_distance / shark_speed)
+#         return f'Alive!'
+#     elif dolphin == False and pontoon_distance / you_speed >= shark_distance / shark_speed:
+#         print(pontoon_distance / you_speed, shark_distance / shark_speed * 0.5)
+#         return f'Shark Bait!'
+#     else:
+#
+#         return f'Shark Bait!'
+# print(shark(12, 50, 4, 8, True))
+# print(shark(7, 55, 4, 16, True))
+# print(shark(24, 0, 4, 8, True))
+
+# def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+#     if dolphin == True:
+#         shark_time = shark_distance / (shark_speed * 0.5)
+#     else:
+#         shark_time = shark_distance / shark_speed
+#     if pontoon_distance / you_speed < shark_time:
+#         return f'Alive!'
+#     else:
+#         return f'Shark Bait!'
+# print(shark(12, 50, 4, 8, True))
+# print(shark(7, 55, 4, 16, True))
+# print(shark(24, 0, 4, 8, True))
+
+# def shark(d1, d2, v1, v2, x):
+#     return "Alive!" if d1 / v1 < d2 / v2 * (x + 1) else "Shark Bait!"
+# print(shark(12, 50, 4, 8, True))
+# print(shark(7, 55, 4, 16, True))
+# print(shark(24, 0, 4, 8, True))
+
+# gather all repeatable elements together and count them
+# lst = ['Dana', 'Pete', 'John', 'Raju', 'Elsa', 'Raju', 'Raju', 'Raju', 'Raju', 'Raju']
+# def cnt_wrds(lst):
+#     counter = {}
+#     for el in lst:
+#         counter[el] = counter.get(el, 0) + 1
+#     doubles = {element: count for element, count in counter.items() if count > 1}
+#     return doubles
+# print(cnt_wrds(lst))
+
+# # gather all repeatable elements together and count them
+# lst = ['Dana', 'Pete', 'John', 'Raju', 'Elsa', 'Raju', 'Raju', 'Raju', 'Raju', 'Raju']
+# def cnt_wrds(lst):
+#     cntr = 0
+#     dbls = []
+#     for i in range(len(lst)):
+#         if lst.count(lst[i]) > 1:
+#             cntr += 1
+#             dbls.append(lst[i])
+#     return cntr, dbls
+# print(cnt_wrds(lst))
+
+# ## expected
+# # I love you
+# # a little
+# # a lot
+# # passionately
+# # madly
+# # not at all
+# # When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+# def how_much_i_love_you(nb_petals):
+#     means = ["not at all", "I love you", "a little", "a lot", "passionately", "madly"]
+#     return means[nb_petals % 6]
+# print(how_much_i_love_you(7)) # I love you 7 % 6 == 1
+# print(how_much_i_love_you(6)) # not at all 6 % 6 == 0
+# print(how_much_i_love_you(5)) # madly 5 % 6 == 0.8333333333333333
+# print(how_much_i_love_you(4)) # passionately 4 % 6 == 0.6666666666666667
+# print(how_much_i_love_you(3)) # a lot 3 % 6 == 0.5
+# print(how_much_i_love_you(2)) # a little 2 % 6 == 0.3333333333333333
+# print(how_much_i_love_you(1)) # I love you 1 % 6 == 0.1666666666666667
+
+# ## expected
+# # I love you
+# # a little
+# # a lot
+# # passionately
+# # madly
+# # not at all
+# # When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+# def how_much_i_love_you(nb_petals):
+#     lst = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+#     rmndr = nb_petals % len(lst)
+#     return lst[rmndr - 1]
+# print(how_much_i_love_you(7)) # I love you 7 % 6 == 1
+# print(how_much_i_love_you(6)) # not at all 6 % 6 == 0
+# print(how_much_i_love_you(5)) # madly 5 % 6 == 0.8333333333333333
+# print(how_much_i_love_you(4)) # passionately 4 % 6 == 0.6666666666666667
+# print(how_much_i_love_you(3)) # a lot 3 % 6 == 0.5
+# print(how_much_i_love_you(2)) # a little 2 % 6 == 0.3333333333333333
+# print(how_much_i_love_you(1)) # I love you 1 % 6 == 0.1666666666666667
+
+# def apple(x):
+#     if int(x) ** 2 > 1000:
+#         return f'It\'s hotter than the sun!!'
+#     else:
+#         return f'Help yourself to a honeycomb Yorkie for the glovebox.'
+# print(apple(50))
+
+# def apple(x):
+#   return "It's hotter than the sun!!" if int(x) ** 2 > 1000 else  "Help yourself to a honeycomb Yorkie for the glovebox."
+# print(apple(50))
+
+# b = bool(input('Enter your data: '))
+# a = 3
+# # print(4) if (a < b) else print(100)
+# print(f'b = {b}, a = {a}')
+# if a > b :
+#   print(4)
+# else:
+#   print(100)
+
+# def apple(x):
+#   if (x ** 2) > 1000:
+#     return f'It\'s hotter than the sun!!'
+#   else:
+#     return f'Help yourself to a honeycomb Yorkie for the glovebox.'
+# print(apple(1001))
 
 
+# def apple(x):
+#   if (x ** 2) > 1000:
+#     return f"It's hotter than the sun!!"
+#   else:
+#     return f"Help yourself to a honeycomb Yorkie for the glovebox."
+# print(apple(1001))
 
+# def sum_str(a, b):
+#   if b == "":
+#     b = 0
+#   if a == "":
+#     a = 0
+#   return str(int(a) + int(b))
+# print(sum_str("9", ""))
+# print(sum_str("", "9"))
+# print(sum_str("9", "9"))
+# print(sum_str("", ""))
 
+# def sum_str(a, b):
+#   try:
+#     return str(int(a) + int(b))
+#   except ValueError:
+#     return '0' if a + b == '' else a + b
+# print(sum_str("9", ""))
+# print(sum_str("", "9"))
+# print(sum_str("9", "9"))
+# print(sum_str("", ""))
 
+# def get_grade(s1, s2, s3):
+#   if 90 <= (s1 + s2 + s3) / 3 <= 100:
+#     return 'A'
+#   elif 80 <= (s1 + s2 + s3) / 3  < 90:
+#     return 'B'
+#   elif 70 <= (s1 + s2 + s3) / 3  < 80:
+#     return 'C'
+#   elif 60 <= (s1 + s2 + s3) / 3  < 70:
+#     return 'D'
+#   elif 0 <= (s1 + s2 + s3) / 3  < 60:
+#     return 'F'
+# print(get_grade(95, 90, 93))
 
+# def get_grade(s1, s2, s3):
+#   mean = (sum([s1, s2, s3])) / 3
+#   if 90 <= mean <= 100: return 'A'
+#   if 80 <= mean < 90: return 'B'
+#   if 70 <= mean < 80: return 'C'
+#   if 60 <= mean < 70: return 'D'
+#   if 0 <= mean < 60: return 'F'
+# print(get_grade(95, 90, 93))
+
+# def summation(num):
+#   return sum(list(range(1, num + 1)))
+# print(summation(8))
+
+# summation = lambda num: sum(list(range(1, num + 1)))
+# print(summation(8))
+
+# summation = lambda n: (n*n+n)/2
+# print(summation(8))
+
+def summation(num):
+  r = 0
+  for e in range(0, num + 1):
+    r = r + e
+  return r
+print(summation(8))
 
 
