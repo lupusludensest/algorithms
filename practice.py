@@ -675,11 +675,53 @@
 # summation = lambda n: (n*n+n)/2
 # print(summation(8))
 
-def summation(num):
-  r = 0
-  for e in range(0, num + 1):
-    r = r + e
-  return r
-print(summation(8))
+# def summation(num):
+#   r = 0
+#   for e in range(0, num + 1):
+#     r = r + e
+#   return r
+# print(summation(8))
+
+# lst1 = [1, 2, 3, 4]
+# lst2 = [5, 6, 7, 8]
+# lst12tpl = tuple(lst1 + lst2)
+# print(lst12tpl, type(lst12tpl))
+
+# def hllwrld():
+#   return f'Hello world!'
+# print(hllwrld())
+
+# def switch_it_up(number):
+#     if number == 1:
+#         return"One"
+#     elif number == 2:
+#         return "Two"
+#     elif number == 3:
+#         return "Three"
+#     elif number == 4:
+#         return "Four"
+#     elif number == 5:
+#         return "Five"
+#     elif number == 6:
+#         return "Six"
+#     elif number == 7:
+#         return "Seven"
+#     elif number == 8:
+#         return "Eight"
+#     elif number == 9:
+#         return "Nine"
+#     elif number == 0:
+#         return "Zero"
+#     else:
+#         return "Wrong input"
+# print(switch_it_up(5))
+
+# def switch_it_up(n):
+#     return ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'][n]
+# print(switch_it_up(5))
+
+
+
+
 
 
