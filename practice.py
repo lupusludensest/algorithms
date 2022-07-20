@@ -720,6 +720,76 @@
 #     return ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'][n]
 # print(switch_it_up(5))
 
+# import math
+# def movie(card, ticket, perc):
+#     # ticket_num
+#     ticket_num = 0
+#     sys_a = 0
+#     sys_b = card
+#     sys_b_prev = ticket
+#     # while loop sys A > loop sys B:
+#     while math.ceil(sys_b) >= sys_a:
+#         # sys A math
+#         sys_a += ticket
+#         # sys B math
+#         sys_b_prev *= perc
+#         sys_b += sys_b_prev
+#         ticket_num += 1
+#     # iterate ticket_num
+#     return ticket_num
+# print(movie(500, 15, 0.9))
+# print(movie(100, 10, 0.95))
+
+# import math
+# def movie(card, ticket, perc):
+#     # ticket_num
+#     ticket_num = 0
+#     sys_a = 0
+#     sys_b_prev = ticket
+#     # while loop sys A > loop sys B:
+#     while math.ceil(card) >= sys_a:
+#         # sys A math
+#         sys_a += ticket
+#         # sys B math
+#         sys_b_prev *= perc
+#         card += sys_b_prev
+#         ticket_num += 1
+#     # iterate ticket_num
+#     return ticket_num
+# print(movie(500, 15, 0.9))
+# print(movie(100, 10, 0.95))
+
+# def rain_amount(mm):
+#     if mm < 40:
+#          return f"You need to give your plant {40 - mm}mm of water"
+#     else:
+#          return f"Your plant has had more than enough water for today!"
+# print(rain_amount(100))
+# print(rain_amount(39))
+
+def calculator(x, y, op): # x and y - operands, op - operator
+    if op == '+':
+        return x + y
+    elif op == '-':
+        return x - y
+    elif op == '*':
+        return x * y
+    elif op == '/':
+        return x / y
+    elif op not in "+-*/" or isinstance(x, (int, float)) or isinstance(x, (int, int)) or isinstance(y, (int, float)) or isinstance(x, (int, int)):
+        return f'unknown value'
+print(calculator(6, 2, '+'))
+print(calculator(4, 3, '-'))
+print(calculator(5, 5, '*'))
+print(calculator(5, 4, '/'))
+print(calculator(6, 2, '&'))
+print(calculator(6, "$", '+'))
+
+
+
+
+
+
 
 
 
