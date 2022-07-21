@@ -767,23 +767,148 @@
 # print(rain_amount(100))
 # print(rain_amount(39))
 
-def calculator(x, y, op): # x and y - operands, op - operator
-    if op == '+':
-        return x + y
-    elif op == '-':
-        return x - y
-    elif op == '*':
-        return x * y
-    elif op == '/':
-        return x / y
-    elif op not in "+-*/" or isinstance(x, (int, float)) or isinstance(x, (int, int)) or isinstance(y, (int, float)) or isinstance(x, (int, int)):
-        return f'unknown value'
-print(calculator(6, 2, '+'))
-print(calculator(4, 3, '-'))
-print(calculator(5, 5, '*'))
-print(calculator(5, 4, '/'))
-print(calculator(6, 2, '&'))
-print(calculator(6, "$", '+'))
+# def calculator(x, y, op):
+#     # x and y - operands, op - operator
+#     if (type(y) == type(x) != str) and (str(op) in "+-*/"):
+#       if op == '+':
+#           return x + y
+#       elif op == '-':
+#           return x - y
+#       elif op == '*':
+#           return x * y
+#       elif op == '/':
+#           return x / y
+#     else:
+#       return 'unknown value'
+# print(calculator(6, 2, '+'))
+# print(calculator(4, 3, '-'))
+# print(calculator(5, 5, '*'))
+# print(calculator(5, 4, '/'))
+# print(calculator(6, 2, '&'))
+# print(calculator(6, "$", '+'))
+
+# def calculator(x, y, op):
+#   return eval(f'{x}{op}{y}') if type(x) == type(y) == int and str(op) in '+-*/' else 'unknown value'
+# print(calculator(6, 2, '+'))
+# print(calculator(4, 3, '-'))
+# print(calculator(5, 5, '*'))
+# print(calculator(5, 4, '/'))
+# print(calculator(6, 2, '&'))
+# print(calculator(6, "$", '+'))
+
+# def find_slope(points): # m = (y2 - y1) / (x2 - x1) a:x1    b:y1    c:x2    d:y2 points = [a,b,c,d]
+#   if points[2] - points[0] != 0:
+#     return str(round((points[3] - points[1]) / (points[2] - points[0])))
+#   else:
+#     return "undefined"
+# print(find_slope([-10,6,-10,3]))
+# print(find_slope([19,3,20,3]))
+# print(find_slope([-7,2,-7,4]))
+# print(find_slope([10,50,30,150]))
+
+# def draw_stairs(n):
+#   res = ''
+#   for e in range(0, n - 1):
+#     res += ' ' * e + 'I\n'
+#   res += ' ' * (n - 1) + 'I'
+#   return res
+# print(draw_stairs(3))
+
+# numpy array
+import numpy as np
+import pandas as pd
+# a = np.array([1, 4, 5, 8], float)
+# print(a)
+# print(type(a))
+#
+# print(a[:2])
+# print(a[3])
+# print(a[0])
+# print(a)
+
+# b = np.array([[1, 2, 3], [4, 5, 6]], float)
+# print(b)
+# print(b[0,0])
+# print(b[0,1])
+# print(b[1,:])
+# print(b[:,2])
+# print(b[-1:, -2:])
+# print(b.shape) # shape возвращает количество строк и столбцов в матрице
+# print(b.dtype) # dtype возвращает тип переменных, хранящихся в массиве  float64, это числовой тип данных в numpy, который используется для хранения вещественных чисел двойной точности
+# print(len(b)) # len возвращает длину первого измерения (оси)
+# print(2 in b) #  in используется для проверки на наличие элемента в массиве
+# print(0 in b)
+
+# c = np.array(range(10), float)
+# print(c)
+# c = c.reshape((5, 2)) # 5 листов по 2 элемента метод reshape создает новый массив, а не модифицирует оригинальный
+# print(c)
+# print(c.shape)
+
+# d = np.array([1, 2, 3], float) # copy используется для создания копии существующего массива в памяти
+# e = d
+# print(e)
+# f = d.copy()
+# print(f)
+# d[0] = 0
+# print(d)
+# print(e)
+# print(f)
+
+# cписки можно тоже создавать с массивов
+# a = np.array([1, 2, 3], float)
+# s = a.tobytes()
+# print(s)
+# s = np.frombuffer(s)
+# print(s)
+
+# lst1 = list(map((lambda x:x**3), range(5)))
+# lst2 = [x**3 for x in range(5)]
+# print(f'{lst1}\n{lst2}')
+
+# import math
+# print(math.fabs(-45.24)) # fabs() method returns the absolute value of a number, as a float. Absolute denotes a non-negative number. This removes the negative sign of the value if it has any. Unlike Python abs(), this method always converts the value to a float value.
+
+# def draw_stairs(n):
+#     r = ''
+#     for e in range(0, n - 1):
+#         r += ' ' * e + 'I\n'
+#     r += ' ' * (n - 1) + 'I'
+#     return r
+# print(draw_stairs(3**3))
+
+# str1 = "Geeks For Geeks"
+# def cntwrfs(str1):
+#     res = 0
+#     res1 = 0
+#     for e in str1.split():
+#         if e == 'For':
+#             res += 1
+#         elif e == 'Geeks':
+#             res1 += 1
+#     return res, res1
+# print(cntwrfs(str1))
+
+# str1 = "Geeks For Geeks"
+# def cntwrfs(str1):
+#     res = 0
+#     res1 = 0
+#     lsstr1 = list(str1.split())
+#     for i in range(0, len(lsstr1)):
+#         if lsstr1[i - 1] == lsstr1[i]:
+#             res += 1
+#         elif lsstr1[i - 1] != lsstr1[i]:
+#             res1 += 1
+#     return res, res1
+# print(cntwrfs(str1))
+
+n = 100
+def nmbrs_n(n):
+    res = []
+    for e in range(1, n + 1):
+        res.append(e)
+    return res
+print(nmbrs_n(n))
 
 
 
