@@ -938,29 +938,92 @@ import pandas as pd
 #         print(i, end = '\t')
 # print(print_nums(8))
 
-def next_prime(n):
-    k = n + 1
-    while k:
-        for i in range(2, k + 1):
-            if k % i == 0:
-                break
-        if i == k:
-            return k
-            break
-        else:
-            k += 1
-print(next_prime(0))
-print(next_prime(2))
-print(next_prime(3))
-print(next_prime(13))
-print(next_prime(181))
-print(next_prime(911))
+# import math
+# # Function that returns True if n
+# # is prime else returns False
+# def isPrime(n):
+#     # Corner cases
+#     if (n <= 1):
+#         return False
+#     if (n <= 3):
+#         return True
+#     # This is checked so that we can skip
+#     # middle five numbers in below loop
+#     if (n % 2 == 0 or n % 3 == 0):
+#         return False
+#     for i in range(5, int(math.sqrt(n) + 1), 6):
+#         if (n % i == 0 or n % (i + 2) == 0):
+#             return False
+#     return True
+#
+# # Function to return the smallest
+# # prime number greater than N
+# def next_prime(N):
+#     # Base case
+#     if (N <= 1):
+#         return 2
+#     prime = N
+#     found = False
+#     # Loop continuously until isPrime returns
+#     # True for a number greater than n
+#     while (not found):
+#         prime = prime + 1
+#         if (isPrime(prime) == True):
+#             found = True
+#     return prime
+# print(next_prime(0))
+# print(next_prime(2))
+# print(next_prime(3))
+# print(next_prime(13))
+# print(next_prime(181))
+# print(next_prime(911))
 
+# def is_prime(num):
+#     if num < 2:
+#         return False
+#     for i in range(2, int(num**0.5)+1):
+#         if num % i == 0:
+#             return False
+#     return True
+#
+# def next_prime(n):
+#     n += 1
+#     while not is_prime(n):
+#         n += 1
+#     return n
+# print(next_prime(0))
+# print(next_prime(2))
+# print(next_prime(3))
+# print(next_prime(13))
+# print(next_prime(181))
+# print(next_prime(911))
 
+# def next_prime(n):
+#     while True:
+#         n += 1
+#         if n == 2 or (n > 2 and n % 2 and all(n % i for i in range(3, int(n**0.5) + 1, 2))): return n
+# print(next_prime(0))
+# print(next_prime(2))
+# print(next_prime(3))
+# print(next_prime(13))
+# print(next_prime(181))
+# print(next_prime(911))
 
-
-
-
+# def human_years_cat_years_dog_years(human_years):
+#     res = []; res.append(human_years); cat_years = 0; dog_years = 0
+#     if human_years == 1: cat_years += 15
+#     elif human_years == 2: cat_years += 24
+#     elif human_years > 2: cat_years += (24 + 4 * (human_years - 2))
+#
+#     if human_years == 1: dog_years += 15
+#     elif human_years == 2: dog_years += 24;
+#     elif human_years > 2: dog_years += (24 + 5 * (human_years - 2))
+#     res.append(cat_years)
+#     res.append(dog_years)
+#     return  res
+# print(human_years_cat_years_dog_years(1))
+# print(human_years_cat_years_dog_years(2))
+# print(human_years_cat_years_dog_years(10))
 
 
 
