@@ -5,9 +5,9 @@
 from random import randint
 import numpy as np
 
-length = int(input(f'Enter the length of the array: '))
-x = int(input(f'Enter the MIN element of the array: '))
-y = int(input(f'Enter the MAX element of the array: '))
+length = int(input(f'Enter the length of the list: '))
+x = int(input(f'Enter the MIN element of the list: '))
+y = int(input(f'Enter the MAX element of the list: '))
 array = []
 
 for i in range(length):
@@ -24,10 +24,10 @@ for x in array:
         array_less_than_average_value_of_primary_list.append(x)
 
 
-print(f'Random primary array is: {array}.'
+print(f'Random primary list is: {array}.'
       f'\nLenght: {length}.'
-      f'\nAverage of array members is: {array_average}.'
-      f'\nSum of primary array elements: {array_sum}.'
-      f'\nPercent- average from sum of primary array: {percent}%.'
-      f'\nNew_array: {array_less_than_average_value_of_primary_list}.')
+      f'\nAverage of list members is: {array_average}.'
+      f'\nSum of primary list elements: {array_sum}.'
+      f'\nPercent- average from sum of primary list: {percent}%.'
+      f'\nNew list: {array_less_than_average_value_of_primary_list}.')
 

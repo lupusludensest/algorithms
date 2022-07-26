@@ -902,15 +902,59 @@ import pandas as pd
 #     return res, res1
 # print(cntwrfs(str1))
 
-n = 100
-def nmbrs_n(n):
-    res = []
-    for e in range(1, n + 1):
-        res.append(e)
-    return res
-print(nmbrs_n(n))
+# n = 100
+# def nmbrs_n(n):
+#     res = []
+#     for e in range(1, n + 1):
+#         res.append(e)
+#     return res
+# print(nmbrs_n(n))
 
+# n_mmbr = str(input('Enter the name: '))
+# def add_nm(n_mmbr):
+#     ls_nms = ['Kate', 'Vic']
+#     if n_mmbr not in ls_nms:
+#         ls_nms.append(n_mmbr)
+#         return ls_nms
+#     else:
+#         return f'{n_mmbr} is already here.'
+# print(add_nm(n_mmbr))
 
+# a_list =['Don\'t', 'do', 'this', 'the', '"C"', 'way']
+# def dnt_d_c_wy(a_list):
+#     for x in a_list:
+#         print(x, end = ' ')
+# print(dnt_d_c_wy(a_list))
+
+# x = ['Python', 'is', 'cool']
+# def prnt_ptn_cl(x):
+#     return ' '.join(x)
+# print(prnt_ptn_cl(x))
+
+# def print_nums(n):
+#     i = 0
+#     while i < n:
+#         i += 1
+#         print(i, end = '\t')
+# print(print_nums(8))
+
+def next_prime(n):
+    k = n + 1
+    while k:
+        for i in range(2, k + 1):
+            if k % i == 0:
+                break
+        if i == k:
+            return k
+            break
+        else:
+            k += 1
+print(next_prime(0))
+print(next_prime(2))
+print(next_prime(3))
+print(next_prime(13))
+print(next_prime(181))
+print(next_prime(911))
 
 
 
