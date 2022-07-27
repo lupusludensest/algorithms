@@ -1063,6 +1063,23 @@ import pandas as pd
 # print(root(8, 3))
 # print(root(6.25, 2))
 
+# def roots(a, b, c):
+#     # x = (-b +- (b ** 2 - 4 * a * c)) / 2 * a; answer = (-b + d ** 0.5) / (2 * a) + (-b - d ** 0.5) / (2 * a)
+#   d = b ** 2 - 4 * a * c
+#   if d >= 0: return round( (-b + d ** 0.5) / (2 * a) + (-b - d ** 0.5) / (2 * a), 2)
+#   return  None
+# print(roots(6,3,8))
+# print(roots(2,11,-6))
+# print(roots(5,-8,3))
+# print(roots(6,4,9))
+# print(roots(1,-2,-5.25))
+# print(roots(3,-10,5))
+# print(roots(5,2,4))
+# print(roots(1,4,3))
+
+
+
+
 
 
 
