@@ -6,3 +6,6 @@ class Cars():
 
     def disp_car(self):
         return f'Car: {self.make, self.model, self.color}'
+
+    def horns_car(self):
+        return f'{self.make, self.model}: HOOOOOOORRRRAAAA!'
