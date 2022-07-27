@@ -1025,5 +1025,46 @@ import pandas as pd
 # print(human_years_cat_years_dog_years(2))
 # print(human_years_cat_years_dog_years(10))
 
+# def womens_age(n):
+#     if n % 2 == 0:
+#         return f'{n}? That\'s just 20, in base {int(n / 2)}!'
+#     else:
+#         return f'{n}? That\'s just 21, in base {int(n / 2)}!'
+# print(womens_age(32))
+# print(womens_age(39))
+
+# womens_age = lambda n : f'{n}? That\'s just 20, in base {int(n / 2)}!' if n % 2 == 0 else f'{n}? That\'s just 21, in base {int(n / 2)}!'
+# print(womens_age(32))
+# print(womens_age(39))
+
+# # min and max elements in the list
+# ls1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 111, -222]
+# def mn_mx_in_lst(ls1):
+#     mn =mx =ls1[0]
+#     for e in ls1:
+#         if mn > e: mn = e
+#         elif mx < e: mx = e
+#     return f'Min: {mn}; Max: {mx}'
+# print(mn_mx_in_lst(ls1))
+
+# # Given two numbers x and n, calculate the (positive) nth root of x; this means that being r = result, r^n = x
+# # Examples
+# # x = 4     n = 2  -->  2    # the square root of 4 is 2     2^2 = 4
+# # x = 8     n = 3  -->  2    # the cube root of 8 is 2       2^3 = 8
+# # x = 256   n = 4  -->  4    # the 4th root of 256 is 4      4^4 = 256
+# # x = 9     n = 2  -->  3    # the square root of 9 is 3     3^2 = 9
+# # x = 6.25  n = 2  -->  2.5  #                             2.5^2 = 6.25
+# def root(x, n):
+#     return x ** (1 / n)
+# print(root(8, 3))
+# print(root(6.25, 2))
+
+# root = lambda x, n : x ** (1.0 / n)
+# print(root(8, 3))
+# print(root(6.25, 2))
+
+
+
+
 
 
