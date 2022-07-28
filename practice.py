@@ -1077,6 +1077,49 @@ import pandas as pd
 # print(roots(5,2,4))
 # print(roots(1,4,3))
 
+# # Opening and closing file
+# f = open('practice.py')
+# file_contents = f.read()
+# print(file_contents)
+# f.close()
+
+# # __________ Contextual syntax
+# with open('practice.py') as f:
+#     file_contents = f.read()
+#     print(file_contents)
+#
+# # The unindented line below is outside the with... block
+# print(f'File is closed: {f.closed}')
+
+# # Basic syntax to open, read, and display file contents
+# f = open('practice.py')
+# file_contents = f.read()
+# print(file_contents)
+# # Return True if the file is closed, otherwise else.
+# print(f'File is closed: {f.closed}')
+#
+# # Closed the file
+# f.close() # Closes the file
+# print('__________') # Print a blank line
+
+# # __________ Contextual syntax
+# with open('practice.py') as f:
+#     file_contents = f.read()
+#     print(file_contents)
+#
+# # The unindented line below is outside the with... block
+# print(f'File is closed: {f.closed}')
+
+# # Opening .txt files with encoding set to utf-8
+# with open('requirements.txt', 'r', encoding = 'utf-16') as f: # errors = 'ignore'
+#     # Read entire file into variable named content.
+#     content = f.read()# f.readlines() f.readline()
+#     # Show that content
+#     print(content)
+
+
+
+
 
 
 
