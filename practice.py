@@ -1117,7 +1117,44 @@ import pandas as pd
 #     # Show that content
 #     print(content)
 
+# find unique number in the air
+# def find_uniq(arr):
+#     if len(arr) >= 3:
+#         unq = 0
+#         for i in range(len(arr) - 1):
+#             if (arr[i - 1] != arr[i] and arr[i - 1] != arr[i + 1]) or (arr[-3] != arr[-2] and arr[-3] == arr[-1] and arr[-2] != arr[-1]): unq += arr[i - 1]
+#         return unq
 
+# def find_uniq(arr):
+#     # your code here
+#     arr.sort()
+#     if(arr[0] < arr[len(arr)-1] and arr[0] < arr[len(arr)-2]):
+#         n = arr[0]
+#     else:
+#         n = arr[len(arr)-1]
+#     return n
+
+# def find_uniq(arr):
+#     a, b = set(arr)
+#     print(set(arr))
+#     return a if arr.count(a) == 1 else b
+
+# def find_uniq(arr):
+#     if arr.count(list(set(arr))[0]) > 1: return list(set(arr))[1]
+#     else: return list(set(arr))[0]
+
+# find_uniq = lambda arr: list(set(arr))[1] if arr.count(list(set(arr))[0]) > 1 else list(set(arr))[0]
+# print(find_uniq([ 1, 1, 1, 2, 1, 1 ])) # 2
+# print(find_uniq([ 0, 0, 0.55, 0, 0 ])) # 0.55
+# print(find_uniq([ 3, 10, 3, 3, 3 ])) # 10
+# print(find_uniq([ 3, 3, 3, 3, 3, 100 ])) # 100
+# print(find_uniq([ 3, 3, 3, 3, 6, 3 ])) # 6
+
+def fib(n):
+    if n == 0: return 0
+    elif n == 1: return 1
+    else: return fib(n - 1) + fib(n - 2)
+print(fib(4))
 
 
 

@@ -8,7 +8,7 @@
 # F2 = 1
 # Fn = Fn-1 + Fn-2
 
-n = int(input("Элемент ряда Фибоначчи: "))
+# n = int(input("Элемент ряда Фибоначчи: "))
 
 # def fibonacci(n):
 #     fibonacci1 = 1
@@ -25,7 +25,7 @@ n = int(input("Элемент ряда Фибоначчи: "))
 #
 # fibonacci(n)
 
-
+n = int(input("Элемент ряда Фибоначчи: "))
 def fibonacci_for(m):
     fibonacci1 = 1
     fibonacci2 = 1
