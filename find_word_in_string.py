@@ -4,7 +4,7 @@ if 'deloitte' in st.lower():
     res += 1
     print(f'1')
 
-"E:\Gurov_SSD_256\IT\Testing\Automation_08_09_2019\algorithms\venv\Scripts\python.exe E:/Gurov_SSD_256/IT/Testing/Automation_08_09_2019/algorithms/find_all_files_2.py
+"E:\Gurov_SSD_256\IT\Testing\Automation_08_09_2019\algorithms\venv\Scripts\python.exe E:/Gurov_SSD_256/IT/Testing/Automation_08_09_2019/algorithms/find_all_files_by_exten_2.py
 E:\Gurov_SSD_256\Books\(by-Ben-Stephenson)-The-Python-Workbook-A-Brief.pdf
 E:\Gurov_SSD_256\Books\1_STRIDE1.pdf
 E:\Gurov_SSD_256\Books\99-bottles-oop.pdf
