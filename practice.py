@@ -1150,18 +1150,57 @@ import pandas as pd
 # print(find_uniq([ 3, 3, 3, 3, 3, 100 ])) # 100
 # print(find_uniq([ 3, 3, 3, 3, 6, 3 ])) # 6
 
-def fib(n):
-    if n == 0: return 0
-    elif n == 1: return 1
-    else: return fib(n - 1) + fib(n - 2)
-print(fib(4))
+# # is it possible to build a triangle with such a sides
+# is_triangle = lambda a, b, c: True if a + b > c and b + c > a and c + a > b else False
 
+# def how_many_dalmatians(n):
+#     dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"]
+#     if n <= 10: return dogs[0]
+#     elif n <= 50: return dogs[1]
+#     elif n == 101: return dogs[3]
+#     else: return dogs[2]
+# print(how_many_dalmatians(101))
 
+# from math import *
+# litres = lambda time: floor(time * 0.5)
+# print(litres(2))
+# print(litres(1.4))
 
+# seats_in_theater = lambda tot_cols, tot_rows, col, row: (tot_cols - col + 1) * (tot_rows - row)
+# print(seats_in_theater(16, 11, 5, 3))
 
+# def is_very_even_number(n):
+#     if sum([int(i) for i in str(sum([int(i) for i in str(n)]))]) % 2 == 0: return True
+#     else: return False
 
+# is_very_even_number = lambda n: True if sum([int(i) for i in str(sum([int(i) for i in str(n)]))]) % 2 == 0 else False
 
+# def is_very_even_number(n):
+#     if 0 <= n <= 9:
+#         if n % 2 == 0 or n == 0: return True
+#         else: return False
+#     else:
+#         res = 0; str_n = str(n)
+#         for el in str_n:
+#             res += int(el)
+#         return is_very_even_number(res)
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
 
+# def is_very_even_number(n):
+#     while len(str(n)) > 1:
+#         n = sum(int(x) for x in str(n))
+#     return True if n % 2 == 0 else False
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
 
 
 
