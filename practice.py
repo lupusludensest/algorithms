@@ -1172,8 +1172,20 @@ import pandas as pd
 # def is_very_even_number(n):
 #     if sum([int(i) for i in str(sum([int(i) for i in str(n)]))]) % 2 == 0: return True
 #     else: return False
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
 
 # is_very_even_number = lambda n: True if sum([int(i) for i in str(sum([int(i) for i in str(n)]))]) % 2 == 0 else False
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
 
 # def is_very_even_number(n):
 #     if 0 <= n <= 9:
@@ -1202,5 +1214,156 @@ import pandas as pd
 # print(is_very_even_number(937))
 # print(is_very_even_number(199))
 
+# def is_very_even_number(n):
+#     if (0 <= n < 10 and n % 2 == 0) or (sum(int(x) for x in str(n)) % 2 == 0): return True
+#     return False
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
 
+# def is_very_even_number(n):
+#     while len(str(n)) > 1:
+#         n = sum(int(i) for i in str(n))
+#     if n % 2 == 0:
+#      return True
+#     else:
+#      return False
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
 
+# def is_very_even_number(n):
+#     while len(str(n)) > 1:
+#         n = sum(int(x) for x in str(n))
+#     return True if n % 2 == 0 else False
+# print(is_very_even_number(4))
+# print(is_very_even_number(5))
+# print(is_very_even_number(88))
+# print(is_very_even_number(222))
+# print(is_very_even_number(937))
+# print(is_very_even_number(199))
+
+# interview 02 august 2022
+# Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
+# More formally check if there exists two indices i and j such that :
+
+# Input: arr = [10,2,5,3]
+# Output: true
+# Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
+
+# Input: arr = [3,1,7,11]
+# Output: false
+# Explanation: In this case does not exist N and M, such that N = 2 * M.
+
+# task is to find element/s 2 times bigger than other/s
+# lst1 = [10, 2, 3, 5] # lst1 = [-8, -4, 1, 2, 10, 6, 8, 5, 77, -100]
+# def fnd_int_tw_tm_bg_th_thr(lst1):
+#     res = []
+#     for i in range(0, len(lst1)):
+#         for j in range(0, len(lst1)):
+#             if lst1[i] / 2 == lst1[j]:
+#                 res.append((lst1[i], lst1[j]))
+#     return res
+# print(fnd_int_tw_tm_bg_th_thr(lst1))
+
+# test above mentioned function fnd_dbld_elmn
+# happy pass: int, float, str, complex, Boolean, list, set, dict
+# < 0, 0, 0 < n < big_num,
+# negative pass: not list type in arg
+
+# def calculate_years(principal, interest, tax, desired):
+#     if principal >= desired:
+#         return 0
+#     result = principal * interest * (1 - tax) + principal
+#     return 1 if result >= desired else 1 + calculate_years(result, interest, tax, desired)
+# print(calculate_years(1000, 0.05, 0.18, 1100))
+
+# def calculate_years(principal, interest, tax, desired):
+#     years = 0
+#     while principal < desired:
+#         principal += principal * interest * (1 - tax)
+#         years += 1
+#     return years
+# print(calculate_years(1000, 0.05, 0.18, 1100))
+
+# codewars The wheat/rice and chessboard problem
+# I assume most of you are familiar with the ancient legend of the rice
+# (but I see wikipedia suggests wheat, for some reason) problem,
+# but a quick recap for you: a young man asks as a compensation
+# only 1 grain of rice for the first square, 2 grains for the second,
+# 4 for the third, 8 for the fourth and so on, always doubling the previous.
+# def squares_needed(grains):
+#     square = 0; grains_r = 1
+#     while grains_r <= grains:
+#         grains_r *= 2
+#         square += 1
+#     return square
+# print(squares_needed(0)) # 0 grains in 0th square/0=0
+# print(squares_needed(1)) # 1 grains in 1th square/1=1
+# print(squares_needed(2)) # 2 grains in 2d square/2=2
+# print(squares_needed(3)) # 3 grains in 2d square/3=4
+# print(squares_needed(4)) # 4 grains in 3d square/4=8
+# print(squares_needed(5)) # 4 grains in 3d square/4=8
+# print(squares_needed(9223372036854775808)) # 9223372036854775808 grains in 64th square
+
+# def squares_needed(grains):
+#     if grains <= 0: return 0
+#     else:
+#          grains_r = 0
+#          for i in range(grains):
+#             grains_r += 2**i
+#             if grains_r >= grains: return i + 1
+# print(squares_needed(0)) # 0 grains in 0th square/0=0
+# print(squares_needed(1)) # 1 grains in 1th square/1=1
+# print(squares_needed(2)) # 2 grains in 2d square/2=2
+# print(squares_needed(3)) # 3 grains in 2d square/3=4
+# print(squares_needed(4)) # 4 grains in 3d square/4=8
+# print(squares_needed(5)) # 4 grains in 3d square/4=8
+# print(squares_needed(9223372036854775808)) # 9223372036854775808 grains in 64th square
+
+# def squares_needed(grains):
+#     return next(i for i in range(99) if 1<<i > grains)
+# print(squares_needed(0)) # 0 grains in 0th square/0=0
+# print(squares_needed(1)) # 1 grains in 1th square/1=1
+# print(squares_needed(2)) # 2 grains in 2d square/2=2
+# print(squares_needed(3)) # 3 grains in 2d square/3=4
+# print(squares_needed(4)) # 4 grains in 3d square/4=8
+# print(squares_needed(5)) # 4 grains in 3d square/4=8
+# print(squares_needed(9223372036854775808)) # 9223372036854775808 grains in 64th square
+
+# def squares_needed(grains):
+#     if not grains: return grains
+#     squares = 1
+#     while 2 ** squares <= grains:
+#         squares += 1
+#     return squares
+# print(squares_needed(0)) # 0 grains in 0th square/0=0
+# print(squares_needed(1)) # 1 grains in 1th square/1=1
+# print(squares_needed(2)) # 2 grains in 2d square/2=2
+# print(squares_needed(3)) # 3 grains in 2d square/3=4
+# print(squares_needed(4)) # 4 grains in 3d square/4=8
+# print(squares_needed(5)) # 4 grains in 3d square/4=8
+# print(squares_needed(9223372036854775808)) # 9223372036854775808 grains in 64th square
+
+# def grains(square):
+#     if type(square) == int and square == 0: return '(0, 0)'
+#     elif type(square) == int and 0 <= square <= 64:
+#         grains = []
+#         for i in range(0, square + 1):
+#             grains.append(2 ** (square - 1))
+#         return (square, grains[-1])
+#         return False
+# print(grains(0))
+# print(grains(1))
+# print(grains(2))
+# print(grains(3))
+# print(grains(4))
+# print(grains(5))
+# print(grains(64))
+# print(grains('Test'))
