@@ -1367,3 +1367,247 @@ import pandas as pd
 # print(grains(5))
 # print(grains(64))
 # print(grains('Test'))
+
+# def get_ages(sum, difference):
+#     a1 = sum - (sum - difference) / 2; a2 = sum - a1
+#     if sum < 0 or difference < 0 or a1 < 0 or a2 < 0:
+#         return None
+#     elif a1 > a2:
+#             return (a1, a2)
+#     else:
+#         return (a2, a1)
+# print(get_ages(24, 4)) # (14, 10)
+# print(get_ages(63, -14)) # None
+# print(get_ages(35.0, -9.0)) # None
+# print(get_ages(23.0, -4.0)) # None
+# print(get_ages(47.0, -4.0)) # None
+# print(get_ages(42.0, -1.0)) # None
+# print(get_ages(30.0, -6.0)) # None
+# print(get_ages(31.0, -6.0)) # None
+# print(get_ages(18.0, -3.0)) # None
+# print(get_ages(49.0, -2.0)) # None
+# print(get_ages(26.0, -4.0)) # None
+
+# get_ages = lambda s, d: None if (s < 0 or d < 0 or (s + d) / 2 < 0 or s - (s + d) / 2 < 0) else ((s + d) / 2, s - (s + d) / 2)
+# print(get_ages(24, 4)) # (14, 10)
+# print(get_ages(63, -14)) # None
+# print(get_ages(35.0, -9.0)) # None
+# print(get_ages(23.0, -4.0)) # None
+# print(get_ages(47.0, -4.0)) # None
+# print(get_ages(42.0, -1.0)) # None
+# print(get_ages(30.0, -6.0)) # None
+# print(get_ages(31.0, -6.0)) # None
+# print(get_ages(18.0, -3.0)) # None
+# print(get_ages(49.0, -2.0)) # None
+# print(get_ages(26.0, -4.0)) # None
+
+# def perfect_roots(n):
+#     print(str(n ** 0.5))
+#     print(str(str((n ** 0.5) ** 0.5)))
+#     print(str(str((n ** 0.5) ** 0.5)))
+#     print(str(((n ** 0.5) ** 0.5) ** 0.5))
+#     if str(n ** 0.5).endswith('0') and str((n ** 0.5) ** 0.5).endswith('0') and str(((n ** 0.5) ** 0.5) ** 0.5).endswith('0'):
+#         return True
+#     else:
+#         return False
+# print(perfect_roots(256))
+# print(perfect_roots(1000))
+
+# def perfect_roots(n):
+#     print(str(n ** 0.5))
+#     print(str(str((n ** 0.5) ** 0.5)))
+#     print(str(str((n ** 0.5) ** 0.5)))
+#     print(str(((n ** 0.5) ** 0.5) ** 0.5))
+#     if n ** 0.5 % 1 == 0 and ((n ** 0.5) ** 0.5) % 1 == 0 and (((n ** 0.5) ** 0.5) ** 0.5) % 1 == 0:
+#         return True
+#     else:
+#         return False
+# print(perfect_roots(256))
+# print(perfect_roots(1000))
+
+# perfect_roots = lambda n: True if (n ** (1/8)) % 1 == 0 else False
+# print(perfect_roots(256))
+# print(perfect_roots(1000))
+
+# perfect_roots = lambda n: not (n ** (1/8)) % 1
+# print(perfect_roots(256))
+# print(perfect_roots(1000))
+
+# def disemvowel(string):
+#     vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+#     for i in range(0, len(string)):
+#         for j in range(0, len(vowels)):
+#             if vowels[j] in string:
+#                 string = string.replace(vowels[j], '')
+#     return string
+# print(disemvowel('This website is for losers LOL!')) # 'Ths wbst s fr lsrs LL!'
+
+# def is_divisible(n, x, y):
+#     if (n >= 0 or x >= 0 or y > 0) and (n % x == 0 and n % y == 0):
+#         return True
+#     else:
+#         return False
+# print(is_divisible(3,3,4))
+# print(is_divisible(12,3,4))
+# print(is_divisible(8,3,4))
+# print(is_divisible(48,3,4)
+
+# is_divisible = lambda n, x, y: True if (n >= 0 or x >= 0 or y > 0) and (n % x == 0 and n % y == 0) else False
+# print(is_divisible(3, 3, 4))
+# print(is_divisible(12, 3, 4))
+# print(is_divisible(8, 3, 4))
+# print(is_divisible(48, 3, 4))
+
+# is_divisible = lambda n, x, y:  n % x == 0 and n % y == 0
+# print(is_divisible(3, 3, 4))
+# print(is_divisible(12, 3, 4))
+# print(is_divisible(8, 3, 4))
+# print(is_divisible(48, 3, 4))
+
+# is_lucky = lambda _: _ % 9 == 0
+# print(is_lucky(9))
+# print(is_lucky(35))
+
+# def remainder(dividend, divisor):
+#     if dividend >= divisor:
+#         rmndr = dividend // divisor
+#         print(rmndr)
+#         return dividend - rmndr * divisor
+# print(remainder(3, 2))
+# print(remainder(19, 2))
+
+# remainder = lambda dividend, divisor: dividend - dividend // divisor * divisor
+# print(remainder(3, 2))
+# print(remainder(19, 2))
+
+# def sum_mul(n, m):
+#     if n <= 0 or m <= 0:
+#         return "INVALID"
+#     else:
+#         res = sum(x for x in range(n, m) if x % n == 0)
+#         return res
+# print(sum_mul(0, 0))
+# print(sum_mul(2, 9))
+# print(sum_mul(4, -7))
+
+# sum_mul = lambda n, m: "INVALID" if n <= 0 or m <= 0 else sum(x for x in range(n, m) if x % n == 0)
+# print(sum_mul(0, 0))
+# print(sum_mul(2, 9))
+# print(sum_mul(4, -7))
+
+# def sum_mul(n, m):
+#     return sum(range(n, m, n)) if n > 0 < m else "INVALID"
+# print(sum_mul(0, 0))
+# print(sum_mul(2, 9))
+# print(sum_mul(4, -7))
+
+# sum_mul = lambda n, m: sum(range(n, m, n)) if n > 0 < m else "INVALID"
+# print(sum_mul(2, 9))
+# print(sum_mul(4, -7))
+
+# def calculate_age(year_of_birth, current_year):
+#     if year_of_birth == current_year: return "You were born this very year!"
+#     elif current_year - year_of_birth == 1: return f'You are {current_year - year_of_birth} year old.'
+#     elif year_of_birth - current_year == 1: return f'You will be born in {year_of_birth - current_year} year.'
+#     elif year_of_birth > current_year: return f'You will be born in {year_of_birth - current_year} years.'
+#     else: return f'You are {current_year - year_of_birth} years old.'
+# print(calculate_age(2012, 2016))
+# print(calculate_age(2016, 1989))
+# print(calculate_age(2000, 1999))
+# print(calculate_age(2000, 2001))
+# print(calculate_age(2000, 2000))
+
+# calculate_age = lambda dob, now: f"You will be born in {dob-now} {'years'if dob-now>1 else 'year'}." if dob>now else "You were born this very year!" if dob==now else f"You are {now-dob} {'years'if now-dob>1 else 'year'} old."
+# print(calculate_age(2012, 2016))
+# print(calculate_age(2016, 1989))
+# print(calculate_age(2000, 1999))
+# print(calculate_age(2000, 2001))
+# print(calculate_age(2000, 2000))
+
+# no_space = lambda x: x.replace(' ', '')
+# print(no_space('hello world'))
+# print(no_space('You were born this very year!'))
+
+# break_chocolate = lambda n, m: max(0, n * m - 1)
+# print(break_chocolate(5, 5))
+# print(break_chocolate(7, 4))
+# print(break_chocolate(1, 1))
+# print(break_chocolate(0, 0))
+# print(break_chocolate(6, 1))
+
+# round_to_next5 = lambda n: n if n % 5 == 0 else n - n % 5 + 5
+# print(round_to_next5(0))
+# print(round_to_next5(5))
+# print(round_to_next5(12))
+# print(round_to_next5(25))
+# print(round_to_next5(30))
+
+# def validate_pin(pin):
+#     valid_nums_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; pin = list(str(pin))
+#     if (len(pin) != 4) and (len(pin) != 6): return False
+#     else:
+#         for e in pin:
+#             if e not in valid_nums_list: return False
+#     return True
+# print(validate_pin(1234))
+# print(validate_pin(123456))
+# print(validate_pin(123))
+# print(validate_pin(1234567))
+# print(validate_pin('a234'))
+# print(validate_pin(.234))
+# print(validate_pin(-123))
+
+# validate_pin = lambda pin: len(str(pin)) in (4, 6) and str(pin).isdigit()
+# print(validate_pin(1234))
+# print(validate_pin(123456))
+# print(validate_pin(123))
+# print(validate_pin(1234567))
+# print(validate_pin('a234'))
+# print(validate_pin(.234))
+# print(validate_pin(-123))
+
+# def calculate(a, o, b):
+#     if (o == "+"): return a + b
+#     elif (o == "-"): return a - b
+#     elif (o == "/" and b != 0): return a / b
+#     elif (o == "*"): return a * b
+#     else: None
+# print(calculate(6,"-", 1.5)) # 4.5
+# print(calculate(-4,"*", 8)) # -32
+# print(calculate(49,"/", -7)) # -7
+# print(calculate(8,"m", 2)) # None
+# print(calculate(4,"/",0)) # None
+
+# calculate=lambda a,o,b: eval(str(a) + o + str(b)) if o in '+-/*' and o+str(b) != '/0' else None
+# print(calculate(6,"-", 1.5)) # 4.5
+# print(calculate(-4,"*", 8)) # -32
+# print(calculate(49,"/", -7)) # -7
+# print(calculate(8,"m", 2)) # None
+# print(calculate(4,"/",0)) # None
+
+# def largest_power(N):
+#     if N >= 0 and type(N) == int:
+#         k = 0
+#         while 3 ** k < N:
+#             k += 1
+#         return k - 1
+#     else:
+#         return False
+# print(largest_power(3)) # 0
+# print(largest_power(4)) # 1
+# print(largest_power(100)) # 4
+# print(largest_power(-4)) # False
+
+# from math import log
+# def largest_power(n):
+#     if n >= 0 and type(n) == int:
+#         k = int(log(n, 3)) # логарифм это целое число-логарифм числа "n" по основанию "3"
+#         return k if 3 ** k < n else k - 1
+#     return False
+# print(largest_power(3)) # 0
+# print(largest_power(4)) # 1
+# print(largest_power(100)) # 4
+# print(largest_power(-4)) # False
+
+
+
