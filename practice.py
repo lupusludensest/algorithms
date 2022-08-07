@@ -1609,5 +1609,19 @@ import pandas as pd
 # print(largest_power(100)) # 4
 # print(largest_power(-4)) # False
 
+# def series_sum(n):
+#     res = 0
+#     for i in range(0, n): res += 1 / (1 + (3 * i))
+#     return f'{res:.2f}'
+# print(series_sum(1)) # 1.00
+# print(series_sum(2)) # 1 + 1 / 4 --> 1.25
+# print(series_sum(5)) # 1 + 1 / 4 + 1 / 7 + 1 / 10 + 1 / 13--> 1.57
 
+# series_sum = lambda n: f'{(sum(1 / (1 + (3 * i)) for i in range(0, n))):.2f}'
+# print(series_sum(1)) # 1.00
+# print(series_sum(2)) # 1 + 1 / 4 --> 1.25
+# print(series_sum(5)) # 1 + 1 / 4 + 1 / 7 + 1 / 10 + 1 / 13--> 1.57
+
+# friend = lambda x: [f_x for f_x in x if len(f_x) == 4]
+# print(friend(["Ryan", "Kieran", "Jason", "Yous"]))
 
