@@ -1625,3 +1625,72 @@ import pandas as pd
 # friend = lambda x: [f_x for f_x in x if len(f_x) == 4]
 # print(friend(["Ryan", "Kieran", "Jason", "Yous"]))
 
+# def accum(x):
+#     # your code
+#     anss = ''
+#     i = 0
+#     while i < len(x):
+#         n = 0
+#         while n < i + 1:
+#             if n == 0: anss += x[i].upper()
+#             else: anss += x[i].lower()
+#             n += 1
+#         anss += '-'
+#         i += 1
+#     return anss[:len(anss)-1]
+# print(accum("ZpglnRxqenU")) # "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu"
+
+# accum = lambda x: '-'.join([c.upper() + c.lower() * i for i, c in enumerate(x)])
+# print(accum("ZpglnRxqenU")) # "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu"
+
+# def cookie(x):
+#     if type(x) == str: return "Who ate the last cookie? It was Zach!"
+#     elif type(x) == int or type(x) == float: return "Who ate the last cookie? It was Monica!"
+#     return "Who ate the last cookie? It was the dog!"
+# print(cookie("Ryan"))
+# print(cookie(2.3))
+# print(cookie(26))
+# print(cookie(True))
+
+# cookie = lambda x: f'Who ate the last cookie? It was {"Zach" if type(x) is str else "Monica" if type(x) in [int, float] else "the dog"}!'
+# print(cookie("Ryan"))
+# print(cookie(2.3))
+# print(cookie(26))
+# print(cookie(True))
+
+# say_hello = lambda name: f'Hello, {name}'
+# print(say_hello('Mr. Spock'))
+
+# def two_decimal_places(n):
+#     return round(n, 2)
+# print(two_decimal_places(4.659725356))
+# print(two_decimal_places(173735326.3783732637948948))
+
+# two_decimal_places = lambda n: round(n, 2)
+# print(two_decimal_places(4.659725356))
+# print(two_decimal_places(173735326.3783732637948948))
+
+# def century(n):
+#     if n % 100 > 0:
+#         return n // 100 + 1
+#     else:
+#         return n // 100
+# print(century(1705))
+# print(century(1900))
+
+# century = lambda n: n // 100 + 1 if n % 100 > 0 else n // 100
+# print(century(1705))
+# print(century(1900))
+
+# bool_to_word = lambda boolean: 'Yes' if boolean == True else 'No'
+# print(bool_to_word(True))
+# print(bool_to_word(not True))
+# print(bool_to_word(False))
+# print(bool_to_word(not False))
+
+# bool_to_word = ['No','Yes'].__getitem__
+# print(bool_to_word(True))
+# print(bool_to_word(not True))
+# print(bool_to_word(False))
+# print(bool_to_word(not False))
+
