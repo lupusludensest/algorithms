@@ -1694,3 +1694,171 @@ import pandas as pd
 # print(bool_to_word(False))
 # print(bool_to_word(not False))
 
+# def odd_count(n):
+#     res = []
+#     for e in range(0, n):
+#         if e % 2 != 0 and e < n:
+#             res.append(e)
+#     return len(res)
+# print(odd_count(7)) # 3
+# print(odd_count(15)) # 7
+# print(odd_count(15023)) # 7511
+
+# odd_count = lambda n: n // 2
+# print(odd_count(7)) # 3
+# print(odd_count(15)) # 7
+# print(odd_count(15023)) # 7511
+
+# import math
+# def find_slope(points):
+#     if points[2] == points[0]:
+#         return "undefined"
+#     elif (points[3] - points[1]) / (points[2] - points[0]) == 0:
+#         return "0"
+#     else:
+#         return str(math.ceil((points[3] - points[1]) / (points[2] - points[0])))
+# print(find_slope([19,3,20,3])) # "0"
+# print(find_slope([-7,2,-7,4])) # "undefined"
+# print(find_slope([10,50,30,150])) # "5"
+# print(find_slope([10,20,20,80])) # "6"
+# print(find_slope([-10,6,-10,3])) # "undefined"
+
+# import math
+# find_slope = lambda points: "undefined" if points[2] == points[0] else "0" if (points[3] - points[1]) / (points[2] - points[0]) == 0 else str(math.ceil((points[3] - points[1]) / (points[2] - points[0])))
+# print(find_slope([19,3,20,3])) # "0"
+# print(find_slope([-7,2,-7,4])) # "undefined"
+# print(find_slope([10,50,30,150])) # "5"
+# print(find_slope([10,20,20,80])) # "6"
+# print(find_slope([-10,6,-10,3])) # "undefined"
+
+# def rain_amount(mm):
+#     if mm >= 40:
+#         return f"Your plant has had more than enough water for today!"
+#     else:
+#         return f"You need to give your plant {40 - mm}mm of water"
+# print(rain_amount(100))
+# print(rain_amount(40))
+# print(rain_amount(39))
+
+# rain_amount = lambda mm: f"Your plant has had more than enough water for today!" if mm >= 40 else f"You need to give your plant {40 - mm}mm of water"
+# print(rain_amount(100))
+# print(rain_amount(40))
+# print(rain_amount(39))
+
+# def draw_stairs(n):
+#     res = ''
+#     for e in range(0, n):
+#         res += e * ' ' + 'I\n'
+#     return res[:-1]
+# print(draw_stairs(3))
+
+# draw_stairs = lambda n: '\n'.join([e * ' ' + 'I' for e in range(0, n)])
+# print(draw_stairs(3))
+
+# draw_stairs = lambda n: ''.join(e * ' ' + 'I\n' for e in range(0, n))[:-1]
+# print(draw_stairs(3))
+
+# def add_five(num):
+#     total = num + 5; return total
+# print(add_five(5)) # 10
+# print(add_five(0)) #  5
+# print(add_five(-5)) # 0
+
+# add_five = lambda num: num + 5
+# print(add_five(5)) # 10
+# print(add_five(0)) #  5
+# print(add_five(-5)) # 0
+
+# def chromosome_check(sperm):
+#     if sperm == 'XY':
+#         return f"Congratulations! You\'re going to have a son."
+#     else:
+#         return f"Congratulations! You\'re going to have a daughter."
+# print(chromosome_check('XY'))
+# print(chromosome_check('XX'))
+
+# chromosome_check = lambda sperm: f"Congratulations! You\'re going to have a son." if sperm == 'XY' else f"Congratulations! You\'re going to have a daughter."
+# print(chromosome_check('XY'))
+# print(chromosome_check('XX'))
+
+# def my_first_kata(a, b):
+#     if type(a) == type(b) in [int, float, complex]: return a % b + b % a
+#     return False
+# print(my_first_kata(3,5)) # 5
+# print(my_first_kata("hello",3)) # False
+# print(my_first_kata(67,"bye")) # False
+# print(my_first_kata(True,True)) # False
+# print(my_first_kata(314,107)) # 207
+# print(my_first_kata(1,32)) # 1
+# print(my_first_kata(-1,-1)) # 0
+# print(my_first_kata(19483,9)) # 16
+
+# my_first_kata = lambda a, b: a % b + b % a if type(a) == type(b) in [int, float, complex] else False
+# print(my_first_kata(3,5)) # 5
+# print(my_first_kata("hello",3)) # False
+# print(my_first_kata(67,"bye")) # False
+# print(my_first_kata(True,True)) # False
+# print(my_first_kata(314,107)) # 207
+# print(my_first_kata(1,32)) # 1
+# print(my_first_kata(-1,-1)) # 0
+# print(my_first_kata(19483,9)) # 16
+
+# def sale_hotdogs(n):
+#     if n < 5:
+#         return 100 * n
+#     elif 5 <= n < 10:
+#         return 95 * n
+#     elif 10 <= n:
+#         return 90 * n
+#     else:
+#         return "Error"
+# print(sale_hotdogs(0))  # 0
+# print(sale_hotdogs(1))  # 100
+
+# sale_hotdogs = lambda n: 100 * n if n < 5 else 95 * n if 5 <= n < 10 else 90 * n if 10 <= n else False
+# print(sale_hotdogs(0))  # 0
+# print(sale_hotdogs(1))  # 100
+
+# import math
+# fun = lambda x : 1 if x == 1 else math.ceil(math.sinh(fun (x-1)))
+# print(fun(5))
+
+# from selenium import webdriver
+# browser = webdriver.Chrome()
+# browser.execute_script("document.title='Script executing';alert('Robots at work');")
+
+
+# Вы создаете систему продажи билетов. Цена одного билета составляет $100.
+# Но для детей младше трех лет билет бесплатный. Ваша программа должна принимать возраст 5
+# пассажиров в качестве входных данных и выводить общую цену их билетов.
+# Пример Входных Данных
+# 18
+# 24
+# 2
+# 5
+# 42
+#
+# Пример Выходных Данных
+# 400
+
+# res = 0
+# for el in range(0, 5):
+#     age = int(input('Enter the age: '))
+#     if age < 3: res += 0
+#     else: res += 100
+# print(f'Total sum for tickets: ${res}')
+
+# total = 0
+# i = 0
+# while i < 5:
+#     i += 1
+#     age = int(input('Enter the age: '))
+#     if age < 3: continue
+#     else: total += 100
+# print(total)
+
+
+
+
+
+
