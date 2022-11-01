@@ -1875,8 +1875,219 @@ import pandas as pd
 #         # loop fell through without finding a factor
 #         print(n, 'is a prime number')
 
+# // Are you here, copilot?
+# // Yes, I'm here, captain.
+# // Whose Crimea now?
+# // It's ours, captain.
+# // What is more popular Python or Java?
+# // Python, captain.
 
+# class Calculator:
+#     current = 0
+#
+#     def add(self, number):
+#         self.current += number
+#
+#     def multiply(self, number):
+#         self.current *= number
+#
+#     def exponentiate(self, power):
+#         base = self.current # TODO: set the exponentiation `base`, it should be equal to the current value.
+#         for i in range(power - 1):
+#             self.multiply(base)
+#             # TODO: use the `multiply` method with the parameter `base` to calculate the result.
+#
+#     def get_current(self):
+#         return self.current
+#
+#
+# calc = Calculator()  # Initialize calculator.
+# print(calc.get_current())  # Make sure the start value is 0.
+#
+# calc.add(2)  # Add 2.
+# print(calc.get_current())  # Print the result, it should be 2.
+#
+# calc.multiply(3)  # Multiply by 3.
+# print(calc.get_current())  # Print the result, it should be 6.
 
+# calc.exponentiate(3)  # Raise to the power of 3.
+# print(calc.get_current())  # Print the result, it should be 216.
 
+# # Conditional if
+# a = [1, -100, 101.1, 'World', [1, -100, 101.1, 'World']]
+# intg = []
+# fltl = []
+# strl = []
+# lstl = []
+# for element in a:
+#     if type(element) == int:
+#         # print(element, end='; ')
+#         intg.append(element)
+#     elif type(element) == float:
+#         fltl.append(element)
+#     elif type(element) == str:
+#         strl.append(element)
+#     else:
+#         lstl.append(element)
+#
+# print(intg)
+# print(fltl)
+# print(strl)
+# print(lstl)
 
+# class Complex:
+#     def __init__(self, real_part, imag_part):
+#         self.real = real_part
+#         self.img = imag_part
+#
+#     def __repr__(self):
+#         return f'Complex(10, 20)'
+#
+#     def __str__(self):
+#         return f'{self.real} + i{self.img}'
+#
+#
+# x = Complex(2, 5)
+# print(str(x))
+# print(repr(x))
+
+# пять_парафраз_одного_принципа_разных_культур_и_эпох = [
+#     "1. Ленин В.И. Принцип необходимости и достаточности;",
+#     "2. Американский KISS-keep it simple, stupid;",
+#     "3. Американский же YAGNI-you aren't gonna need it;",
+#     "4. Occam Razor, бритва Оккама, средневекового философа;",
+#     "5. Не делай сегодня того, что можно отложить на завтра. Народная мудрость."
+# ]
+#
+# пять_факторов_куэев = [
+# '* 1-н мозг для процессинга',
+# '* 2-е руки для клавы и тачскрина',
+# '* 2-глаза для мониторов',
+# '* 2-а уха и',
+# '* 1-н рот-соблюдать пропорцию слушать в 2-а раза больше, чем говорить. Все остальное опции.'
+# ]
+# def five_paraphrases(пять_парафраз_одного_принципа_разных_культур_и_эпох):
+#     for i in пять_парафраз_одного_принципа_разных_культур_и_эпох:
+#         print(i)
+#     return "Конец списка"
+#
+# print(five_paraphrases([
+# "1. Ленин В.И. Принцип необходимости и достаточности;",
+# "2. Американский KISS-keep it simple, stupid;",
+# "3. Американский же YAGNI-you aren't gonna need it;",
+# "4. Occam Razor, бритва Оккама, средневекового философа;",
+# "5. Не делай сегодня того, что можно отложить на завтра. Народная мудрость."
+# ]))
+#
+# def five_qa_factors(пять_факторов_куэев):
+#     for i in пять_факторов_куэев:
+#         print(i)
+#     return "Конец списка"
+#
+# print(five_qa_factors([
+# '* 1-н мозг для процессинга',
+# '* 2-е руки для клавы и тачскрина',
+# '* 2-глаза для мониторов',
+# '* 2-а уха и',
+# '* 1-н рот-соблюдать пропорцию слушать в 2-а раза больше, чем говорить. Все остальное опции.'
+# ]
+# ))
+
+# The `favorite_food` list in the following code should not be used as a
+# class variable because a single list would be shared by all `Cat` instances:
+# class Cat:
+#
+#     favorite_food = []
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def add_food(self, food):  # Method modifying the class variable
+#         self.favorite_food.append(food)
+#
+#
+# kitty = Cat('Kitty')
+# barsik = Cat('Barsik')
+# kitty.add_food('salmon')  # We are only adding a fave food for Kitty, but Barsik gets it too
+# print(barsik.favorite_food)
+
+# # Because every cat has its own favorite food,
+# # this class should be instead implemented as follows:
+# class Cats:
+#
+#     def __init__(self, name):
+#         self.name = name
+#         self.favorite_food = []
+#
+#     def add_food(self, food):  # Method modifying an instance variable
+#         self.favorite_food.append(food)
+#
+#
+# kitty = Cats('Kitty')
+# barsik = Cats('Barsik')
+# kitty.add_food('salmon')
+# print(barsik.favorite_food)  # This time it's empty!
+# print(kitty.favorite_food)
+
+# class Animals:
+#     # Add a class variable `kind` and assign it the required value.
+#     kind = ''
+#
+#     def __init__(self, name, species):
+#         # Add an instance variable `name`.
+#         # pass
+#         # Add an instance variable `species`.
+#         self.name = name
+#         self.species = species
+#         self.kind = 'pets'
+#
+#     def __str__(self):
+#         return f'\nThis is {self.name} the {self.species}, one of my {self.kind}.'
+#
+#
+# george = Animals('George', 'rabbit')
+# sally = Animals('Sally', 'horse')
+# doggie = Animals('Doggie', 'dog')
+# print(george, sally)
+# print(type(george.kind))
+# print(type(doggie))
+# print(type(doggie.kind))
+
+# class City:
+#     # TODO: add a mutable class variable (all_cities list) to store all added city names
+#     all_cities = []
+#
+#     def __init__(self, name, population, country):
+#         self.name = name
+#         self.population = population
+#         self.country = country
+#         self.add_city()
+#         # TODO: call add_city method to add the city name to the list upon object initialization
+#
+#     def add_city(self):
+#         # pass
+#         # TODO: implement a method that will append a city name to the all_cities list. Delete the pass statement!
+#         self.all_cities.append(self.name)
+#
+#
+# if __name__ == '__main__':
+#     malaga = City('Malaga', 569005, 'Spain')
+#     boston = City('Boston', 689326, 'USA')
+#     beijing = City('Beijing', 21540000, 'China')
+#
+#     print(malaga.all_cities)  # This should print "['Malaga', 'Boston', 'Beijing']".
+
+# import my_module
+# # Import the module `calculator` here
+# import calculator
+#
+# my_module.hello_world("John")
+#
+#
+# calc = calculator.Calculator() # 'Create a new instance of Calculator class defined in calculator'
+# for i in range(100):
+#     calc.add(i)
+#     # Use Calculator method `add` to add `i` to the current value.
+#
+# print(calc.get_current())
 
