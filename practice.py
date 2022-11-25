@@ -2091,3 +2091,46 @@ import pandas as pd
 #
 # print(calc.get_current())
 
+# # Checking if are two objects equal and are they one the same object
+# lst_1 = [1, 2, 3]
+# lst_2 = [1, 2, 3]
+# if lst_1 == lst_2:
+#     print(f"lst_1: {lst_1} == lst_2: {lst_2}\n")
+# else:
+#     print(f"lst_1: {lst_1} != lst_2: {lst_2}\n")
+#
+# if id(lst_1) == id(lst_2):
+#     print(f"id(lst_1): {id(lst_1)} == id(lst_2): {id(lst_2)}\n")
+# else:
+#     print(f"id(lst_1): {id(lst_1)} != id(lst_2): {id(lst_2)}\n")
+#
+# if lst_1 is lst_2:
+#     print(f"address lst_1: {lst_1} is address lst_2: {lst_2}\n")
+# else:
+#     print(f"address lst_1: {lst_1} is not address lst_2: {lst_2}\n")
+
+# zoo = ["lion", "elephant", "monkey"]
+# number = 15
+#
+# with open("output.txt", 'a') as f:
+#     f.write('\n' + ' and '.join(zoo) + '\n' + str(number))
+#     # f.write('\n' + str(number))
+#     # On a new line in  "output.txt", add all elements from the zoo list, joined by " and "
+#     # Add the number to the output as well
+
+# import numpy as np  # Importing the NumPy module
+#
+# a = np.arange(6)  # Creating an array of integers from 0 to 5
+# b = np.array([1, 2, 3, 4, 5, 6])  # Creating an array of integers from 1 to 6
+# c = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])  # Creating a 2-D (two-dimensional) array of shape (3, 4)
+#
+# if __name__ == "__main__":
+#     print(f'An array of integers from 0 to 5: "{a}"\nType of a: "{type(a)}"\n')
+#     print(f'An array of integers from 1 to 6: "{b}"\nType of a: "{type(b)}"\n')
+#     print(f'Creating a 2-D (two-dimensional) array of shape (3, 4): "{c}"\nType of a: "{type(c)}"\n')
+#
+
+# rng = np.random.default_rng()
+# a = rng.integers(1000)  # Randomly pick one integer from 0 to 1000
+# print(a)
+
