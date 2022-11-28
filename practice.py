@@ -1,61 +1,60 @@
 # # Disney code interview dt 10 june 2022
-# nums = [2,7,11,15]
-# def wrkwlst(nums):
-#     nlst=[]
-#     nnlst=[]
+# # Find every two elements from the list together in sum = k
+# nums = [2, 11, 7, 15, -2]; k = 9
+# def sm_k(nums, k):
+#     res = []; ndxs = []
 #     for i in range(len(nums)):
-#         if (nums[i-1] + nums[i]) == 9:
-#             nlst.append(nums[i-1]), nlst.append(nums[i]),nnlst.append(i-1), nnlst.append(i)
-#     return f'Elements: \t{nlst}\nIndexes: \t{nnlst}'
-# print(wrkwlst(nums))
+#         for j in range(i + 1, len(nums)):
+#             if nums[i] + nums[j] == k:
+#                 res.append((nums[i], nums[j])); ndxs.append((i, j))
+#     return f'Elements: \t{res}\nIndexes: \t{ndxs}'
+#
+# print(sm_k(nums, k))
 
 # # Decimal to binary
 # dec = int(input('Input decimal: '))
-# bnr=''
+# bnr = ''
 # while dec > 0:
 #     bnr += str(dec % 2)
-#     dec = dec // 2
+#     dec //= 2
 # bnr = bnr[::-1]
-# print(bnr)
+# print(f'Decimal {dec} => Binary {bnr}')
 
 # # Count even and odd number in the integer
-# def cntevod(num = int(input('Énter the integer: '))):
+# def cntevod(num = int(input('Enter the integer: '))):
 #     print(f'You entered integer: {num}')
 #     lsnm = list(map(int, str(num)))
 #     print(f'We have a list {lsnm}, {type(lsnm)}')
-#     ev = []
-#     od = []
+#     ev = []; od = []
 #     for e in lsnm:
 #         if e % 2 == 0:
 #             ev.append(e)
-#         else:
-#             od.append(e)
-#     return f'Ev: {len(ev)} = {ev}\nOd: {len(od)} = {od}'
+#         od.append(e)
+#     return f'Ev: {len(ev)} => {ev}\nOd: {len(od)} => {od}'
 # print(cntevod())
 
 # # Count char in the string
-# st = str(input('Enter the string: '))
-# print(f'You entered the string: {st}')
-# ch = str(input('Enter the char to count the char in string: '))
-# print(f'You have {ch} to count in the string')
+# st = str(input('Enter the string: ')); print(f'You entered the string: {st}')
+# ch = str(input('Enter the char to count the char in string: ')); print(f'You have {ch} to count in the string')
 # def cntchr(st, ch):
 #     cntr = 0
 #     for e in st:
 #         if e == ch:
 #             cntr += 1
-#         else:
-#             cntr += 0
+#         cntr += 0
 #     return f'We have "{ch}" repeated "{cntr}" times'
 # print(cntchr(st, ch))
 
 # # Factorial n! of integer
 # def fctrl(num = int(input('Enter the integer: '))):
-#     if num == 0:
+#     if num < 0:
+#         return 'You entered the wrong number'
+#     elif num == 0 or num == 1:
 #         return f'Factorial of "{num}" = "1"'
-#     fctrl = 1
+#     fct = 1
 #     for e in range(1, num + 1):
-#         fctrl *= e
-#     return f'Factorial of "{num}" = "{fctrl}"'
+#         fct *= e
+#     return f'Factorial of "{num}" = "{fct}"'
 # print(fctrl())
 
 # answers = ['A', 'B', '', 'D']
@@ -63,19 +62,18 @@
 #     if answer == '':
 #         print('Incomlete')
 #         break
-#     print(answer)
+#     print(answer, end = '; ')
 # print('Loop is done')
 
 # list1 = [1, 2, 3, 4, 5]
 # def fnd_n_lst(list1):
-#     ev = []
-#     od = []
+#     ev = []; od = []
 #     for i in list1:
 #         if i % 2 == 0:
 #             ev.append(i)
-#         else:
+#         elif i % 2 != 0:
 #             od.append(i)
-#     return f'Even: {ev}, total: {len(ev)},\nOdd:{od}, total: {len(od)}'
+#     return f'Even: {ev}, total: {len(ev)};\nOdd: {od}, total: {len(od)}'
 #
 # print(fnd_n_lst(list1))
 
@@ -105,17 +103,19 @@
 #
 # for char in alpha.lower():
 #     count = input.count(char)
+#     res = []
 #     if count > 0:
-#         print(str(count) + char, end='')
-
+#         res.append((char, str(count)))
+#         print(f'{res}')
 
 # print(f'2\n')
 
 # from collections import Counter
-
+#
 # input = 'aaaabbbccdddd'
 # count = Counter(input)
 # res = ''
+#
 # print(res.join(list(map(lambda b: str(count[b]) + b, count))))
 
 # print(f'3\n')
@@ -132,20 +132,19 @@
 #             c += 1
 #         else:
 #             d += 1
-#     return f'{a}{e}{b}{e}{c}{e}{d}{e}'
+#     return f'{a}-{e};{b}-{e};{c}-{e};{d}-{e}'
 #
 # print(cntchrs(input))
 
 # print(f'4\n')
-#
+
 # input = 'aaaabbbccdddd'
 # def cntchrs(input):
 #     res = ''
 #     for e in input:
 #         if input.count(e) > 0:
-#             res += (str(input.count(e)) + e)
-#     res += (str(input.count(e)) + e)
-#     return f'{res}'
+#             res += str(input.count(e)) + e
+#     return f'{res[0:2]};{res[10:12]};{res[16:18]};{res[20:22]}'
 #
 # print(cntchrs(input))
 
@@ -165,7 +164,7 @@
 #
 #   output += str(countLetter) + char
 #   return output
-
+#
 # print(cntchrs(input))
 
 # input = 'aaaabbbccdddd'
@@ -232,18 +231,18 @@
 #  return f'{output}'
 # print(cntltrs(input))
 
-# print('Пиши свое число и я его прибавлю')
+# print('Пиши свое число и я его прибавлю к 1')
 # first = round(float(input('Enter the number: ')), 2)
 # print(f'Ответ: 1 + {first} = {1 + first}')
 
 
 # a=float('1.93')
-# b=float('1,93')
-# print(a,b)
+# b=float('1,93') # ValueError: could not convert string to float: '1,93'
+# print(a, b)
 
-# print(444//110) # 4
-# print(444//100) # 4
-# print(444%100) # 44
+# print(444//110) # 4 floor division
+# print(444//100) # 4 floor division
+# print(444%100) # 44 the rest
 
 # # find min and max elements in list
 # lst = [1,2,3,4,5,6,7,8,9,10,-100,100]
@@ -259,9 +258,9 @@
 
 # # generate list from number n < m
 # n, m = 5, 10
-# def gnrtLstfrmNmbrsNm(n, m):
+# def gnrtLstfrmNmbrsNm(n, m, k = 1):
 #     lst = []
-#     for el in range(n, m + 1):
+#     for el in range(n, m + 1, k):
 #         lst.append(el)
 #     return lst
 # print(gnrtLstfrmNmbrsNm(n, m))
@@ -272,15 +271,16 @@
 #     nStr = []
 #     mrFv = []
 #     lsFv = []
+#     fv = []
 #     for ind in range(0, len(lst)):
 #         if type(lst[ind]) != str:
 #             nStr.append(lst[ind])
 #         elif len(lst[ind]) > 5:
 #             mrFv.append(lst[ind])
-#         elif len(lst[ind]) <= 5:
+#         elif len(lst[ind]) < 5:
 #             lsFv.append(lst[ind])
-#
-#     return f'Nstr: {nStr}\nMrfv: {mrFv}\n'f'Lsfv: {lsFv}'
+#         fv.append(lst[ind])
+#     return f'Not string: {nStr}\nMore than 5: {mrFv}\nLess than 5: {lsFv}\nExactly 5: {fv}'
 #
 # print(fndWrdsMrFv(lst))
 
@@ -292,7 +292,7 @@
 #         if lst[i] < 0:
 #             frstNgtvElmnt += str(i)
 #             break
-#     return f'frstNgtvElmnt: {frstNgtvElmnt}'
+#     return f'frstNgtvElmnt index: {frstNgtvElmnt}'
 #
 # print(fndFrstNgElmnt(lst))
 
@@ -315,7 +315,6 @@
 #         else:
 #             r.append(word)
 #     return ' '.join(r)
-#
 #
 # print(replace_word('Hello heLlo PYthon pasv', 'hello', 'HI'))
 
@@ -2133,4 +2132,166 @@ import pandas as pd
 # rng = np.random.default_rng()
 # a = rng.integers(1000)  # Randomly pick one integer from 0 to 1000
 # print(a)
+
+# # Find min and max elements from the list
+# lst_1 = [-99.99, 88, 0, 8, 99, 444.44]
+# mn = mx = lst_1[0]
+# for el in lst_1:
+#     if el < mn:
+#         mn = el
+#     if el > mx:
+#         mx = el
+# print(f'Min: {mn}; Max: {mx}')
+
+# # // practice
+# nmbr = 444
+# devider_1 = 110
+# devider_2 =100
+# if nmbr// devider_1 != nmbr // devider_2:
+#     print(f'nmbr// devider_1 != nmbr // devider_2')
+# else:
+#     print(f'nmbr// devider_1 = nmbr // devider_2')
+
+# # Getters VS setters
+# class Javatpoint:
+#     def __init__(self, age=0):
+#         self._age = age
+#         # using the getter method
+#
+#     def get_age(self):
+#         return self._age
+#         # using the setter method
+#
+#     def set_age(self, a):
+#         self._age = a
+#
+#
+# John = Javatpoint()
+#
+# # using the setter function
+# John.set_age(19)
+#
+# # using the getter function
+# print(John.get_age())
+#
+# print(John._age)
+# # Источник: https: // pythonpip.ru / osnovy / gettery - settery - python
+
+# class Javatpoint:
+#     def __init__(self):
+#         self._age = 0
+#         # using the get function
+#
+#     def get_age(self):
+#         print("getter method")
+#         return self._age
+#         # using the set function
+#
+#     def set_age(self, y):
+#         print("setter method")
+#         self._age = y
+#         # using the del function
+#
+#     def del_age(self):
+#         del self._age
+#
+#     age = property(get_age, set_age, del_age)
+#
+#
+# John = Javatpoint()
+#
+# John.age = 18
+#
+# print(John.age)
+# # Источник: https: // pythonpip.ru / osnovy / gettery - settery - python
+
+# class Javatpoint:
+#     def __init__(self):
+#         self._age = 0
+#
+#         # using the getter function
+#
+#     @property
+#     def age(self):
+#         print("getter method")
+#         return self._age
+#
+#         # now, using the setter function
+#
+#     @age.setter
+#     def age(self, x):
+#         if (x < 20):
+#             raise ValueError("the age is below eligibility criteria")
+#         print("setter method")
+#         self._age = x
+#
+#
+# John = Javatpoint()
+#
+# John.age = 25
+#
+# print(John.age)
+# # Источник: https: // pythonpip.ru / osnovy / gettery - settery - python
+
+# class Javatpoint:
+#     def __init__(self):
+#         self.emp = "None"
+#     def getEmp(self):
+#         return self.emp
+#     def setEmp(self, emp):
+#         self.emp = emp
+# Mark = Javatpoint()
+# John = Javatpoint()
+# Mark.setEmp("Developer")
+# John.setEmp("Designer")
+# print(John.emp)
+# print(Mark.emp)
+# # Источник: https://pythonpip.ru/osnovy/gettery-settery-python
+
+# n = int(input('Enter the number: '))
+# def fctl(n):
+#     if 0 <= n <= 1:
+#         return f'Fact {n} = 1'
+#     else:
+#         f = 1
+#         for el in range(0, n + 1):
+#             f *= el
+#         return f'Fact {n} = {el}'
+# 
+# print(fctl(n))
+
+# # Geometry progression, find some member of by the index
+#
+# n = int(input('Enter the quantity: '))
+# m = int(input('Enter the mult: '))
+# def pr_sm_mb(n, m):
+#     frst = 1
+#     for el in range(1, n):
+#         frst *= m
+#     return frst
+#
+# print(pr_sm_mb(n, m))
+
+# # Find two numbers in the list in sum 9
+# def check_sum(lst, k):
+#     res = []
+#     for i in range(0, len(lst)):
+#         for j in range(i+1, len(lst)):
+#             if lst[i] + lst[j] == k:
+#                 res.append((lst[i], lst[j]))
+#     return f'{res} => {k}' if res else f'No result for {lst} => {k}'
+#
+# print(check_sum([12, 5, 0, 5, 4, 6], 10))
+# print(check_sum([20, 20, 4, 5], 40))
+# print(check_sum([1, -1], 0))
+# print(check_sum([1, 1, 0], 0))
+
+
+
+
+
+
+
+
+
 
