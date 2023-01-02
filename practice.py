@@ -2286,12 +2286,75 @@ import pandas as pd
 # print(check_sum([1, -1], 0))
 # print(check_sum([1, 1, 0], 0))
 
+# print('This is the first line\nThis is the second line')
+# print(r"Newlines are indicated by \n")
+# print(13 / 3)
+# print(13 // 3)
+# print(-13 // 3)
+# print(9 // 1.81)
+# print(13 % 3)
+# print(-25.5 % 2.25)
+# print(2 << 2) # left shift
+# print(11 >> 1) # right shift
+# print(11 & 3) # bitwise AND
 
+# while loop
 
+# answr = 11
+# run = True
+#
+# while run:
+#     gss = int(input('Guess: '))
+#     if gss == answr:
+#         print('Guessed!')
+#         run = False
+#     elif gss < answr:
+#         print('Answer is greater!')
+#     else:
+#         print('Answer is less!')
+# else:
+#     print('Done')
 
+# def find_total(my_list):
+#     ev = od = 0
+#     evv = odd = []
+#     for i in range(len(my_list)):
+#         if i % 2 == 0:
+#             ev += my_list[i]
+#             evv.append(my_list[i])
+#         else:
+#             od += my_list[i]
+#             odd.append(my_list[i])
+#     return f'Ev: {ev}; {evv}\nOd: {od}; {odd}\nEv - Od: {ev - od}'
+# print(find_total([-1, 2, -3, 4,])) # expected -10
 
+# # Population variance formula
+# n = ((1-3)**2+(2-3)**2+(3-3)**2+(4-3)**2+(5-3)**2)/5
+# print(n)
+#
+# # Sample variance formula
+# m = ((1-3)**2+(2-3)**2+(3-3)**2+(4-3)**2+(5-3)**2)/(5-1)
+# print(m)
 
-
-
-
+# # S15_L87
+# # Sample variance formula
+# # [1, 3, 5]
+# mean = (1+3+5)/3
+# print(f'Mean(x under line): {round(mean, 2)}')
+# smpl_vrnc = ((1-3)**2+(3-3)**2+(5-3)**2)/(3-1)
+# print(f'Sample variance: {round(smpl_vrnc, 2)}')
+# smpl_stndrd_dvtn = smpl_vrnc ** 0.5
+# print(f'Sample standard deviation: {round(smpl_stndrd_dvtn, 2)}')
+# smpl_cffcnt_of_vrtn = smpl_stndrd_dvtn / mean
+# print(f'Sample coefficient of variation(S): {round(smpl_cffcnt_of_vrtn, 2)}\n')
+#
+# # [1, 2, 3, 3, 5, 6, 7, 8, 9, 11]
+# mean = (1+2+3+3+5+6+7+8+9+11)/10
+# print(f'Mean(x under line): {mean}')
+# smpl_vrnc  = ((1-5.5)**2+(2-5.5)**2+(3-5.5)**2+(3-5.5)**2+(5-5.5)**2+(6-5.5)**2+(7-5.5)**2+(8-5.5)**2+(9-5.5)**2+(11-5.5)**2)/(10-1)
+# print(f'Sample variance: {round(smpl_vrnc, 2)}')
+# smpl_stndrd_dvtn = smpl_vrnc ** 0.5
+# print(f'Sample standard deviation: {round(smpl_stndrd_dvtn, 2)}')
+# smpl_cffcnt_of_vrtn = smpl_stndrd_dvtn / mean
+# print(f'Sample coefficient of variation(S): {round(smpl_cffcnt_of_vrtn, 2)}\n')
 
