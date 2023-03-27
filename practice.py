@@ -2358,3 +2358,13 @@ import pandas as pd
 # smpl_cffcnt_of_vrtn = smpl_stndrd_dvtn / mean
 # print(f'Sample coefficient of variation(S): {round(smpl_cffcnt_of_vrtn, 2)}\n')
 
+# odd = lambda x: bool(x % 2)
+numbers = [n for n in range(10)]
+print(numbers)
+# n = list()
+
+# for i in numbers:
+#     if odd(i):
+#         continue
+#     else:
+#         break

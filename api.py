@@ -7,10 +7,10 @@ if 300 >= r.status_code >= 200:
 else:
     print(f'\nFAIL_STATUS ="{r.status_code}"')
 print(f'\nReceived responce = "{r}"')
-x1 = r.text
+whole_txt = r.text
 wrd = 'war'
-# print(x1)
-if wrd in x1:
+# print(whole_txt)
+if wrd in whole_txt:
     print(f'\nFound: "{wrd}"')
 else:
     print (f'\nNot found: "{wrd}"')
