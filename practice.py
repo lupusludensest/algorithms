@@ -2359,8 +2359,8 @@ import pandas as pd
 # print(f'Sample coefficient of variation(S): {round(smpl_cffcnt_of_vrtn, 2)}\n')
 
 # odd = lambda x: bool(x % 2)
-numbers = [n for n in range(10)]
-print(numbers)
+# numbers = [n for n in range(10)]
+# print(numbers)
 # n = list()
 
 # for i in numbers:
@@ -2368,3 +2368,15 @@ print(numbers)
 #         continue
 #     else:
 #         break
+
+class MyClass:
+    def __init__(self, a=0, b=0):
+        self.a = a
+        self.b = b
+
+    @classmethod
+    def value_x(cls, value):
+        return cls(value * 10)
+
+ob = MyClass(1, 2).value_x(3)
+print(ob.a, ob.b)
