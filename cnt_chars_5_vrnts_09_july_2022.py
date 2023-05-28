@@ -4,9 +4,9 @@ input = 'aaaabbbccdddd'
 def cntltrs(input):
  output = ''
  for n in range(0, len(input)):
-    if (len(output)==0 or input[n] != output[-1]):
+    if (len(output) == 0 or input[n] != output[-1]):
      if input.count(input[n]) > 0 and input[n - 1] == input[n]:
-        output+=(str(input.count(input[n - 1])) + input[n - 1])
+        output += (str(input.count(input[n - 1])) + input[n - 1])
  return f'{output}'
 print(cntltrs(input))
 
@@ -18,7 +18,7 @@ def run_me(string):
     hash_table = defaultdict(int)
 
     for char in string:
-        hash_table[char] +=1
+        hash_table[char] += 1
 
     res = ''
 
