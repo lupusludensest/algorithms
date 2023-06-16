@@ -1,13 +1,3 @@
-# # find min amd maxi in the list
-# lst_1 = [-10099, -4, 0, 4, 6, 88]
-# min_i = max_i = lst_1[0]
-# for i in lst_1:
-#     if i < min_i:
-#         min_i = i
-#     if i > max_i:
-#         max_i = i
-# print(min_i, max_i)
-
 # bayer test 04 jun 2023, sunday
 # Question 4/4
 #
@@ -94,6 +84,21 @@
 #     return inputData
 
 
+# # Use urllib.request to send network request if needed.
+
+# import fileinput
+
+# inputData = ''
+
+# for line in fileinput.input():
+#     inputData += line
+
+
+# def code_here():
+#     # Use the function to return the solution.
+#     return inputData
+
+
 # print(code_here())
 
 def initialize(checking_init, savings_init):
@@ -141,23 +146,6 @@ def transfer(trns, fr_where, to_where):
             savings = savings + trns
             return f'checking: {checking}, savings: {savings}'
 print(transfer(555, f'savings', 'checking'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
