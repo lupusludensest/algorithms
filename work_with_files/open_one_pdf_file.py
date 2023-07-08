@@ -1,7 +1,7 @@
 # importing required modules
 import PyPDF2
 
-# creating a pdf file object
+# creating a pdf file objectzz
 pdfFileObj = open('E:/Gurov_SSD_256/My_docs/CV/CV_to_Vit_Krasnik_updated_with_Native_Digital.pdf', 'rb')
 
 # creating a pdf reader object
@@ -15,7 +15,7 @@ pageObj = pdfReader.getPage(0)
 
 # extracting text from page
 actual_text = pageObj.extractText()
-expected_text = "Gur"
+expected_text = "Gurov"
 assert expected_text in pageObj.extractText()
 print(f'Expected "{expected_text}", and got: "{actual_text}" ')
 

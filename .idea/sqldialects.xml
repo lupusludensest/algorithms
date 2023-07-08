@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$USER_HOME$/Desktop/symetra/symetra_sql_querries.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/../../../../DatabaseApplicationDevelopment24August2017/Uploaded_ tests/Graduation_docs/My_practical_tasks/IOUG_FINAL_PROJECT_DT_02_22_2018.sql" dialect="Oracle" />
   </component>
 </project>
