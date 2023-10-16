@@ -36,33 +36,38 @@ import re
 #
 # print(calculate_total_minutes(time_string))
 
+# Имеется строка '1h 45m,360s,25m,30m 120s,2h 60s'. Необходимо посчитать общее кол-во
+# минут, содержащееся в строке.
+time_string = '1h 45m,360s,25m,30m 120s,2h 60s'
+
+
 def calculate_total_minutes(time_string):
   times = time_string.split(',')
+  #   print(f'Times: {times},{type(times)}\n')
 
   total_minutes = 0
 
   for time in times:
-
     parts = time.split()
+    # print(f'Parts: {parts}, {type(parts)}\n')
 
-    hours = 0
-    minutes = 0
-    seconds = 0
+    hours = minutes = seconds = 0
 
     for part in parts:
       if 'h' in part:
-        hours = int(part[:-1])
+        hours += int(part[:-1])  # string to int without last element
       elif 'm' in part:
-        minutes += int(part[:-1])
+        minutes += int(part[:-1])  # string to int without last element
       elif 's' in part:
-        seconds += int(part[:-1])
+        seconds += int(part[:-1])  # string to int without last element
 
     minutes += seconds // 60
     total_minutes += hours * 60 + minutes
 
-  return total_minutes
+  return f'Total minutes: {total_minutes}'
 
-time_string = '1h 45m,360s,25m,30m 120s,2h 60s'
+
+# time_string = '1h 45m,360s,25m,30m 120s,2h 60s'
 print(calculate_total_minutes(time_string))
 
 # The time string is:
@@ -72,3 +77,4 @@ print(calculate_total_minutes(time_string))
 # '25m' -> 25 minutes
 # '30m 120s' -> 30 minutes + 120 seconds = 2 minutes = 32 minutes
 # '2h 60s' -> 2 hours = 120 minutes + 60 seconds = 1 minute = 121 minutes
+
