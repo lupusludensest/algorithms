@@ -4,9 +4,21 @@ print(a_list)
 # swap first and last items in the list -> [9,1,2,3...,0]
 
 a_list[0], a_list[-1] = a_list[-1], a_list[0]
-
 # print(a_list)
 print(a_list[::-1]) # start stop step
+
+def swap_first_last_character(input_string):
+    if len(input_string) < 2:
+        # If the string has less than 2 characters, there's nothing to swap
+        return input_string
+
+    # Swap the first and last characters using string slicing
+    return input_string[-1] + input_string[1:-1] + input_string[0]
+
+# Example usage:
+my_string = "hello"
+swapped_string = swap_first_last_character(my_string)
+print(swapped_string)  # Output should be "oellh"
 
 # to_zip = 'aabbbcccd'  # archive / compress / zip the string ->   a2b3c3d1
 #
