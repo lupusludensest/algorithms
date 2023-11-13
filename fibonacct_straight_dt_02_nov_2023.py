@@ -8,9 +8,7 @@ def fb_str(n):
     else:
         a, b = 0, 1
         for i in range(2, n + 1):
-            c = a + b
-            a = b
-            b = c
+            a, b = b, a + b
         return b
 
 print(fb_str(9))
