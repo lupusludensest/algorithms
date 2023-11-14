@@ -1,6 +1,6 @@
 # fibonaccy straignt
 
-def fb_str(n):
+def fb_str(n = int(input('Enter the n for fibonaccy: '))):
     if n < 0:
         return f'Error'
     elif 0 <= n <= 1:

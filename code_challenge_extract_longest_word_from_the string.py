@@ -17,3 +17,13 @@ def lngst_wrd_str(str_a):
     return lngst_wrd
 
 print(lngst_wrd_str(str_a))
+
+# longest word from string by split and sort and key=len and index
+
+str_1 = 'longest word from string'
+def lngst_wrd_str(str_1):
+    lst = list(str_1.split())
+    lst.sort(key=len)
+    return lst[-1]
+
+print(lngst_wrd_str(str_1))

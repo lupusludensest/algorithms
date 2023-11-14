@@ -1,4 +1,5 @@
-# Caesars Sportsbook Technical Screen interview 13 nov 2023
+# Caesars Sportsbook Technical Screen interview 13 nov 2023 11am EST
+# Interviewer(s): Sohaib Khan
 # implement a function that accepts a string as an input and returns true
 # if the input is a palindrome.False if it is not.
 

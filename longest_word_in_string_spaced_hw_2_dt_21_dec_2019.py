@@ -18,3 +18,17 @@ if count > m:
     index = i - count + 1
 
 print(f'The longest word is: "{string[index:index + m]}", length: "{len(string[index:index + m])}".')
+
+def lnfs_wrd_str_max(string):
+    return f'The longest word is: "{max(list(string.split()), key=len)}", length: "{len(max(list(string.split()), key=len))}"'
+
+print(lnfs_wrd_str_max(string))
+
+def lnfs_wrd_str_sort(string):
+    lst = list(string.split())
+    lst.sort(key=len)
+    return f'The longest word is: "{max(list(string.split()), key=len)}", length: "{len(max(list(string.split()), key=len))}"'
+
+print(lnfs_wrd_str_sort(string))
+
+

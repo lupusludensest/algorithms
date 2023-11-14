@@ -1,5 +1,5 @@
 # fibonaccy recursion
-def fb_rc(n):
+def fb_rc(n = int(input('Enter the n for fibonaccy: '))):
     if 0 <= n <= 1:
         return n
     elif 1 <= n:

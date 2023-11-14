@@ -1,37 +1,22 @@
 # code that defines the effectiveness of code bugs based on execution time
+from fibonaccy_straight_dt_02_nov_2023 import *
+from fibonaccy_recursion_dt_02_nov_2023 import *
 import time
-# 1
-def fb_str(n):
-    if n < 0:
-        return f'Error'
-    elif 0 <= n <= 1:
-        return n
-    else:
-        a, b = 0, 1
-        for i in range(2, n + 1):
-            c = a + b
-            a = b
-            b = c
-        return b
-# 2
-def fb_rc(n):
-    if 0 <= n <= 1:
-        return n
-    elif 1 <= n:
-        return (fb_rc(n - 2) + fb_rc(n - 1))
-    else:
-        return f'Error'
 
-# data for input
-n = int(input('Enter the n for fibonaccy: '))
+# 1 call func from fibonaccy_straight_dt_02_nov_2023.py
+fb_str()
 
+# 2 call func from fibonaccy_recursion_dt_02_nov_2023.py
+fb_rc()
+
+# count and comparing the execution times of both functions
 start = time.time()
-fb_str(n)
+fb_str()
 end = time.time()
 time1 = end - start
 
 start = time.time()
-fb_rc(n)
+fb_rc()
 end = time.time()
 time2 = end - start
 
