@@ -1,10 +1,10 @@
 # fibonaccy recursion
-def fb_rc(n = int(input('Enter the n for fibonaccy: '))):
-    if 0 <= n <= 1:
-        return n
-    elif 1 <= n:
-        return (fb_rc(n - 2) + fb_rc(n - 1))
-    else:
+def fb_rc(n = int(input('Enter the n for fibonaccy recursion: '))):
+    if n < 0:
         return f'Error'
+    elif 0 <= n <= 1:
+        return n
+    else:
+        return (fb_rc(n - 2) + fb_rc(n - 1))
 
-print(fb_rc(9))
+print(fb_rc())

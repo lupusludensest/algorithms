@@ -1,6 +1,6 @@
 # fibonaccy straignt
 
-def fb_str(n = int(input('Enter the n for fibonaccy: '))):
+def fb_str(n = int(input('Enter the n for fibonaccy straight: '))):
     if n < 0:
         return f'Error'
     elif 0 <= n <= 1:
@@ -11,4 +11,4 @@ def fb_str(n = int(input('Enter the n for fibonaccy: '))):
             a, b = b, a + b
         return b
 
-print(fb_str(9))
+print(fb_str())
