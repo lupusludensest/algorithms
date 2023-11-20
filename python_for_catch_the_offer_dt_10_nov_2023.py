@@ -31,15 +31,44 @@ dct_a = {
     2: {'id':2, 'name':'Peter', 'address':'Moscow', 'age':33},
     3: {'id':3, 'name':'John', 'address':'Tokio', 'age':42}
     }
+
 # print(dct_a)
 
-moscow = []
-not_moscow = []
+# ass one more
+# dct_a[4] = {'id':5, 'name':'Vincent', 'address':'Milano', 'age':88}
 
-for i in dct_a.values():
-  if i['address'] == 'Moscow':
-    moscow.append(i)
-  else:
-    not_moscow.append(i)
+# moscow = []
+# not_moscow = []
+#
+# for i in dct_a.values():
+#   if i['address'] == 'Moscow':
+#     moscow.append(i)
+#   else:
+#     not_moscow.append(i)
+#
+# print(f"Moscow: {moscow}\nTotal: {len(moscow)};\nNot Moscow: {not_moscow}\nTotal: {len(not_moscow)};")
 
-print(f"Moscow: {moscow};\nNot Moscow: {not_moscow};")
+# def high_and_low(numbers):
+#     numbers_sorted = [int(x) for x in numbers.split(' ')]
+#     numbers_sorted.sort()
+#
+#     min = numbers_sorted[0]
+#     max = numbers_sorted[-1]
+#
+#     return str(max) + ' ' + str(min)
+#
+#
+# print(high_and_low('8 3 -5 42 -1 0 0 -9 4 7 4 -4'))
+
+# Lucas numbers
+def lucasnum(n):
+    a, b = 2, 1
+
+    flip = n < 0 and n % 2 != 0
+
+    for i in range(abs(n)):
+        a, b = b, a + b
+
+    return -a if flip else a
+
+print(lucasnum(-10))
