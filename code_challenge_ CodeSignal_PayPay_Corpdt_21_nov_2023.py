@@ -42,11 +42,14 @@
 # Your programming language should accept complex variable names only.
 # You need to check if the variableName is accepted by your programming language.
 # Example
-# For words = ["is", "valid", "right"] and variableName = "isValid", the output should be solution(words, variableName) = true.
+# For words = ["is", "valid", "right"] and variableName = "isValid", the output should be solution
+# (words, variableName) = true.
 # As variableName consists of words "is" and "valid", and both of them are in words.
-# For words = ["is", "valid", "right"] and variableName = "IsValid", the output should be solution(words, variableName) = true.
+# For words = ["is", "valid", "right"] and variableName = "IsValid", the output should be solution
+# (words, variableName) = true.
 # Note that both variants: "IsValid" and "isValid" are valid in CamelCase.
-# For words = ["is", "valid", "right"] and variableName = "isValId", the output should be solution(words, variableName) = false.
+# For words = ["is", "valid", "right"] and variableName = "isValId", the output should be solution
+# (words, variableName) = false.
 # variableName is separated to words "is", "val", "id", and not all words are in words.
 
 import re
@@ -90,7 +93,8 @@ print(solution(["is", "valid", "right"], "isValId"))
 # 2 code challenge
 # Codewriting
 # You are given the prices of a stock, in the form of an array of integers, prices.
-# Let's say that prices[i] is the price of the stock on the ith day (0-based index). Assuming that you are allowed to buy and sell the stock only once, your task is to find the maximum possible profit (the difference between the buy and sell prices).
+# Let's say that prices[i] is the price of the stock on the ith day (0-based index). Assuming that you are allowed
+# to buy and sell the stock only once, your task is to find the maximum possible profit (the difference between the buy and sell prices).
 # Note: You can assume there are no fees associated with buying or selling the stock.
 # Example
 # For prices = [6, 3, 1, 2, 5, 4], the output should be solution(prices) = 4.
