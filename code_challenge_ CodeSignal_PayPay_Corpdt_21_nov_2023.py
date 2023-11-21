@@ -1,6 +1,6 @@
 # PayPay Corp invited you to take PayPay Corp - QA Coding Challenge on CodeSignal
 
-# Write a function returning a sum of digits of "n" which has two digits
+# Write a function returning a sum of digits of integer "n" which has two digits
 # def solution(n):
 #     str_n = str(n)
 #     str_a = str_n[0]
@@ -102,7 +102,6 @@ print(solution(["is", "valid", "right"], "isValId"))
 # For prices = [3, 100, 1, 97], the output should be solution(prices) = 97.
 # It would be most profitable to buy the stock on day 0 and sell it on day 1. Thus, the maximum
 # profit is prices[1] - prices[0] = 100 - 3 = 97.
-
 
 def solution(prices):
     mn = prices[0]
