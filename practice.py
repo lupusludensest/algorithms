@@ -195,9 +195,148 @@
 #
 # print(dcml_ntgr_plndrm(int_a))
 
+# import os
+#
+# if not os.path.isfile('text.txt'):
+#
+#     data = []
+#
+#     topic = input('Enter Topic: ')
+#     series = input('Enter Series: ')
+#
+#     data.append(topic)
+#     data.append(series)
+#
+#     with open('text.txt', 'w') as file:
+#         file.write(topic + '\n')
+#         file.write(series + '\n')
+#
+# else:
+#     with open('text.txt', 'r') as file:
+#         data = file.readlines()
+#
+#     topic = data[0].strip()
+#     series = data[1].strip()
+#
+#     print(f'\nWelcome back to: {topic} {series}')
+
+# import pickle, os
+# if not os.path.isfile('pickle.dat'):
+#
+#     data = [0, 1]
+#
+#     data[0] = input('Enter Topic: ')
+#     data[1] = input('Enter Series: ')
+#
+#     file = open('pickle.dat', 'wb')
+#
+#     pickle.dump(data, file)
+#
+#     file.close()
+#
+#     file = open('pickle.dat', 'rb')
+#
+#     data = pickle.load(file)
+#     file.close()
+#
+#     print('\nWelcome back to: ', data[0], data[1])
+#
+#
+# import random
+# import string
+#
+# def generate_login():
+#   password = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+#   username = ''.join(random.choices(string.ascii_letters, k=8))
+#   email = username + "@gmail.com"
+#
+#   print(f"Your login credentials are: \nEmail: {email}\nPassword: {password}")
+#
+# generate_login()
+
+# 24 nov 2023, fri, practice
+
+# # fib linear
+#
+# n = int(input('Enter FB SEQ number: '))
+#
+# def fb_ln(n):
+#     if n < 0:
+#         raise ValueError('n cannot be negative')
+#     if 0 <= n <= 1:
+#         return n
+#     else:
+#         a, b = 0, 1
+#         for i in range(2, n + 1):
+#             a, b = b, b + a
+#         return b
+#
+# print(fb_ln(n)) # 0 1 1 2 3 5 8 13 21 34 55
 
 
+# # fib lrec
+#
+# n = int(input('Enter FB SEQ number: '))
+#
+# def fb_rc(n):
+#     if n < 0:
+#         raise ValueError('n cannot be negative')
+#     if 0 <= n <= 1:
+#         return n
+#     else:
+#         return ((fb_rc(n - 2)) + (fb_rc(n - 1)))
+#
+# print(fb_rc(n)) # 0 1 1 2 3 5 8 13 21 34 55
 
+# 27 nov 2023, mon,
+
+# test 1
+
+# addOrConcat(arg0, arg1):
+
+# If Int + Int, thus Addition # 2, 3 # 5
+
+# test 2
+
+# addOrConcat(arg0, arg1):
+
+# If Int + Str, thus Concat # 2 + ' Str' # "2 Str"
+
+# test 3
+
+# addOrConcat(arg0, arg1):
+
+# If Str + Int, thus Concat # 'Str ' + 2 # "Str 2"
+
+
+# If Str + Str, thus Concat # 'Str ' + 'Str' # "Str Str"
+
+# Negative
+
+# If Bool + Str, thus Concat # True + 'Str' # raise ValueError"Bool First"
+
+# If Str + Bool, thus Concat # 'Str' + False # raise ValueError"Bool second"
+
+
+# If List + Int, thus Concat # List + Int # raise ValueError"List first"
+
+# If Set/Dict + Int, thus Concat # Set/Dict + Int # raise ValueError"Set/Dict  first"
+
+# If RegEx + Int/Str, thus Concat # RegExt + Int/Str # raise ValueError"RegExt   first"
+
+
+#
+# can be           open | opening | closing | closed
+#
+# moving up                                     *
+#
+# moving down                                   *
+#
+# stationary        *       *          *        *
+#
+# button UP                                     *
+#
+# button down                                   *
 
 
 

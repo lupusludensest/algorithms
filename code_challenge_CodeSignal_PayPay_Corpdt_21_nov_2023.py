@@ -21,7 +21,7 @@
 # 1. URL parsing;
 # 2. DNS lookup;
 # 3. Request heats loadbalancer of the site;
-# 4. HTTP/S request procesed by the web server;
+# 4. HTTP/S request processed by the web server;
 # 5. Responce (200 if success) and data transfer (HTML returned to the browser);
 # 6. Page rendering in the browser;
 # 7. JavaScript execution;
@@ -52,43 +52,43 @@
 # (words, variableName) = false.
 # variableName is separated to words "is", "val", "id", and not all words are in words.
 
-import re
-def solution(words, variableName):
-    parts = re.findall('[A-Z][^A-Z]*', variableName)
+# import re
+# def solution(words, variableName):
+#     parts = re.findall('[A-Z][^A-Z]*', variableName)
+#
+#     for part in parts:
+#         if part.lower() not in words:
+#             return False
+#
+#     return True
+#
+# print(solution(["is", "valid", "right"], "isValid"))
+# print(solution(["is", "valid", "right"], "isValId"))
 
-    for part in parts:
-        if part.lower() not in words:
-            return False
 
-    return True
-
-print(solution(["is", "valid", "right"], "isValid"))
-print(solution(["is", "valid", "right"], "isValId"))
-
-
-def solution(words, variableName):
-    parts = []
-    current_word = ''
-
-    for char in variableName:
-        if char.islower():
-            current_word += char
-        else:
-            if current_word:
-                parts.append(current_word)
-            current_word = char
-
-    if current_word:
-        parts.append(current_word)
-
-    for part in parts:
-        if part.lower() not in words:
-            return False
-
-    return True
-
-print(solution(["is", "valid", "right"], "isValid"))
-print(solution(["is", "valid", "right"], "isValId"))
+# def solution(words, variableName):
+#     parts = []
+#     current_word = ''
+#
+#     for char in variableName:
+#         if char.islower():
+#             current_word += char
+#         else:
+#             if current_word:
+#                 parts.append(current_word)
+#             current_word = char
+#
+#     if current_word:
+#         parts.append(current_word)
+#
+#     for part in parts:
+#         if part.lower() not in words:
+#             return False
+#
+#     return True
+#
+# print(solution(["is", "valid", "right"], "isValid"))
+# print(solution(["is", "valid", "right"], "isValId"))
 
 # 2 code challenge
 # Codewriting
@@ -107,19 +107,49 @@ print(solution(["is", "valid", "right"], "isValId"))
 # It would be most profitable to buy the stock on day 0 and sell it on day 1. Thus, the maximum
 # profit is prices[1] - prices[0] = 100 - 3 = 97.
 
-def solution(prices):
-    mn = prices[0]
-    mx_dff = 0
+def max_difference(prices):
+    mn = prices[0] # Declare a mn and pass to it first element of incoming list
+    mx_dff = 0 # Declare a mx and pass 0 to it
 
-    for i in range(1, len(prices)):
-        mn = min(mn, prices[i])
-        mx_dff = max(mx_dff, prices[i] - mn)
+    for i in range(1, len(prices)): # Iterating through indexes of incoming list starting from second element
+        mn = min(mn, prices[i]) # By min choosing the minimum from first all elements from the incoming list
+        mx_dff = max(mx_dff, prices[i] - mn) # By max choosing the maximim between 0 and greatest quotent from iterated elements and chosen mn
 
     return mx_dff
 
-print(solution([6, 3, 1, 2, 5, 4]))
-print(solution([1, 3, 1, 2, 6, 4]))
+print(max_difference([6, 3, 1, 2, 5, 4]))
+print(max_difference([1, 3, 1, 2, 6, 4]))
 
+# def max_difference(arr):
+#     """
+#     Function to find the maximum difference in a list,
+#     where the larger number comes after the smaller number.
+#
+#     Parameters:
+#     arr (list): A list of integers.
+#
+#     Returns:
+#     int: The maximum difference.
+#     """
+#     if len(arr) < 2:
+#         return 0  # No difference possible
+#
+#     max_diff = 0
+#     for i in range(len(arr)):
+#         for j in range(i+1, len(arr)):
+#             if arr[j] > arr[i]:
+#                 max_diff = max(max_diff, arr[j] - arr[i])
+#
+#     return max_diff
+#
+# # Example usage
+# print(max_difference([6, 3, 1, 2, 5, 4]))
+# print(max_difference([1, 3, 1, 2, 5, 4]))
+# print(max_difference([6, 3, 1, 8, 5, 4]))
+# # expected output:
+# # 4
+# # 4
+# # 7
 
 
 
