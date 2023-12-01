@@ -339,15 +339,34 @@
 # button down                                   *
 
 
+# def high_and_low(numbers):
+#     numbers_sorted = [int(x) for x in numbers.split(' ')]
+#     numbers_sorted.sort()
+#
+#     min = numbers_sorted[0]
+#     max = numbers_sorted[-1]
+#
+#     return str(max) + ' ' + str(min)
+#
+#
+# print(high_and_low('8 3 -5 42 -1 0 0 -9 4 7 4 -4'))
 
-
-
-
-
-
-
-
-
+# to define if an integer is a prime
+# the prime number is not negative and can be divided by 1 and itself only and can not be < 2
+# 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+# n = int(input('Enter the prime to evaluate: '))
+#
+# def is_prm(n):
+#     if n < 2:
+#         raise ValueError('The prime can not be less than 2')
+#     for i in range(2, n):
+#         if n % i == 0:
+#             return f"Not a prime"
+#     else:
+#         return f"The prime"
+#
+#
+# print(is_prm(n))
 
 
 

@@ -60,15 +60,15 @@ dct_a = {
 #
 # print(high_and_low('8 3 -5 42 -1 0 0 -9 4 7 4 -4'))
 
-# Lucas numbers
-def lucasnum(n):
-    a, b = 2, 1
-
-    flip = n < 0 and n % 2 != 0
-
-    for i in range(abs(n)):
-        a, b = b, a + b
-
-    return -a if flip else a
-
-print(lucasnum(-10))
+# # Lucas numbers
+# def lucasnum(n):
+#     a, b = 2, 1
+#
+#     flip = n < 0 and n % 2 != 0
+#
+#     for i in range(abs(n)):
+#         a, b = b, a + b
+#
+#     return -a if flip else a
+#
+# print(lucasnum(-10))
