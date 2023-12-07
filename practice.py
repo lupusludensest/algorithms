@@ -368,6 +368,254 @@
 #
 # print(is_prm(n))
 
+# python data types
+# primitive & complex
+# primitive: integers, floats, strings, booleans, complex
+# complex: list, dictionares, sets, tuples, frozenset
+# mutable & unmutable
+# mutable: list, dictionary, set,
+# unmutable: integers, floats, bbolean, strings, unicode, tuple
+
+# Is Python a Case-Sensitive Language?
+# YES, Python is a case-sensitive programming language.
+
+# How Python interpreted?
+# 1 Source code
+# 2 Intermediate language
+# 3 Native
+# 4 Executive
+
+# Is list an ordered in Python?
+# Dictionary is an unordered collection of data values that stores data values like a map.
+
+# What are unordered datatypes in Python?
+# A set is an unordered collection of items. Every set element is exclusive
+# (no duplicates) and must be immutable (cannot be changed).
+
+# As the set is an unordered collection, indexing will be meaningless.
+#  Dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+
+# Lists are ordered, which means they retain the order in which you insert the elements
+# into the list.
+
+# What is a list comprehension?
+# The ability of creation of list in one line of the code.
+
+# What kid of operators fo you know in Python?
+# /; *; **, =; ==; //; %
+
+# What are the operators and operands in Python?
+# 2 + 2 => 2 - operands; + - operator
+
+# What is the difference between shallow nd deep copy in Python?
+# Shallow copy is being made if changed-changes the original too.
+# Deep copy is independed from the original and is being made if changed-does not change
+# the original.
+
+
+# given a list of the integers every is less 10. return the whole integer with the last digit with added 1.
+# and if the last digit is 9 it has to be 0. I.e. list1 = [1, 2, 3] => 124, list2 = [1, 2, 4] => 125,
+# list3 = [1, 2, 9, 9, 9, 9] => 129990
+
+# list1 = [1, 2, 3]
+# list2 = [1, 2, 4]
+# list3 = [1, 2, 9, 9, 9, 9]
+# def mass_plus(a):
+#     if a[-1] != 9:
+#         a[-1] += 1
+#         s = []
+#         for i in range(len(a)):
+#             s.append(str(a[i]))
+#             res = int("".join(s))
+#         return res
+#     else:
+#         a[-1] = 0
+#         s = []
+#         for i in range(len(a)):
+#             s.append(str(a[i]))
+#             res = int("".join(s))
+#         return res
+#
+#         return res
+#
+# a = list1
+# print(mass_plus(a))
+#
+# a = list2
+# print(mass_plus(a))
+#
+# a = list3
+# print(mass_plus(a))
+
+# 04 dec 2023, practice
+
+# # Function. We have a string 'I'm a Ptthon specialist'. Write a function that will reverse the string given.
+#
+# a = "I'm a Python specialist"
+# #  "I'm a Python specialist"
+# #   0123456789 10
+#
+# def rev_st(a):
+#     return a[::-1] # slicing start/stop/step
+#
+# print(rev_st(a), type(a[::-1]))
+
+# def reverse_string(input_str):
+#     reversed_str = "" # empty str is declared
+#     index = len(input_str) - 1 # index variable is declared
+#     while index >= 0:
+#         reversed_str += input_str[index]
+#         index -= 1
+#     return reversed_str
+#
+#
+# input_str = "I'm a Python specialist"
+# print(reverse_string(input_str))
+
+# Define if a string is a palyndrome
+
+# a = str(input('Enter the word: '))
+
+# def if_plndrm(a):
+#     if a == (a[::-1]):
+#         return True
+#     raise ValueError('Err')
+#
+# print(if_plndrm(a))
+
+# We have a two different string 'Wsdfgh' and 'Kjhgfdsdfg'. Write a function to concatenate the not usin "+".
+# Use a ' ' between them.
+
+# a = 'Wsdfgh'
+# b = ' Kjhgfdsdfg'
+# c = ' '
+#
+# def nct_strns(a, b, c):
+#     return f'{a}{c}{b}'
+#
+# print(nct_strns(a, b, c))
+
+# a = 'Wsdfgh'
+# b = ' Kjhgfdsdfg'
+# c = ' '
+#
+# def nct_strns(a, b, c):
+#     return '{}{}{}'.format(a, b, c)
+#
+# print(nct_strns(a, b, c))
+
+# Given string by user. "()[]{}". If "(]", if "([)]" false.
+#
+# a = input('Enter the string: ')
+# def check_brackets(a):
+#     bopen = ['(', '[', '{']
+#     bclose = [')', ']', '}']
+#     stack = []
+#
+#     for char in a:
+#         if char in bopen:
+#             stack.append(char)
+#         elif char in bclose:
+#             pos = bclose.index(char)
+#             if ((len(stack) > 0) and (bopen[pos] == stack[len(stack) - 1])):
+#                 stack.pop()
+#             else:
+#                 return False
+#
+#     if len(stack) == 0:
+#         return True
+#     else:
+#         return False
+#
+# print(check_brackets(a))
+
+# s = input("Enter the word: ")
+# def isValid(s):
+#     stack = []
+#     for char in s:
+#         if char in ['(', '[', '{']:
+#             stack.append(char)
+#         elif char == ')':
+#             if not stack or stack[-1] != '(':
+#                 return False
+#             stack.pop()
+#         elif char == ']':
+#             if not stack or stack[-1] != '[':
+#                 return False
+#             stack.pop()
+#         elif char == '}':
+#             if not stack or stack[-1] != '{':
+#                 return False
+#             stack.pop()
+#
+#     return not stack
+#
+# print(isValid(s))
+
+# We have a string give. We need to count each char in the string. And return a string where 'a2b3'.
+
+# a = str(input('Enter the string: ')) # abc
+# def count_chars(a):
+#     res = ""
+#     prev_char = ""
+#     char_count = 0
+#
+#     for char in a:
+#         if char != prev_char:
+#             if len(prev_char) > 0:
+#                 res += prev_char + str(char_count)
+#             char_count = 1
+#             prev_char = char
+#         else:
+#             char_count += 1
+#
+#     res += prev_char + str(char_count)
+#     return res
+#
+# print(count_chars(a))
+
+# # Given integer. Define if it is odd or even and is it negative or positive.
+#
+# a = int(input('Enter the integer: '))
+#
+# def if_int_odd_even_pos_neg(a):
+#     if a == 0:
+#         return f'{a} is just a zero-not even/add and not pos/neg'
+#     elif a < 0 and a % 2 == 0:
+#         return f'{a} is negative and even' # -2
+#     elif a < 0 and a % 2 != 0:
+#         return f'{a} is negative and odd' # -3
+#     elif a > 0 and a % 2 == 0:
+#         return f'{a} is positive and even' # 4
+#     elif a > 0 and a % 2 != 0:
+#         return f'{a} is positive and odd' # 7
+#     else:
+#         raise ValueError('Err')
+#
+# print(if_int_odd_even_pos_neg(a))
+
+
+import re
+
+str_a = str(input('Enter the word: '))
+
+
+def f_plndrm(str_a):
+    # Remove non-alphanumeric characters
+    str_a = re.sub(r'[\W_]+', '', str_a)
+
+    # Decapitalize
+    str_a = str_a.lower()
+
+    # Reverse string
+    rvrsd_str_a = str_a[::-1]
+
+    if rvrsd_str_a == str_a:
+        return f'Palindrome'
+    return f'Not palindrome'
+
+
+print(f_plndrm(str_a))
 
 
 

@@ -16,10 +16,10 @@
 
 str_a = str(input('Enter whatever: '))
 
-def if_plndrm(str_a):
-    if str_a == str_a[::-1]:
-        return f'True'
-    return f'False'
-
-
-print(if_plndrm(str_a))
+# def if_plndrm(str_a):
+#     if str_a == str_a[::-1]:
+#         return f'True'
+#     return f'False'
+#
+#
+# print(if_plndrm(str_a))
