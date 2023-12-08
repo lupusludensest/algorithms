@@ -32,3 +32,16 @@ def lnfs_wrd_str_sort(string):
 print(lnfs_wrd_str_sort(string))
 
 
+# find the longest word in the string
+s = str(input('Enter the phrase: '))
+def lng_wr(s):
+    lng_wr = ''
+    for i in s.split():
+        if len(i) > len(lng_wr):
+            lng_wr = i
+
+    return lng_wr
+
+print(lng_wr(s))
+
+

@@ -6,6 +6,8 @@
 #     else:
 #       print(end="   ")
 #   print()
+import heapq
+
 
 # lst_1 = [-99, -77, 0, 2, 4, 44]
 
@@ -483,151 +485,78 @@
 #
 # print(if_plndrm(a))
 
-# We have a two different string 'Wsdfgh' and 'Kjhgfdsdfg'. Write a function to concatenate the not usin "+".
-# Use a ' ' between them.
-
-# a = 'Wsdfgh'
-# b = ' Kjhgfdsdfg'
-# c = ' '
+# # linear fib
 #
-# def nct_strns(a, b, c):
-#     return f'{a}{c}{b}'
+# n = int(input('Enter the Fib seq number: '))
 #
-# print(nct_strns(a, b, c))
-
-# a = 'Wsdfgh'
-# b = ' Kjhgfdsdfg'
-# c = ' '
-#
-# def nct_strns(a, b, c):
-#     return '{}{}{}'.format(a, b, c)
-#
-# print(nct_strns(a, b, c))
-
-# Given string by user. "()[]{}". If "(]", if "([)]" false.
-#
-# a = input('Enter the string: ')
-# def check_brackets(a):
-#     bopen = ['(', '[', '{']
-#     bclose = [')', ']', '}']
-#     stack = []
-#
-#     for char in a:
-#         if char in bopen:
-#             stack.append(char)
-#         elif char in bclose:
-#             pos = bclose.index(char)
-#             if ((len(stack) > 0) and (bopen[pos] == stack[len(stack) - 1])):
-#                 stack.pop()
-#             else:
-#                 return False
-#
-#     if len(stack) == 0:
-#         return True
-#     else:
-#         return False
-#
-# print(check_brackets(a))
-
-# s = input("Enter the word: ")
-# def isValid(s):
-#     stack = []
-#     for char in s:
-#         if char in ['(', '[', '{']:
-#             stack.append(char)
-#         elif char == ')':
-#             if not stack or stack[-1] != '(':
-#                 return False
-#             stack.pop()
-#         elif char == ']':
-#             if not stack or stack[-1] != '[':
-#                 return False
-#             stack.pop()
-#         elif char == '}':
-#             if not stack or stack[-1] != '{':
-#                 return False
-#             stack.pop()
-#
-#     return not stack
-#
-# print(isValid(s))
-
-# We have a string give. We need to count each char in the string. And return a string where 'a2b3'.
-
-# a = str(input('Enter the string: ')) # abc
-# def count_chars(a):
-#     res = ""
-#     prev_char = ""
-#     char_count = 0
-#
-#     for char in a:
-#         if char != prev_char:
-#             if len(prev_char) > 0:
-#                 res += prev_char + str(char_count)
-#             char_count = 1
-#             prev_char = char
-#         else:
-#             char_count += 1
-#
-#     res += prev_char + str(char_count)
-#     return res
-#
-# print(count_chars(a))
-
-# # Given integer. Define if it is odd or even and is it negative or positive.
-#
-# a = int(input('Enter the integer: '))
-#
-# def if_int_odd_even_pos_neg(a):
-#     if a == 0:
-#         return f'{a} is just a zero-not even/add and not pos/neg'
-#     elif a < 0 and a % 2 == 0:
-#         return f'{a} is negative and even' # -2
-#     elif a < 0 and a % 2 != 0:
-#         return f'{a} is negative and odd' # -3
-#     elif a > 0 and a % 2 == 0:
-#         return f'{a} is positive and even' # 4
-#     elif a > 0 and a % 2 != 0:
-#         return f'{a} is positive and odd' # 7
-#     else:
+# def fb_ln(n):
+#     if n < 0:
 #         raise ValueError('Err')
+#     elif 0 <= n < 2:
+#         return n
+#     a, b = 0, 1
+#     for i in range(2, n + 1):
+#         a, b = b, a + b
+#     return b
 #
-# print(if_int_odd_even_pos_neg(a))
+# print(fb_ln(n))
 
+# fib recursion
 
-import re
+# n = int(input('Enter the Fib seq number: '))
+# def fb_rc(n):
+#     if n < 0:
+#         raise ValueError('Err')
+#     elif 0 <= n < 2:
+#         return n
+#     return ((fb_rc(n - 2)) + (fb_rc(n - 1)))
+#
+# print(fb_rc(n))
 
-str_a = str(input('Enter the word: '))
+# tesla interview code challenge
+# rearrange string. given a string s. rearrange the characters of s so that any two adjacent characters are not the same.
+# or return "" if not possible. example 1 input: s = "aab", output = "aba". example 2 input: s = "aaab", output = "".
 
+# from collections import Counter
+#
+# def rearrange_string(s: str) -> str:
+#   """
+#   Rearranges the characters in a string so that no two adjacent characters are the same.
+#
+#   Args:
+#     s: The string to rearrange.
+#
+#   Returns:
+#     The rearranged string, or an empty string if it is not possible.
+#   """
+#   count = Counter(s)
+#   max_heap = [(-cnt, char) for char, cnt in count.items()]
+#   heapq.heapify(max_heap)
+#
+#   prev, res = None, ""
+#   while max_heap:
+#     cnt, char = heapq.heappop(max_heap)
+#     res += char
+#
+#     if prev and prev[1] != char and count[prev[1]] > 0:
+#       heapq.heappush(max_heap, prev)
+#
+#     if cnt < -1:
+#       prev = (cnt + 1, char)
+#     else:
+#       prev = None
+#
+#   return res if len(res) == len(s) else ""
+#
+# # Example usage
+# s = "aabdd"
+# print(rearrange_string(s)) # Output: aba
 
-def f_plndrm(str_a):
-    # Remove non-alphanumeric characters
-    str_a = re.sub(r'[\W_]+', '', str_a)
+# find the longest word in the string
 
-    # Decapitalize
-    str_a = str_a.lower()
+s = str(input('Enter the phrase: '))
+def lngst_wrd(s):
+    return max(s.split(), key=len)
 
-    # Reverse string
-    rvrsd_str_a = str_a[::-1]
-
-    if rvrsd_str_a == str_a:
-        return f'Palindrome'
-    return f'Not palindrome'
-
-
-print(f_plndrm(str_a))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(lngst_wrd(s))
 
