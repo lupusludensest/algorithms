@@ -552,11 +552,279 @@ import heapq
 # s = "aabdd"
 # print(rearrange_string(s)) # Output: aba
 
-# find the longest word in the string
+# convert string to number
 
-s = str(input('Enter the phrase: '))
-def lngst_wrd(s):
-    return max(s.split(), key=len)
+# n = str(input('Enter the float: '))
+#
+# def cnv_t_num(n):
+#     try:
+#         float(n)
+#     except ValueError:
+#         return f'Wrong input'
+#
+#     return round(float(n), 2), type(n)
+#
+# print(cnv_t_num(n))
 
-print(lngst_wrd(s))
+# list given. return True if duplicates, return False if not
+
+# l = [-9, 4, -5, 0, 44, 44]
+#
+# def dplcts(l):
+#     if len(l) == len(set(l)):
+#         return False
+#     return True
+#
+#
+# print(dplcts(l))
+
+# given list and a target with the sum of some two elements of the list. find indexes of those
+# elements which give a sum in target
+
+# s = [4, 3, 5, 1, 8, 7]
+# t = 10
+# def sumt(s, t):
+#     d_i_c = {} # dict is pair of keys & values
+#     for i in range(len(s)): # start stop step
+#         r = t - s[i]
+#         if s[i] in d_i_c:
+#             return d_i_c[s[i]], i
+#         else:
+#             d_i_c[r] = i
+#     return None, None
+#
+# print(sumt(s,t)) # time complexity O(n) because only one for loop # space complexity O(n)
+# # because only one for loop
+
+# binary search. list sorted given. given target number. find the index of target in the list. if not
+# found return -1
+
+# l = [-9, 4, -6, 0, 5, 4, 2, 8]
+# t = 5
+#
+# def fnd_ndx_trg(l, t):
+#     s_l = sorted(l)
+#     print(s_l)
+#     for i in range(len(l)):
+#         mdl_el =
+#         if l[i] == t:
+#             return i
+#     return "-1"
+#
+# print(fnd_ndx_trg(l, t))
+
+# def binary_search(nums, target):
+#     """
+#     This function finds the index of a target in a sorted list using binary search.
+#
+#     Args:
+#       nums: A list of sorted integers.
+#       target: The target integer to search for.
+#
+#     Returns:
+#       The index of the target if it is found, otherwise -1.
+#     """
+#     left = 0 # pointer not counter
+#     right = len(nums) - 1
+#
+#     while left <= right:
+#         middle = (left + right) // 2 # floor division
+#
+#         if nums[middle] == target: # this is only working part of the code
+#             return middle
+#
+#         if nums[middle] > target:
+#             right = middle - 1 # right variable moves to left on one step from the middle
+#
+#         else:
+#             left = middle + 1 # left variable moves to right on one step to the middle
+#
+#     return -1
+#
+# # Example usage
+# nums = [1, 3, 7, 8, 9, 10, 18]
+# target = 7
+# print(binary_search(nums, target))
+
+# given list and a target with the sum of some two elements of the list. find indexes of those
+# elements which give a sum in target
+# via dict
+
+# l = [1, 3, 7, 8, 9, 10, 18]
+# t = 10
+#
+# def fnd_tw_indxs(l, t):
+#     res = {}
+#     for i, num in enumerate(l):
+#         dif = t - num
+#         if dif in res:
+#             return res[dif], i
+#         else:
+#             res[num] = i
+#     return None, None
+#
+# print(fnd_tw_indxs(l, t))
+
+# given a list and a target which is a sum of two elements of tge list. find tge indexes of those elements. if not return None, None
+
+# l = [1, 3, 7, 8, 9, 10, 18]
+# t = 28
+#
+# def fnd_tw_indxs(l, t):
+#     l.sort()
+#     left = 0
+#     right = len(l) - 1
+#     while left < right:
+#         sm = l[left] + l[right]
+#         if sm == t:
+#             return left, right
+#         elif sm < t:
+#             left += 1
+#         elif sm > t:
+#             right -= 1
+#     return None, None
+#
+# print(fnd_tw_indxs(l, t))
+# print(sorted(l))
+
+# find indexes of two list elements which to be added are equal to some target
+# l = [9, 2, 3, 5, 7], t = 7
+# via dictionary
+
+l = [9, 2, 3, 5, 7]
+t = 5
+
+# def fn_indxs_tr(l, t):
+#     res = {}
+#     for i, num in enumerate(l):
+#         df = t - num
+#         if df in res:
+#             return res[df], i
+#         else:
+#             res[num] = i
+#     return None, None
+# print(fn_indxs_tr(l, t))
+
+# via sort and two pointers
+# def fnd_indxs_tr(l, t):
+#     l.sort()
+#     lf = 0
+#     rg = len(l) - 1
+#     while lf < rg:
+#         sm = l[lf] + l[rg]
+#         if sm == t:
+#             return lf, rg
+#         elif sm < t:
+#             lf += 1
+#         elif sm > t:
+#             rg -= 1
+#     return None, None
+#
+# print(fnd_indxs_tr(l, t))
+# print(sorted(l))
+
+# if the phrase is a palyndrome return True. if not return False
+
+# phrs = 'A man, a plan, a canal: Panama'
+
+# def if_phr_pal(phrs):
+#     res = ""
+#     for i in phrs.lower():
+#         if i.isalnum():
+#             res+=i
+#     if res == res[::-1]:
+#         return f'Pal'
+#     else:
+#         return f'Not pal'
+#
+# print(if_phr_pal(phrs))
+
+# find indexes of two list elements which to be added are equal to some target
+# l = [9, 2, 3, 5, 7], t = 7
+# via dictionary
+
+# l = [9, 2, 3, 5, 7]
+# t = 16
+#
+# # t_list = []
+# for i in l:
+#     i_index = l.index(i)
+#     # print(f'{i} + #print(i) + {i_index} + #i_index')
+#     '''
+#     Логика:
+#     ok 1. Выявить индекс каждого числа из листа
+#     ok 2. Взять число (i) с индексом 0 второй раз пробежаться по массиву (j)
+#     ok 2.1. Выявить индексы (j)
+#     ok 3. Сравнить индекс (i.index) != (j.index) => sum
+#     4. Если sum = "t" => print(t)
+#     '''
+#
+#     for j in l:
+#         j_index = l.index(j)
+#         # print(f'{j} + #print(j) + {j_index} + #j_index')
+#         if i_index != j_index:
+#             sum = i + j
+#             # print(f'{sum} + #print(sum)')
+#             if sum == t:
+#                 # print(f'{sum} + #то что мы искали = сумма чисел = цели')
+#                 # print(f'{i} + {j} = {sum}')
+#                 # print(f'Индекс числа {i} = {i_index} + индекс числа {j} = {j_index} = цели {sum}')
+#                 print(f'{i_index} + {j_index} = цели {sum}')
+#             #     print(f'{i_index} {j_index}')
+
+# find indexes of two list elements which to be added are equal to some target
+# l = [9, 2, 3, 5, 7], t = 7
+# via dictionary
+
+# l = [9, 2, 3, 5, 7]
+# t = 8
+#
+# def fnd_indxs_tw_el(l, t):
+#     res = {}
+#     for i, j in enumerate(l):
+#         df = t - j
+#         if df in res:
+#             return res[df], i
+#         else:
+#             res[j] = i
+#     return f'None'
+#
+# print(fnd_indxs_tw_el(l, t))
+
+# via sort & two pointers
+
+# l = [9, 2, 3, 5, 7]
+# t = 7
+#
+# def fnd_tw_indxs(l, t):
+#     lf = 0
+#     rg = len(l) - 1
+#     l.sort()
+#     while lf < rg:
+#         sm = l[lf] + l[rg]
+#         if sm == t:
+#             return lf, rg
+#         elif sm < t:
+#             lf += 1
+#         elif sm > t:
+#             rg -= 1
+#     return None, None
+#
+# print(fnd_tw_indxs(l, t))
+# print(sorted(l))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
