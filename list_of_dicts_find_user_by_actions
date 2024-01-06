@@ -1,0 +1,37 @@
+# list given of dictionaries. find user with ABCD (actions) and return userId
+
+logss = [
+{'action': 'A', 'userId': 1},
+{'action': 'A', 'userId': 1},
+{'action': 'A', 'userId': 2}, # if ABC return userId
+{'action': 'A', 'userId': 3},
+{'action': 'A', 'userId': 1},
+{'action': 'B', 'userId': 1},
+{'action': 'B', 'userId': 1},
+{'action': 'B', 'userId': 2},
+{'action': 'B', 'userId': 3},
+{'action': 'A', 'userId': 3},
+{'action': 'C', 'userId': 3},
+{'action': 'C', 'userId': 2},
+{'action': 'C', 'userId': 1},
+{'action': 'B', 'userId': 1},
+{'action': 'C', 'userId': 1},
+{'action': 'D', 'userId': 2},
+]
+
+def fnd_usr(logss):
+    
+    res = {} # {1: 'AAABBCBC', 2: 'ABCD', 3: 'ABAC'}
+
+    for dict in logss:
+        if dict['userId'] in res:
+            res[dict['userId']] += dict['action']
+        else:
+            res[dict['userId']] = dict['action']
+            
+    for k in res:
+        if 'ABCD' in res[k]:
+            return k
+    return False
+
+print(fnd_usr(logss))

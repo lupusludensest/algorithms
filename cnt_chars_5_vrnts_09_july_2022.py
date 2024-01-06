@@ -63,18 +63,19 @@ print(f'\n5')
 input = 'aaaabbbccddddaaaa'
 def run_me(input):
     
-    hash_table = {}
+    hash_table = {} # empty dictionary declared
 
-    for char in input:
-        if char in hash_table:
-            hash_table[char] +=1
+    for char in input: # iterate every char in the string input
+        if char in hash_table: # if element char is in dictionary-which is false in the first iterarion
+            hash_table[char] +=1 # if element char is in dictionary-add 1 to its value in dictionary
 
         else:
-            hash_table[char] = 1
-    res = ''
+            hash_table[char] = 1 # if element char is not in dictionary-it accepts 1
+         
+    res = '' # empty string is declared
 
-    for k, v in hash_table.items():
-        res += f'{v}{k}'
+    for k, v in hash_table.items(): # for every pair of key and value in dictionary
+        res += f'{v}{k}' # empty string accepts pairs of values and keys
         
     return res
 output = run_me(input)
