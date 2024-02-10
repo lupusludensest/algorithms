@@ -665,7 +665,9 @@ import heapq
 #
 # print(fnd_tw_indxs(l, t))
 
-# given a list and a target which is a sum of two elements of tge list. find tge indexes of those elements. if not return None, None
+# given a list and a target which is a sum of two elements of tge list. find tge indexes of those elements.
+# if not return None, None
+
 
 # l = [1, 3, 7, 8, 9, 10, 18]
 # t = 28
@@ -691,8 +693,8 @@ import heapq
 # l = [9, 2, 3, 5, 7], t = 7
 # via dictionary
 
-l = [9, 2, 3, 5, 7]
-t = 5
+# l = [9, 2, 3, 5, 7]
+# t = 5
 
 # def fn_indxs_tr(l, t):
 #     res = {}
@@ -773,7 +775,7 @@ t = 5
 #             #     print(f'{i_index} {j_index}')
 
 # find indexes of two list elements which to be added are equal to some target
-# l = [9, 2, 3, 5, 7], t = 7
+# l = [9, 2, 3, 5, 7], t = 5
 # via dictionary
 
 # l = [9, 2, 3, 5, 7]
@@ -812,6 +814,172 @@ t = 5
 #
 # print(fnd_tw_indxs(l, t))
 # print(sorted(l))
+
+# Array reverse. Write a method that will take an array as an argument and reverse it.
+# - Reversing an array involves rearranging its elements so
+# that the first element becomes the last and the last becomes the first.
+# - This task is a fundamental operation in array manipulation and tests the
+# understanding of array data structures.
+
+# lst = [1, 3, 5, 7, 9]
+# def lst_rev(lst):
+#     return lst[::-1]
+#
+# print(lst_rev(lst))
+
+# lst = [1, 3, 5, 7, 9]
+# def lst_rev_nxt(lst):
+#     lst_rev_nxt = []
+#     for i in range(len(lst) - 1, -1, -1): # start, stop, step
+#         lst_rev_nxt.append(lst[i])
+#     return lst_rev_nxt
+#
+# print(lst_rev_nxt(lst))
+
+# lst = [1, 3, 5, 7, 9]
+# def lst_rev_one_more(lst):
+#     return list(reversed(lst)), type(reversed(lst)), type(lst)
+#
+# print(lst_rev_one_more(lst))
+
+# check if an array contains any duplicates.
+# Your function should accept an array of integers as input.
+# - It should return **`true`** if any value appears at least
+# twice in the array, and **`false`** otherwise.
+
+# lst = [1, 3, 5, -1, 9, -5, 55, 7]
+# def fnd_dplcts(lst):
+#     st_lst = list(set(lst))
+#     if sorted(st_lst) == sorted(lst):
+#         return False
+#     else:
+#         return True
+#
+# print(fnd_dplcts(lst))
+
+# tpl = (1, 2.3, 'rty', False, [1, 2.3, 'fgh'], (1, 2.3, 'rty', False))
+# print(tpl, type(tpl))
+
+# dct_1 = {'num':1, 'name':'Petya', 'age': 99}
+# print(dct_1, type(dct_1))
+
+# dct_1 = {'num':1, 'name':'Petya', 'age': 99, 'num':1, 'name':'Petya', 'age': 99}
+# set_1 = set(dct_1)
+# print(set_1, type(set_1))
+
+# lst_1 = {1, 3, 5, -1, 9, -5, 55, 7, 1, 3, 5, -1, 9, -5, 55, 7}
+# set_1 = set(lst_1)
+# print(lst_1, type(lst_1))
+
+# ternary operator
+# x = int(input('Enter the integer: '))
+#
+# def trn_prt(x):
+#     answer = 'pos' if x > 0 else 'neg'
+#     return answer
+#
+# print(trn_prt(x))
+
+# find sum of all positive elements in list
+#
+# l = [-99, 9, -4, -3, 0, -3, -4, -6, -8, 1]
+#
+# def sm_lmnts_lst(l):
+#     res = []
+#     for i in l:
+#         if i > 0:
+#             res.append(i)
+#
+#     return sum(res)
+#
+# print(sm_lmnts_lst(l))
+
+# find indexes of two list elements which to be added are equal to some target
+# l = [9, 2, 3, 5, 7], t = 5
+
+# l = [9, 2, 3, 5, 7]
+# t = 5
+#
+# # via sort and two pointers
+# def fnd_indxs_tr(l, t):
+#     l.sort()
+#     lf = 0
+#     rg = len(l) - 1
+#     while lf < rg:
+#         sm = l[lf] + l[rg]
+#         if sm == t:
+#             return lf, rg
+#         elif sm < t:
+#             lf += 1
+#         elif sm > t:
+#             rg -= 1
+#     return None, None
+#
+# print(fnd_indxs_tr(l, t))
+# print(sorted(l))
+
+# swap the list of integers by two pointers
+
+# lst = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+#
+# def tw_pntrs(lst):
+#   lf_pntr = 0
+#   rt_pntr = len(lst) - 1
+#
+#   while lf_pntr < rt_pntr:
+#     lst[lf_pntr], lst[rt_pntr] = lst[rt_pntr], lst[lf_pntr]
+#     lf_pntr += 1
+#     rt_pntr -= 1
+#
+#   return lst
+#
+# print(tw_pntrs(lst))
+
+# # if phrase has all alphabet letters
+#
+# my_string = "qwertyuioplkjhgfdsazxc" #vbnm"
+# def pangram(my_string): # O(n)
+#     alphabet = 'abcdefghijklmnopqrstuvwxyz'
+#
+#     for letter in alphabet:
+#         if letter not in my_string:
+#             return False
+#     return True
+#
+# print(pangram(my_string))
+
+# # fib recursion
+# # 0 1 2 3 4 5 6 7 8 9 10
+# # 0 1 1 2 3 5 8 13 21 34 55
+#
+# n = int(input('Enter the number of fob seq element: '))
+# def fb_rec(n):
+#     if n < 0:
+#         return "Err"
+#     elif 0 <= n <= 1:
+#         return n
+#     return(fb_rec(n - 2) + fb_rec(n - 1))
+#
+# print(fb_rec(n))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
