@@ -100,7 +100,9 @@ def test_send_credit_card_transaction():
     cc_transaction.set_credit_card_number(credit_card_number)
     cc_transaction.send_transaction()
 
-    # TODO: 5. Write asserts to check that the amount and status are valid and acceptable values.  Use as many asserts as you like.
+    # TODO: 5. Write asserts to check that the amount and status are valid and acceptable values.
+    #  Use as many asserts as you like.
+
     actual_status = cc_transaction.get_status()
     actual_processed_amount = cc_transaction.get_processed_amount()
 

@@ -962,37 +962,22 @@ import heapq
 #
 # print(fb_rec(n))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# # fib linear
+# # 0 1 2 3 4 5 6 7 8 9 10
+# # 0 1 1 2 3 5 8 13 21 34 55
+#
+# n = int(input('Enter the number of fib member: '))
+# def fb_lin(n) -> int:
+#     if n < 0:
+#         raise ValueError
+#     elif 0 < n < 1:
+#         return n
+#     else:
+#         a = 0
+#         b = 1
+#         for i in range(1, n):
+#             a, b = b, a + b
+#         return b
+#
+# print(fb_lin(n))
 
