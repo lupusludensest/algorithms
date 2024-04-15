@@ -30,6 +30,9 @@ def validate_ssn(ssn):
 
 # Example usage
 ssn = "123-45-6789"
+
+print(validate_ssn(ssn))
+
 if validate_ssn(ssn):
     print(f"{ssn} is a valid SSN.")
 else:
