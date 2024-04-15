@@ -38,7 +38,12 @@ class Solution:
 
 
 def main():
-    linked_list = ListNode(5)
+    linked_list = ListNode(10)
+    linked_list = ListNode(9, linked_list)
+    linked_list = ListNode(8, linked_list)
+    linked_list = ListNode(7, linked_list)
+    linked_list = ListNode(6, linked_list)
+    linked_list = ListNode(5, linked_list)
     linked_list = ListNode(4, linked_list)
     linked_list = ListNode(3, linked_list)
     linked_list = ListNode(2, linked_list)
