@@ -1,6 +1,6 @@
-def validate_ssn(ssn):
+def is_valid_ssn(ssn):
     # Remove dashes from the SSN
-    ssn = ssn.replace("-", "")
+    ssn = ssn.replace("-", "").replace(" ", "")
 
     # Check if the SSN has exactly 9 digits
     if len(ssn) != 9:
@@ -12,7 +12,7 @@ def validate_ssn(ssn):
 
     # Check if the first three digits are within the valid range (001-772)
     first_three_digits = int(ssn[:3])
-    if not (1 <= first_three_digits <= 772):
+    if not (0 <= first_three_digits <= 772):
         return False
 
     # Check if the second two digits are within the valid range (01-99)
@@ -29,11 +29,6 @@ def validate_ssn(ssn):
     return True
 
 # Example usage
-ssn = "123-45-6789"
-
-print(validate_ssn(ssn))
-
-if validate_ssn(ssn):
-    print(f"{ssn} is a valid SSN.")
-else:
-    print(f"{ssn} is not a valid SSN.")
+print(is_valid_ssn("714-33-5179"))
+print(is_valid_ssn("014-33-5179"))
+print(is_valid_ssn("a14-33-5179"))

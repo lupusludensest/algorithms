@@ -11,3 +11,5 @@ def is_valid_ssn(ssn):
         return False
 
 print(is_valid_ssn("714-33-5179"))
+print(is_valid_ssn("014-33-5179"))
+print(is_valid_ssn("a14-33-5179"))
