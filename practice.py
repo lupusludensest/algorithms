@@ -981,18 +981,3 @@ import heapq
 #
 # print(fb_lin(n))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,159 @@
+import os
+import sys
+from pathlib import Path
+import re
+import subprocess
+
+def search_files_on_drive():
+    """Search for files that might contain the customs letter"""
+    
+    drive = "E:\\"
+    target_address = "2001 N Andrews Ave, Wilton Manors, FL 33311"
+    
+    # File extensions to search for
+    extensions = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png', '.tiff', '.tif', '.bmp']
+    
+    # Keywords to look for in filenames
+    keywords = ['custom', 'icon', 'russia', 'usa', 'letter', 'wilton', 'manors', 'andrews']
+    
+    print(f"Searching {drive} for customs letter...")
+    print(f"Looking for files with address: {target_address}")
+    print("=" * 60)
+    
+    found_files = []
+    
+    try:
+        for root, dirs, files in os.walk(drive):
+            for file in files:
+                file_lower = file.lower()
+                file_path = os.path.join(root, file)
+                
+                # Check file extension
+                if any(file_lower.endswith(ext) for ext in extensions):
+                    
+                    # Check if filename contains relevant keywords
+                    keyword_matches = [kw for kw in keywords if kw in file_lower]
+                    
+                    if keyword_matches:
+                        try:
+                            stat = os.stat(file_path)
+                            size_mb = stat.st_size / (1024 * 1024)
+                            
+                            print(f"POTENTIAL MATCH: {file_path}")
+                            print(f"  Size: {size_mb:.2f} MB")
+                            print(f"  Keywords found: {', '.join(keyword_matches)}")
+                            print(f"  Modified: {os.path.getmtime(file_path)}")
+                            print("-" * 40)
+                            
+                            found_files.append(file_path)
+                        except (OSError, PermissionError):
+                            continue
+    
+    except PermissionError:
+        print(f"Permission denied accessing {drive}")
+        return []
+    
+    print(f"\nFound {len(found_files)} potential files")
+    return found_files
+
+def search_by_content_windows():
+    """Use Windows search to find files containing the address"""
+    
+    print("\nSearching by content using Windows search...")
+    
+    # Windows search command for content
+    search_terms = [
+        "2001 N Andrews Ave",
+        "Wilton Manors",
+        "customs",
+        "icons Russia USA"
+    ]
+    
+    for term in search_terms:
+        print(f"\nSearching for: '{term}'")
+        try:
+            # Use findstr for text files or dir for filename search
+            cmd = f'dir E:\\ /s /b | findstr /i "{term}"'
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.stdout.strip():
+                print("Found files:")
+                for line in result.stdout.strip().split('\n'):
+                    print(f"  {line}")
+        except Exception as e:
+            print(f"  Error: {e}")
+
+def quick_recent_files_search():
+    """Search for recently modified files that might be the document"""
+    
+    print("\nSearching for recent PDF/DOC/image files...")
+    
+    import time
+    from datetime import datetime, timedelta
+    
+    # Look for files modified in the last 6 months
+    six_months_ago = time.time() - (6 * 30 * 24 * 60 * 60)
+    
+    try:
+        for root, dirs, files in os.walk("E:\\"):
+            for file in files:
+                file_lower = file.lower()
+                if any(file_lower.endswith(ext) for ext in ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png']):
+                    file_path = os.path.join(root, file)
+                    try:
+                        if os.path.getmtime(file_path) > six_months_ago:
+                            mod_time = datetime.fromtimestamp(os.path.getmtime(file_path))
+                            size_mb = os.path.getsize(file_path) / (1024 * 1024)
+                            print(f"{file_path} - {mod_time.strftime('%Y-%m-%d %H:%M')} - {size_mb:.1f}MB")
+                    except (OSError, PermissionError):
+                        continue
+    except PermissionError:
+        print("Permission denied accessing E: drive")
+
+# List of drives to check
+drives = ['C:\\', 'D:\\', 'E:\\', 'F:\\', 'G:\\']
+
+# The filename or letter to look for
+target_filename = 'your_target_file.txt'  # Change as needed
+
+found_paths = []
+
+for drive in drives:
+    for root, dirs, files in os.walk(drive):
+        if target_filename in files:
+            found_path = os.path.join(root, target_filename)
+            found_paths.append(found_path)
+            print(f"Found at: {found_path}")
+
+if not found_paths:
+    print("File not found on any specified disk.")
+
+if __name__ == "__main__":
+    print("CUSTOMS LETTER SEARCH UTILITY")
+    print("=" * 50)
+    
+    # Method 1: Search by filename keywords
+    potential_files = search_files_on_drive()
+    
+    # Method 2: Search by content (Windows)
+    search_by_content_windows()
+    
+    # Method 3: Recent files
+    quick_recent_files_search()
+    
+    if potential_files:
+        print(f"\n\nSUMMARY: Found {len(potential_files)} potential matches:")
+        for i, file_path in enumerate(potential_files, 1):
+            print(f"{i}. {file_path}")
+    else:
+        print("\nNo obvious matches found. Try the PowerShell command below for a more thorough search.")
+    
+    print("\n" + "=" * 60)
+    print("MANUAL COMMANDS TO TRY:")
+    print("=" * 60)
+    print("1. PowerShell content search:")
+    print('   Get-ChildItem E:\\ -Recurse -Include *.pdf,*.doc,*.docx | Select-String "Andrews Ave"')
+    print("\n2. Windows search in File Explorer:")
+    print('   Open File Explorer, go to E:, search for: "2001 N Andrews Ave"')
+    print("\n3. Command prompt filename search:")
+    print('   dir E:\\ /s /b | findstr /i "custom"')
+    print('   dir E:\\ /s /b | findstr /i "wilton"')
