@@ -981,3 +981,8 @@ import heapq
 #
 # print(fb_lin(n))
 
+def longest(a1, a2):
+    return ''.join(sorted(set(a1 + a2)))
+
+print(longest("x", "y"))  # Output: "xy"
+print(longest("are", "zebra"))  # Output: "aberz"
