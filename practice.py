@@ -6,7 +6,7 @@
 #     else:
 #       print(end="   ")
 #   print()
-import heapq
+# import heapq
 
 
 # lst_1 = [-99, -77, 0, 2, 4, 44]
@@ -775,7 +775,7 @@ import heapq
 #             #     print(f'{i_index} {j_index}')
 
 # find indexes of two list elements which to be added are equal to some target
-# l = [9, 2, 3, 5, 7], t = 5
+# l = [9, 2, 3, 5, 7], t = 7
 # via dictionary
 
 # l = [9, 2, 3, 5, 7]
@@ -981,8 +981,261 @@ import heapq
 #
 # print(fb_lin(n))
 
-def longest(a1, a2):
-    return ''.join(sorted(set(a1 + a2)))
+# def longest(a1, a2):
+#     return ''.join(sorted(set(a1 + a2)))
 
-print(longest("x", "y"))  # Output: "xy"
-print(longest("are", "zebra"))  # Output: "aberz"
+# print(longest("x", "y"))  # Output: "xy"
+# print(longest("are", "zebra"))  # Output: "aberz"
+
+# def sum_dig_pow(a, b):
+#     result = []
+#     for i in range(a, b + 1):
+#         digits = str(i)
+#         summ = 0
+#         for n in range(len(digits)):
+#             summ += int(digits[n]) ** (n + 1)
+#         if summ == i:
+#             result.append(i)
+#     return result
+
+# print(sum_dig_pow(1, 100))  # Output: [1, 2, 3, 4, 5, 89]
+
+
+
+# def maxProfit(pr):
+#     min_price = float('inf')
+#     max_profit = 0
+#     for price in pr:
+#         if price < min_price:
+#             min_price = price
+#         elif price - min_price > max_profit:
+#             max_profit = price - min_price
+#     return max_profit
+
+# print(maxProfit([7,1,5,3,6,4]))  # Output: 5
+
+
+
+# from typing import List
+
+# class Solution:
+#     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+#         intervals.sort()
+#         res_list = []
+    
+#         for interval in intervals:
+#             # If the result list is empty, add the first interval
+#             if not res_list:
+#                 res_list.append(interval)
+#             else:
+#                 # Check if the current interval overlaps with the last interval in the result list
+#                 last_interval = res_list[-1]
+#                 if last_interval[1] >= interval[0]:  # Overlap condition
+#                     # Merge the intervals by updating the end time
+#                     res_list[-1][1] = max(last_interval[1], interval[1])
+#                 else:
+#                     # If no overlap, add the current interval to the result list
+#                     res_list.append(interval)
+        
+#         return res_list  # Move return outside the loop
+
+
+# print(Solution().merge([[2,6],[15,18], [8,10], [1,3]])) # [[1,6],[8,10],[15,18]]
+
+# from typing import List
+
+# class Solution:
+#     def maxProfit(self, p: List[int]) -> int:
+#         max_prof = 0
+#         min_pric = float("inf")
+#         for i in range(len(p)):
+#             if p[i] < min_pric:
+#                 min_pric = p[i] # best price in the row 1
+#             elif p[i] - min_pric > max_prof:
+#                 max_prof = p[i] - min_pric
+
+#         return max_prof
+
+# print(Solution().maxProfit([7,1,5,3,6,4]))  # Output: 5
+
+#  Kadane’s Algorithm:
+# from typing import List
+
+# class Solution:
+#     def maxSubArray(self, n: List[int]) -> int:
+#         max_sum = n[0]
+#         cur_sum = n[0]
+#         for i in n[1:]: 
+#             cur_sum = max(i, i + cur_sum)
+#             max_sum = max(max_sum, cur_sum)
+        
+
+#         return max_sum
+    
+# print(Solution().maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))  # Output: 6
+
+##########
+
+# 03 aug 2025, sun
+
+# Here’s a list of around 10 algorithms and problems on platforms like Codewars and LeetCode that you can practice to improve your coding skills as a QA Engineer:
+
+# ### 1. Two Sum
+# - **Description**: Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+# - **Platform**: [LeetCode #1](https://leetcode.com/problems/two-sum/)
+
+# from typing import List
+
+# class Solution:
+#     def twoSum(self, n: List[int], target: int) -> List[int]:
+#         for i in range(len(n)):
+#             for j in range(i + 1, len(n)):
+#                 if n[i] + n[j] == target:
+#                     return [i, j]
+
+# print(Solution().twoSum([2, 7, 11, 15], 9))  # Output: [0, 1]
+
+# ### 2. Reverse String
+# - **Description**: Write a function that reverses a string.
+# - **Platform**: [LeetCode #344](https://leetcode.com/problems/reverse-string/)
+
+# from typing import List
+
+# class Solution:
+#     def reverseString(self, s: List[str]) -> None:
+#         s[:] =s[::-1]
+#         return s
+
+# print(Solution().reverseString(["h", "e", "l", "l", "o"]))  # Output: ["o", "l", "l", "e", "h"]
+
+
+# ### 3. Valid Parentheses
+# - **Description**: Determine if the input string's parentheses are valid.
+# - **Platform**: [LeetCode #20](https://leetcode.com/problems/valid-parentheses/)
+
+# from typing import List
+
+# class Solution:
+#     def isValid(self, s: str) -> bool:
+#         res = []
+#         mapping = {")":"(", "]":"[", "}":"{"}
+
+#         for i in s:
+#             if i in mapping:
+#                 if res and res[-1 ] == mapping[i]:
+#                     res.pop()
+#                 else:
+#                     return False
+#             else:
+#                 res.append(i)
+
+#         return not res
+
+# print(Solution().isValid("()[]{}"))  # Output: True
+# print(Solution().isValid("(]"))      # Output: False
+
+# ### 4. Merge Two Sorted Lists
+# - **Description**: Merge two sorted linked lists and return it as a new sorted list.
+# - **Platform**: [LeetCode #21](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+# from typing import List
+
+# class Solution:
+#     def mergeTwoLists(self, list1: List[int], list2: List[int]) -> List[int]:
+#         return sorted(list1 + list2)
+
+# print(Solution().mergeTwoLists([1, 2, 4], [1, 3, 4]))  # Output: [1, 1, 2, 3, 4, 4]
+
+# ### 5. Maximum Subarray
+# - **Description**: Find the contiguous subarray (containing at least one number) which has the largest sum.
+# - **Platform**: [LeetCode #53](https://leetcode.com/problems/maximum-subarray/)
+
+# ### 6. Climbing Stairs
+# - **Description**: You are climbing a staircase. Each time you can either climb 1 or 2 steps. How many distinct ways can you climb to the top?
+# - **Platform**: [LeetCode #70](https://leetcode.com/problems/climbing-stairs/)
+
+# ### 7. Best Time to Buy and Sell Stock
+# - **Description**: Find the maximum profit you can achieve from buying and selling a stock.
+# - **Platform**: [LeetCode #121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+# ### 8. Product of Array Except Self
+# - **Description**: Given an array nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+# - **Platform**: [LeetCode #238](https://leetcode.com/problems/product-of-array-except-self/)
+
+# ### 9. Search in Rotated Sorted Array
+# - **Description**: Search for a target in a rotated sorted array and return its index.
+# - **Platform**: [LeetCode #33](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+
+# ### 10. Kth Largest Element in an Array
+# - **Description**: Find the kth largest element in an unsorted array.
+# - **Platform**: [LeetCode #215](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+# ### Additional Practice Resources
+# - **Codewars**: Search for problems tagged with "algorithms" or "data structures".
+# - **LeetCode Explore**: Check their "Explore" sections for curated lists on specific topics like "Array", "Strings", or "Dynamic Programming".
+
+# Practicing these problems will help you build your algorithmic thinking and coding skills, which are essential for QA engineering interviews. Good luck!
+
+# Kadane’s Algorithm
+
+# def max_subarray_sum(nums):
+#     max_sum = current_sum = nums[0]
+#     for num in nums[1:]:
+#         # Either start a new subarray at current num, or extend previous subarray
+#         current_sum = max(num, current_sum + num)
+#         # Update max_sum if current_sum is greater
+#         max_sum = max(max_sum, current_sum)
+#     return max_sum
+
+# # Example usage:
+# nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+# print(max_subarray_sum(nums))  # Output: 6 (subarray: [4, -1, 2, 1])
+
+# Find the Missing Number
+
+# class Solution:
+#     def missingNum(self, arr):
+#         if len(arr) < 0:
+#             return "Ren"
+#         res_arr = []
+#         for i in range(len(arr) + 1):
+#             res_arr.append(i + 1)
+#         return sum(res_arr) - sum(arr)
+
+# print(Solution().missingNum([1, 2, 4, 5]))  # Output: 3
+
+
+# # Piles Game
+
+# def gameOfPiles(piles, k):
+#     nim_sum = 0
+#     for i in piles:
+#         nim_sum ^= (i // k)
+    
+#     if nim_sum != 0:
+#         return "Sam"
+#     else:
+#         return "Alex"
+
+
+# # Example test cases
+# if __name__ == "__main__":
+#     # Test case 1
+#     piles = [3, 5, 7]
+#     k = 2
+#     print(gameOfPiles(piles, k))  # Output: Sam
+
+#     # Test case 2
+#     piles = [2, 4, 6]
+#     k = 2
+#     print(gameOfPiles(piles, k))  # Output: Alex
+
+#     # Test case 3
+#     piles = [10, 15, 20]
+#     k = 5
+#     print(gameOfPiles(piles, k))  # Output: Sam
+
+#     # Test case 4
+#     piles = [1, 1, 1]
+#     k = 1
+#     print(gameOfPiles(piles, k))  # Output: Alex
