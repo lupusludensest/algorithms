@@ -1239,3 +1239,41 @@
 #     piles = [1, 1, 1]
 #     k = 1
 #     print(gameOfPiles(piles, k))  # Output: Alex
+
+# str_exam = "Shirly Mirly"
+
+# def reverse(str_exam):
+#     str_exam_rev = []
+#     for i in range(len(str_exam), 0, -1):
+#         str_exam_rev.append(str_exam[i-1])
+
+#     return ''.join(str_exam_rev)
+
+# print(reverse(str_exam))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
