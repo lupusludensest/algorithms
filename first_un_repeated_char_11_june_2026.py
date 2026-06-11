@@ -10,22 +10,22 @@
 
 ## with dictionary
 
-def first_unrepeated_char(s):
-    counts = {}
+def first_unrepeated_char(s):  # s is the input string
+    counts = {}  # create an empty dictionary
 
-    # Count occurrences
-    for char in s:
-        if char in counts:
-            counts[char] += 1
+    # Count occurrences of each character
+    for char in s:  # iterate through every character in the string
+        if char in counts:  # if the character already exists as a key
+            counts[char] += 1  # increment its count
         else:
-            counts[char] = 1
+            counts[char] = 1  # first occurrence of this character
 
-    # Find first character with count 1
-    for char in s:
-        if counts[char] == 1:
+    # Find the first character that appears only once
+    for char in s:  # iterate through the string again to preserve order
+        if counts[char] == 1:  # check its count in the dictionary
             return f"First unrepeated character in '{s}': {char}, {counts}"
 
-    return None
+    return None  # no unrepeated character exists
 
 
-print(first_unrepeated_char("swiss"))  # w
+print(first_unrepeated_char("swiss"))
