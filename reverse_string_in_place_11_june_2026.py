@@ -9,5 +9,5 @@ def reverse_string_in_place(s):
     return "".join(s)
 
 
-s =str(input("Enter the string: "))
+s = input("Enter the string: ")
 print(reverse_string_in_place(s))
