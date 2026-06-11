@@ -8,7 +8,7 @@
 
 # print(first_unrepeated_char("swiss"))  # w
 
-## with dictionary
+# with dictionary
 
 def first_unrepeated_char(s):  # s is the input string
     counts = {}  # create an empty dictionary
@@ -21,11 +21,12 @@ def first_unrepeated_char(s):  # s is the input string
             counts[char] = 1  # first occurrence of this character
 
     # Find the first character that appears only once
-    for char in s:  # iterate through the string again to preserve order
+    for i, char in enumerate(s):  # iterate with index to preserve order
         if counts[char] == 1:  # check its count in the dictionary
-            return f"First unrepeated character in '{s}': {char}, {counts}"
+            return f"First unrepeated character in '{s}': '{char}' at index {i}, Character counts: {counts}"
 
     return None  # no unrepeated character exists
 
+n = str(input("Enter the string: "))
+print(first_unrepeated_char(n))
 
-print(first_unrepeated_char("swiss"))
