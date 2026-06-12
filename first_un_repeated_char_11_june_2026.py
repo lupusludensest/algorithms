@@ -25,7 +25,7 @@ def first_unrepeated_char(s):  # s is the input string
         if counts[char] == 1:  # check its count in the dictionary
             return f"First unrepeated character in '{s}': '{char}' at index {i}, Character counts: {counts}"
 
-    return None  # no unrepeated character exists
+    return -1  # no unrepeated character exists
 
 n = str(input("Enter the string: "))
 print(first_unrepeated_char(n))
