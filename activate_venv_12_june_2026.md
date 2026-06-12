@@ -1,0 +1,1 @@
+source /Users/vicgurov/Documents/Gurov_SSD_256GB/IT/Testing/Automation_08_09_2019/algorithms/.venv/bin/activate
